@@ -1,0 +1,106 @@
+{% extends "layout" %}
+
+
+{% block content %}
+
+
+<section class="about_box">
+    <h3 class="about-header">Datenschutz</h3>
+    <br /> 
+    <br /> 
+        <p class="about-text">
+         1. Verantwortlichkeit
+        <br /> 
+        <br /> 
+         Skateboard für alle
+        <br />
+        Jahnstr. 2/1
+        <br />
+         75397 Simmozheim
+        <br />
+         Telefon:
+        <br /> 
+         E-Mail: kontakt@steboardfueralle.org
+        <br />
+        <br />
+        2. Speicherung von Zugriffsdaten
+        <br />
+        <br /> 
+        Bei dem Zugriff auf unsere Website werden Zugriffsdaten in einer Protokolldatei auf dem
+        Webserver unseres Providers gespeichert.
+        Dieser Datensatz besteht aus:
+        <br />
+        <br /> 
+        • der IP-Adresse des anfragenden Endgeräts,
+        <br />
+        • Datum und Uhrzeit des Abrufs,
+        <br />
+        • dem Namen und der URL der angeforderten Datei,
+        <br />
+        • der übertragenen Datenmenge,
+        <br />
+        • der Meldung, ob der Abruf erfolgreich war,
+        <br />
+        • Erkennungsdaten des verwendeten Browsers und Betriebssystems,
+        <br />
+        • Website, von der aus der Zugriff erfolgt, sowie
+        <br />
+        • dem Namen Ihres Internet-Zugangs-Providers.
+        <br />
+        <br /> 
+        Die Erhebung dieser Daten ist aus technischen Gründen notwendig. Diese Daten erlauben
+        uns selbst keinen Rückschluss auf Ihre Person. Eine Nutzung unserer Website ist ohne
+        Bereitstellung Ihrer IP-Adresse technisch leider nicht möglich.
+        <br />
+        <br />
+        3 - Cookies: Diese Website nutzt keine 'Cookies'.
+        <br />
+        <br /> 
+        4 - Unsere Website benutzt kein Webanalysedienst und keine Plug-ins der sozialen Netwerke.
+        <br />
+        <br /> 
+        5 - Unsere Website bietet keine Anmeldung, kein Nutzerkonto, kein Newsletter und kein Kontakformular.
+        <br />
+        <br /> 
+        6 - Ihre Rechte
+        <br />
+        <br /> 
+        Als betroffene Person haben Sie folgende Rechte:
+        <br />
+        <br /> 
+        • Sie haben ein Auskunftsrecht bezüglich der Sie betreffenden personenbezogenen Daten, die der Verantwortliche verarbeitet (Art. 15 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht auf Berichtigung der Sie betreffenden Daten, wenn diese unrichtig oder unvollständig gespeichert werden (Art. 16 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht auf Löschung (Art. 17 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen (Art. 18 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht auf Datenübertragbarkeit (Art. 20 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben ein Widerspruchsrecht gegen die Verarbeitung Sie betreffender personenbezogener Daten (Art. 21 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht nicht einer ausschließlich auf einer automatisierten Verarbeitung – einschließlich Profiling – beruhenden Entscheidung unterworfen zu werden, die Ihnen gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt (Art. 22 DSGVO),
+        <br />
+        <br /> 
+        • Sie haben das Recht, sich bei einem vermuteten Verstoß gegen das Datenschutzrecht bei der zuständigen Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Zuständig ist die Aufsichtsbehörde an Ihrem üblichen Aufenthaltsort, Arbeitsplatz oder am Ort des vermuteten Verstoßes.
+        
+        <br />
+        <br />
+        Kontaktdaten unseres Datenschutzbeauftragen
+        <br />
+        <br /> 
+        E-Mail: kontakt@skateboardfueralle.org
+        </p>
+        <br> <br> <br>
+</section>
+
+
+{% endblock %}
+

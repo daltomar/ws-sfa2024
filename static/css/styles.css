@@ -1,0 +1,525 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+  
+}
+
+main {
+    flex: 1;
+    margin-top: 2rem; /* To prevent content from being hidden behind the fixed header */
+    z-index: 1;
+    display: flex; /* Make main a flex container */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    max-width: 1200px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    /*background-color: #04AA6D;*/
+    background-color:rgba(62, 68, 68, 1);
+    overflow: hidden;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgba(62, 68, 68, 0.5);
+    color: black;
+  }
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    /*background-color: #038A5A;*/
+    background-color:rgba(62, 68, 68, 0.25);
+    color: white;
+  }
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+/* ######################################################## Logo SKT + Logo Text from index page / animation  */
+
+/* Index page has no footer */
+.no-footer .footer-container {
+    display: none;
+}
+
+.background {
+    background-image: url('/static/images/SFA_bck.png');
+    background-size: cover;  /*Ensure the background image covers the entire viewport */
+    /* background-size: contain; */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Semi-transparent overlay for the watermark effect */
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 249, 249, 0.7); /* Watermark color with 0.8 opacity */
+    z-index: 1; /* Place it over the background image */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /*Full viewport height*/ 
+    max-width: 100%;
+    width: 100%;
+    text-align: center; /* Center text */
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+#container_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: normal; */
+    padding-top: 5rem;
+    max-width: 100%;
+    width: 100%;
+    height: 90%;
+    flex-grow: 1; /* Add this to allow the container to take up available space*/
+}
+
+#logo {
+    animation-name: ollie;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    max-width: 100%;
+    height: auto;
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-right: auto;
+    z-index: 500;
+}
+
+#logo_text {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-play-state: running;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin: 5px auto 0 auto;
+    padding-top: 33px;
+    z-index: 600;
+}
+
+#motto {
+    text-align:justify;
+    animation-name: slide;
+    animation-duration: 6s;
+    animation-play-state: running;
+    display: block;
+    max-width: 85%;
+    height: auto;
+    margin-top: 40px;
+    font-size: medium;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#ollie {
+    display: block;
+    margin: auto;
+    border: #fff
+}
+
+
+@media (max-width: 768px) {
+    .background {
+        background-size: 150%;
+    }
+}
+
+/* INDEX MOBILE ----------------------------------------------------> */
+@media (max-width: 480px) {
+    .background {
+        background-image: url('/static/images/SFA_bck-vert.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    #container_logo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: flex-start;
+        margin-top: 10px;
+        align-items: center;
+        padding-top: 10rem;
+        max-width: 100%;
+        width: 100%;
+        height: 90%;
+        flex-grow: 1; /* Add this to allow the container to take up available space*/
+        margin-top: 20px;
+    }
+    #logo_text {
+        padding-top: 3px;
+    }
+    
+    #motto {
+        margin-top: 120px;
+        font-weight: 200;
+    }
+}
+
+
+/* Animations -------------------> Slide -> Logo Text */
+@keyframes slide {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animations -------------------> Ollie -> Logo sk8 */
+@keyframes ollie {
+
+    0% {
+        transform: translateX(100%);
+        transform: translateY(5000%)
+    }
+
+    45% {
+        
+        /*transform: translateY(-20%);*/
+    }
+
+    100% {
+        transform: translateX(100%);
+        transform: translateY(-12%);
+    }
+}
+
+
+/* Animations -------------------> Slide -> Logo Text */
+@keyframes slide_in {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/* --------------------------------------------About page */
+
+.about_box {
+    max-width: 95%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.about-pic-container {
+    width: 200px;
+    height: 100px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-pic-container img {
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: black;
+    /*float: left;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/*                          Projects Page */
+
+.p1-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 1px;
+    max-width: 85%;
+}
+
+.project-box {
+    max-width: 95% ;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35px;
+}
+
+.p2-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 1px;
+    max-width: 85%;
+}
+
+.projects-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: black;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+/* -------------------Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    text-align: left !important;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot1 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot1:hover {
+    background-color: #717171;
+}
+
+.dot2 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot2:hover {
+    background-color: #717171;
+}
+
+/*                                                   News Page */
+
+.news_container {
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.news_box {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 1rem 1rem;
+    background-color: white;
+    border: black;
+}
+
+.newstext {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: black;
+    /*float: left;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.news-pic-container {
+    width: 100%;
+    height: auto;
+    /*float: left;*/
+}
+
+.news-pic-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+}
+
+.grid {
+    display: grid;
+    align-items: start;  /* Alterado em 26.08. - Chat GPT */
+    /* border: 2px solid black; */
+}
+
+@media screen and (min-width: 758px) {
+    .grid--1x2 {
+      grid-template-columns: 1fr 3fr;
+    }
+}
+  
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+}
+
+/*                                                   Footer */
+
+.footer-container {
+    display: flex;
+    align-items: center; /* Vertically center the lines with the logo */
+    justify-content: center; /* Horizontally center the whole element */
+    /* position: relative; */
+    position: fixed;
+    width: 95%;
+    padding: 5px 0;
+    margin-top: auto; /* Push the logo container to the bottom */
+    z-index: 100;
+    bottom: 0;
+    background-color: #fff;
+}
+
+/* Style for the logo */
+.footer-logo {
+    width: 15vw;
+    max-width: 80px;
+    height: auto;
+
+}
+
+/* Style for the lines */
+.footer-line {
+    height: 2px;
+    background-color: black;
+    width: 90%;
+}
+

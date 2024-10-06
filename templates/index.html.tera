@@ -1,0 +1,27 @@
+{% extends "layout" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body class="no-footer">
+
+<div class="background">
+    <div id="container">
+        <div id="container_logo">
+            <img id="logo_text" src="/static/images/sfa_skt_text.png" alt="">
+            <img id="logo" src="/static/images/sfa_skt.gif" alt="">
+            <p id="motto">Wir sammeln Skateboardteile und verteilen sie an Kinder und Jugendliche in Brasilien.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/static/js/intro.js"></script>
+</body>
+
+
+{% endblock %}
+
+

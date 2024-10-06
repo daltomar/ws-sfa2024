@@ -1,0 +1,46 @@
+{% extends "layout" %}
+
+
+{% block content %}
+
+
+<div class="about-pic-container">
+<img  class="about-pic" src="/static/images/SFA_Logo_v03.png" alt="">
+</div>
+
+<section class="about_box">
+    <h3 class="about-header">…..and Skateboards for all!</h3>
+        <p class="about-text">
+        Im Jahr 2019 erfüllte sich Thais De Fusco ihren Kindheitstraum und
+        begann Skateboard zu fahren. Danilo Altomar ist in seiner Kindheit viel
+        Skateboard gefahren und wollte nach vielen Jahren Pause mal wieder auf
+        vier Rädern rollen.
+        <br />
+        <br />
+        Seitdem können wir uns ein Leben ohne Skateboard nicht mehr vorstellen. Als Brasilianer
+        die in Deutschland wohnen, besuchen wir jährlich unsere Familien in Sao
+        Paulo. Leider kann man dort Armut und Elend in jeder Ecke sehen. In den Skateparks teilen
+        sich oft mehrere Kinder ein einziges Skateboard, denn viele wollen
+        Skateboard fahren aber haben keins.
+        <br />
+        Das hat uns sehr berührt und wir
+        wollten irgendwie helfen. Deswegen sind wir auf die Idee von “Skateboard
+        für alle” gekommen. Unser Ziel ist es, so vielen Kindern und Jugendlichen
+        wie möglich Skateboard zur Verfügung zu stellen. Wir hoffen, dass
+        wir vielen Kindern und Jugendlichen die Gelegenheit geben können, das
+        Skateboard-Fahren zu genießen.
+        <br />
+        <br />
+        Wir freuen uns über jede Spende von Skateboardteilen oder ganzes
+        Skateboards (gebraucht oder neu). Wenn Du alte Skateboard Teile übrig 
+        hast und mitmachen möchtest, bitte kontaktiere uns.
+        </p>
+        Kontakt : kontakt@skateboardfueralle.org
+        <br>
+        <br> 
+        <br>
+</section>
+
+
+{% endblock %}
+

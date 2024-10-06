@@ -1,0 +1,13 @@
+[global]
+address = "0.0.0.0"
+port = 8000
+
+[development]
+address = "localhost"
+port = 8000
+log_level = "debug"
+
+
+[release]
+log = "critical"
+secret_key = {source = "env", name = "ROCKET_SECRET_KEY"}

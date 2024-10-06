@@ -1,0 +1,51 @@
+{% extends "layout" %}
+
+
+{% block content %}
+
+
+<section class="about_box">
+    <h3 class="about-header">Impressum</h3>
+        <p class="about-text">
+        Skateboard für alle
+        <br /> 
+        Vertreten durch:
+        <br />
+        Danilo de Freitas Altomar (1. Vorsitzender)
+        <br />
+         Jahnstr. 2/1
+        <br />
+         75397 Simmozheim
+        <br /> 
+         E-Mail: kontakt@steboardfueralle.org
+        <br />
+        <br />
+        Gemeinnützig anerkannt seit 30.07.2024
+        <br />
+        Inhaltlich verantwortlich gemäß § 55 Abs. 2 RsTv (V.i.S.d.M.): Danilo de Freitas Altomar
+        <br />
+        <br />
+        Haftung für Links:
+        <br />
+        Unsere Website enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben.
+        Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
+        Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
+        wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum
+        Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist
+        jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei bekannt werden von Rechtsverletzungen
+        werden wir derartige Links umgehend entfernen.
+        <br />
+        <br />
+        Urheberrechtshinweis:
+        <br />
+        Die Organisation behält sich alle Rechte an dieser Webseite und ihren Inhalten vor. Sie ist
+        entweder Urheber oder hat sich die entsprechenden Nutzungsrechte einräumen lassen.
+        </p>
+        <br />
+        <a href="/datenschutz" class="link-arrow">Datenschutz</a>
+        <br> <br> <br>
+</section>
+
+
+{% endblock %}
+
