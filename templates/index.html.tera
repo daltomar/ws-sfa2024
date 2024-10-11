@@ -10,7 +10,7 @@
         <div id="container_logo">
             <img id="logo_text" src="/static/images/sfa_skt_text.png" alt="">
             <img id="logo" src="/static/images/sfa_skt.gif" alt="">
-            <p id="motto">Wir sammeln Skateboardteile und verteilen sie an Kinder und Jugendliche in Brasilien.</p>
+            <img id="motto" src="/static/images/SFA_motto.png" alt="">
         </div>
     </div>
 </div>
