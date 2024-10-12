@@ -348,7 +348,7 @@ header {
     max-width: 95% ;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 35px;
+    padding-bottom: 75px;
 }
 
 .p2-header {
@@ -501,21 +501,33 @@ header {
     /* border: 2px solid black; */
 }
 
-@media screen and (min-width: 758px) {
+/*@media screen and (min-width: 758px) and (max-width: 1024px) {
     .grid--1x2 {
       grid-template-columns: 1fr 3fr;
+      column-gap: 20px;
+    }
+
+    .newstext {
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: large;
     }
 }
-  
+*/  
+
 @media screen and (min-width: 1024px) {
     .grid--1x3 {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 30px;
     }
-}
 
-@media (min-width: 768px) {
+
     .newstext {
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
         font-size: large;
     }
 }

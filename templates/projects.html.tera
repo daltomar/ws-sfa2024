@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h2 id="psp-header" class="p1-header"><span>Projekte</span></h2>
+<h1 id="psp-header" class="p1-header"><span>Projekte</span></h1>
 <section class="project-box">
   <p class="projects-text">
       <br />
@@ -15,7 +15,8 @@
   </p>
 </section>
 
-<h2 id="psp-header" class="p2-header"><span>Projeto Skate Poético</span></h2>
+ <img id="" src="/static/images/PSP_Logo.png" alt="">
+
 <section class="project-box">
 
 <!-- Slideshow container -->
@@ -67,10 +68,10 @@
     und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
     Kalender besser organisiert.
      </p>
-     <br />
+  
 
 
-    <br>
+
     <p class="projects-text">
     Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
     (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape- Schneiden und Bemalen, sowie
@@ -84,6 +85,8 @@
     <br />
     Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
   </p>
+
+  <p class="projects-text"><a href= "https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
 </section>
 
     <h2 id="vpsp-header" class="p2-header"><span>Vila Prudente Skate Park</span></h2>
@@ -137,10 +140,7 @@
         auch an der kirchlich Gruppe „Cristo na Base“, die verschiedenen Angebote für Kinder und Jungendliche Osts
         São Paulos fördert.
        </p>
-        <br />
-
-        
-        <br>
+  
         <p class="projects-text">
         Der Skate Park in Stadtteil Vila Prudente gehört zu den Skateparks, die häufig von Mailton besucht werden.
         Dort ist unsere Idee von “Skateboard für alle” geboren, vor allem weil wir von vielen Kindern angesprochen wurden.
@@ -152,11 +152,5 @@
 
 <script src="/static/js/projects.js"></script>
 
-<div id="last_block">
-  <div class="gambifooter-logo">
-    <div class="gambifooter-logo-pic-container">
-       <img class="gambifooter-logo-pic" src="/static/pics/SFA_Logo_v02.png" alt="">
-    </div>
-  </div>
-</div>
+
 {% endblock %}

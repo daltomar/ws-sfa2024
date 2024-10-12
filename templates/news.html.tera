@@ -9,11 +9,15 @@
   <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <picture>
+            <source srcset="/static/images/PSP_04.png" media="(min-width: 1024px)" />
             <img
               src="/static/images/PSP_04.png"
               alt="Skaters"
               class="news_bild"
-            /></div>
+            />
+            </picture>
+            </div>
           <div class="newstext">
             <h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4>
             <p>
@@ -108,7 +112,7 @@
   <div class="grid grid--1x2">
         <div class="news-pic-container">
         <img
-          src="/static/images/SFA_03.png"
+          src="/static/images/PSP_03.png"
           alt="Skaters"
           class="news_bild"
         /></div>
