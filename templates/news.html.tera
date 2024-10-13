@@ -9,17 +9,17 @@
   <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
-            <picture>
-            <source srcset="/static/images/PSP_04.png" media="(min-width: 1024px)" />
+            <picture class="image-container">
+            <source srcset="/static/images/PSP_04-m.png" media="(min-width: 1024px)" />
             <img
               src="/static/images/PSP_04.png"
               alt="Skaters"
               class="news_bild"
             />
+            <div class="image-title"><h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4></div>
             </picture>
             </div>
           <div class="newstext">
-            <h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4>
             <p>
               Am 24.03.2024 waren wir beim Projekt “Skate Poetico”. Wir haben die neuen Installation im Gebäude der Sambaschule “Escola de Samba Unidos de Santa Barbara”
               besucht und die gespendeten Skateboardteile übergeben. Da das Projekt Skate Poetico jetzt mehr Teilnehmer hat, kommen die gespendeten Materialien sehr gut entgegen. 
@@ -37,13 +37,17 @@
   <section class="news_box">
     <div class="grid grid--1x2">
           <div class="news-pic-container">
+          <picture class="image-container">
+          <source srcset="/static/images/VP_08.png" media="(min-width: 1024px)" />
           <img
             src="/static/images/VP_08.png"
             alt="Skaters"
             class="news_bild"
-          /></div>
+          />
+          <div class="image-title"> <h4>20.03.24 - Freundliche Wettbewerbe an Vila Prudente Skate Park</h4></div>
+          </picture>
+          </div>
         <div class="newstext">
-          <h4>20.03.24 - Freundliche Wettbewerbe an Vila Prudente Skate Park</h4>
           <p>
             Mailton dos Santos leitet im Moment das Projekt “Skate para todos”, das kostenlose Skateboard-Unterrichte anbietet.
             Gemeinsam haben wir eine kleine Party für die Teilnehmer organisiert, wo zwei freundliche Wettbewerbe stattgefunden haben.
@@ -60,13 +64,17 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/O_Logo_Klippel.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/O_Logo_Klippel.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>20.02.24 - Unterstützung von KLIPPEL Stiftung</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>20.02.24 - Unterstützung von KLIPPEL Stiftung</h4>
         <p>
           Die KLIPPEL Stiftung ist eine anerkannt gemeinnützige Organisation und unterstützt Projekte, in denen Kinder, Jugendliche
           und Erwachsene kreativ werden oder sich gemeinsam sportlich oder musikalisch betätigen.
@@ -77,20 +85,23 @@
         </p>
       </div>
       </div>
-
 </section>
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/VP_07.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/VP_07.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>14.01.23 - Best Trick Wettkampf auf dem Vila Prudente Skatepark</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>14.01.23 - Best Trick Wettkampf auf dem Vila Prudente Skatepark</h4>
         <p>
           Am 15. Dezember 2022 haben wir einen kleinen „Best Trick“-Wettbewerb organisiert, um die Skaters des
           <a href="https://www.instagram.com/vilaprudenteskateplaza/"
@@ -101,23 +112,25 @@
           <br />
           Hoffentlich ist das die erste von vielen Veranstaltungen!!
         </p>
-
       </div>
       </div>
-
 </section>
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/PSP_03.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/PSP_03.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>14.01.23 - Spendenaktion an "Projeto Skate Poético" 2022</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>14.01.23 - Spendenaktion an "Projeto Skate Poético" 2022</h4>
         <p>
           Am 11. Dezember 2022 waren wir beim <a href="https://www.instagram.com/projetoskatepoetico/"
           >Projeto Skate Poético</a>, um die gespendeten Materialien vorbeizubringen.
@@ -125,23 +138,25 @@
           Nochmal vielen Dank an alle, die die Teilen gespendet haben, und wir hoffen, dass wir nächstes Jahr diese Aktion
           wiederholen können!
         </p>
-
       </div>
       </div>
-
 </section>
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/PSP_02.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/PSP_02.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>22.01.22 - Spendenaktion an "Projeto Skate Poético" 2021</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>22.01.22 - Spendenaktion an "Projeto Skate Poético" 2021</h4>
         <p>
           Im Laufe des Jahres 2021 wurden an uns Skateboards, Kleidungen und
           Bücher gespendet und im Dezember waren wir bei Projeto Skate
@@ -149,37 +164,36 @@
           sein und die Begeisterung der Kinder zu sehen, die sofort die Boards
           holten und starteten zu spielen. Mehr Bilder und Videos kann man auf
           <a href="https://www.instagram.com/projetoskatepoetico/"
-            >Instagram</a
-          >
+            >Instagram</a>
           finden.
-
           <br />
           <br />
           Wir möchten uns bei allen Spendern herzlichen bedanken!
         </p>
       </div>
       </div>
-
 </section>
-
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/VP_06.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/VP_06.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>22.01.22 - Spendenaktion an "Vila Prudente Skate Park"</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>22.01.22 - Spendenaktion an "Vila Prudente Skate Park"</h4>
-        <p>
+       <p>
           Aufgrund der großen Spendenmenge mussten wir ein paar Skateboards
           per Post schicken. Leider ist das Paket bisher vermisst. Das war uns
           sehr Schade, aber zumindest konnten wir ein Teil der Spende an das
           Projekt Vila Prudente Skate Park abgeben.
-
           <br />
           <br />
           Wir hoffen, dass wir das Paket zurückbekommen, um es am Ende des
@@ -187,21 +201,23 @@
         </p>
       </div>
       </div>
-
 </section>
-
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/SFA_03.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/SFA_03.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"> <h4>27.06.21 - Aktion 2021 läuft!</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>27.06.21 - Aktion 2021 läuft!</h4>
         <p>
           Wir haben schon ein paar Teile für die Aktion im Jahr 2021
           gesammelt. Ziel ist es, mindestens die gleiche Menge wie im Jahr
@@ -215,20 +231,23 @@
         </p>
       </div>
       </div>
-
 </section>
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/PSP_01.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/PSP_01.png"
           alt="Skaters"
           class="news_bild"
-        /></div>
+        />
+         <div class="image-title"><h4>19.06.2021 - Wir werden das Projekt “Skate Poético” unterstützten!</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>19.06.2021 - Wir werden das Projekt “Skate Poético” unterstützten!</h4>
         <p>
           Wir haben das Projekt “Skate Poético” kennengelernt - eine Aktion,
           die Skateboard und Kultur für Kinder aus einem armen Stadtviertel
@@ -238,20 +257,23 @@
         </p>
       </div>
       </div>
-
 </section>
 
 
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <picture class="image-container">
+        <source srcset="/static/images/SFA_01.png" media="(min-width: 1024px)" />
         <img
           src="/static/images/SFA_01.png"
           alt="Skateboards"
           class="news_bild"
-        /></div>
+        />
+        <div class="image-title"><h4>01.06.2021 - Unsere erste Aktion.</h4></div>
+          </picture>
+        </div>
       <div class="newstext">
-        <h4>01.06.2021 - Unsere erste Aktion.</h4>
         <p>
           Wir haben unsere erste Aktion im Dezember 2020 durchgeführt. Wir
           konnten 10 Skateboards zusammenbauen und an Kinder im “Vila Prudente
@@ -265,7 +287,6 @@
         </p>
       </div>
       </div>
-
 </section>
 
 

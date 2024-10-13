@@ -15,7 +15,7 @@
   </p>
 </section>
 
- <img id="" src="/static/images/PSP_Logo.png" alt="">
+ <img id="psp-logo" src="/static/images/PSP_Logo.png" alt="">
 
 <section class="project-box">
 

@@ -369,6 +369,14 @@ header {
     hyphens: auto;
 }
 
+@media (max-width: 768px) {
+    #psp-logo{
+        max-width: 250px;
+        height: auto;
+    }
+
+}
+
 @media (min-width: 768px) {
     .p1-header{
         font-size: x-large;
@@ -501,21 +509,6 @@ header {
     /* border: 2px solid black; */
 }
 
-/*@media screen and (min-width: 758px) and (max-width: 1024px) {
-    .grid--1x2 {
-      grid-template-columns: 1fr 3fr;
-      column-gap: 20px;
-    }
-
-    .newstext {
-        align-items: center;
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: large;
-    }
-}
-*/  
-
 @media screen and (min-width: 1024px) {
     .grid--1x3 {
       grid-template-columns: repeat(3, 1fr);
@@ -532,6 +525,48 @@ header {
     }
 }
 
+/*                                                   TEST IMAGE LEGEND */
+
+.image-container {
+    position: relative; /* Make the container a positioned element */
+    display: inline-block; /* Keep the container the size of the image */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-title {
+    position: absolute;
+    bottom: 8px; /* Adjust this if needed */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Move the container to truly center */
+    padding: 4px 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+    color: white;
+    text-align: center; /* Center text inside the container */
+    border-radius: 4px;
+    max-width: 95%; /* Max width for preventing overflow */
+}
+
+/* Mobile Version (screens smaller than 768px) */
+@media (max-width: 768px) {
+    .image-title {
+        width: 90%; /* Fixed width: 90% of the image for mobile */
+        font-size: 14px; /* Adjust font size as needed */
+    }
+}
+
+/* Larger Screens (screens wider than 768px) */
+@media (min-width: 769px) {
+    .image-title {
+        width: 100%; /* Fixed width: 60% of the image for larger screens */
+        font-size: 16px; /* Adjust font size as needed */
+    }
+}
+  
+
 /*                                                   Footer */
 
 .footer-container {
@@ -545,7 +580,7 @@ header {
     margin-top: auto; /* Push the logo container to the bottom */
     z-index: 100;
     bottom: 0;
-    background-color: #fff;
+    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0) 50%);
     max-width: 1200px;
 }
 
@@ -560,7 +595,7 @@ header {
 /* Style for the lines */
 .footer-line {
     height: 2px;
-    background-color: black;
+    background-color: rgba(62, 68, 68, 1);
     width: 90%;
     max-width: 1200px;
 }
