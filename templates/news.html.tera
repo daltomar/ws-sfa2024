@@ -10,7 +10,7 @@
       <div class="grid grid--1x2">
             <div class="news-pic-container">
             <picture class="image-container">
-            <source srcset="/static/images/PSP_04-m.png" media="(min-width: 1024px)" />
+            <source srcset="/static/images/PSP_04-m2.png" media="(min-width: 1024px)" />
             <img
               src="/static/images/PSP_04.png"
               alt="Skaters"
