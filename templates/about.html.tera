@@ -37,6 +37,11 @@
         </p>
         <p class="about-text">Kontakt : kontakt@skateboardfueralle.org</p>
         <br>
+        <div class="about-pic2-container">
+        <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" style="text-decoration: none;">
+        <img class="about-pic2" src="/static/images/instagram_logo.png" alt="Instagram">
+        </div>
+    </a>
         <br> 
         <br>
 </section>

@@ -10,6 +10,37 @@
       <div class="grid grid--1x2">
             <div class="news-pic-container">
             <picture class="image-container">
+            <source srcset="/static/images/SFA_05.png" media="(min-width: 1024px)" />
+            <img
+              src="/static/images/SFA_05.png"
+              alt="Skaters"
+              class="news_bild"
+            />
+            <div class="image-title"><h4>01.11.24 - Amtliche Annerkenung !</h4></div>
+            </picture>
+            </div>
+          <div class="newstext">
+            <p>
+              Ab jetzt sind wir offiziell als gemeinnützige Organisation anerkannt! Das heißt, wir dürfen jetzt Geldspenden annehmen
+               und Spendenquittungen ausstellen. Dadurch können wir teilweise auch Skateboardteile direkt in Brasilien kaufen und du
+                kannst Steuer sparen, da die Spende steuerlich absetzbar ist.
+              <br />
+              <br />
+              Wir werden weiterhin Skateboardteile als Gepäck auf unseren Reisen nach Brasilien mitnehmen, möchten aber den Versand
+               per Post vermeiden, da dieser sehr teuer und bürokratisch ist. 
+              <br />
+              <br />
+              Falls du uns unterstützen möchtest, kontaktiere uns gerne über kontakt@skateboardfueralle.org.
+            </p>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="news_box">
+      <div class="grid grid--1x2">
+            <div class="news-pic-container">
+            <picture class="image-container">
             <source srcset="/static/images/PSP_04-m2.png" media="(min-width: 1024px)" />
             <img
               src="/static/images/PSP_04.png"
