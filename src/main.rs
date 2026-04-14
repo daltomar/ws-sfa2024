@@ -42,11 +42,16 @@ fn datenschutz() -> Template {
     Template::render("datenschutz", &context)
 }
 
+#[get("/hilfmit")]
+fn hilfmit() -> Template {
+    let context: HashMap<String, String> = HashMap::new();
+    Template::render("hilfmit", &context)
+}
 
 #[launch]
 fn rocket() -> _{
     rocket::build()
-        .mount("/", routes![index, about, projects, news, impressum, datenschutz])
+        .mount("/", routes![index, about, projects, news, impressum, datenschutz, hilfmit])
         .mount("/static", FileServer::from(relative!("static")))
         .attach(Template::fairing())
 }

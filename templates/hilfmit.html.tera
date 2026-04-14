@@ -1,0 +1,14 @@
+{% extends "layout" %}
+
+
+{% block content %}
+
+
+<div class="banner-hilf-container">
+<img  class="banner-hilf" src="/static/images/SFA_banner_hilfmit.png" alt="">
+</div>
+
+
+
+{% endblock %}
+
