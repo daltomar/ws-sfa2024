@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="/static/images/favicon.png" type="image/x-icon">
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <header>
         <div class="topnav" id="myTopnav">
             <a href="/" class="active">Home</a>
@@ -35,6 +35,5 @@
     </main>
 
     <script src="/static/js/menu.js"></script>
-    <script src="/static/js/intro.js"></script>
 </body>
 </html>
