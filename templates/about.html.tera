@@ -5,7 +5,7 @@
 
 
 <div class="about-pic-container">
-<img  class="about-pic" src="/static/images/SFA_Logo_v03.png" alt="">
+<img  class="about-pic" src="/static/images/SFA_Logo_v03.png" alt="Skateboard für alle Logo" loading="lazy">
 </div>
 
 <section class="about_box">
@@ -35,8 +35,7 @@
         <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" style="text-decoration: none;">
         Instagram</a>
         </p>
-    </a>
-        <br> 
+        <br>
         <br>
 </section>
 
