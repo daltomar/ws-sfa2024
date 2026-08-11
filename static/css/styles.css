@@ -332,18 +332,11 @@ body.home main {
 @keyframes ollie {
 
     0% {
-        transform: translateX(100%);
-        transform: translateY(5000%)
-    }
-
-    45% {
-        
-        /*transform: translateY(-20%);*/
+        transform: translateX(-150%);
     }
 
     100% {
-        transform: translateX(100%);
-        transform: translateY(-12%);
+        transform: translateX(0);
     }
 }
 
