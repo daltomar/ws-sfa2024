@@ -155,7 +155,7 @@ header {
 
 #logo {
     animation-name: ollie;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-play-state: paused;
     max-width: 100%;
@@ -167,9 +167,9 @@ header {
 }
 
 #logo_text {
-    animation-name: slide;
-    animation-duration: 2s;
-    animation-play-state: running;
+    /* animation-name: slide; */
+    /* animation-duration: 2s; */
+    /* animation-play-state: running; */
     display: block;
     max-width: 100%;
     height: auto;
@@ -181,9 +181,9 @@ header {
 
 #motto {
     text-align:justify;
-    animation-name: slide;
-    animation-duration: 6s;
-    animation-play-state: running;
+    /* animation-name: slide; */
+    /* animation-duration: 6s; */
+    /* animation-play-state: running; */
     display: block;
     max-width: 85%;
     height: auto;
