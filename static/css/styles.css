@@ -121,67 +121,53 @@ body.home main {
     pointer-events: none;
 }
 
-/* Centered floating "pill" nav, homepage only (scoped via body.home) */
-body.home .topnav {
-    position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: calc(100% - 32px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 16px;
-    border-radius: 999px;
-    background-color: rgba(8, 8, 8, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-}
-
-body.home .topnav a {
-    float: none;
-    padding: 10px 26px;
-    border-radius: 999px;
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-body.home .topnav a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-}
-
-body.home .topnav a.active {
-    background-color: rgba(255, 255, 255, 0.22);
-    color: #fff;
-}
-
-@media (max-width: 600px) {
-    /* Collapse back to the exact site-wide mobile nav pattern below
-       the existing 600px breakpoint - homepage matches every other
-       page here, unchanged. */
+/* Centered floating "pill" nav, homepage only (scoped via body.home).
+   Wrapped in a min-width query matching the site's existing 600px
+   mobile breakpoint exactly, rather than declaring these rules
+   unconditionally and trying to undo each property again below
+   600px - that approach previously missed resetting link padding/
+   font-size/white-space, leaking the desktop pill's sizing into the
+   mobile hamburger dropdown. Scoping to min-width means there is
+   nothing to undo: below 600px none of these rules exist, so the
+   homepage's mobile nav is guaranteed identical to every other page,
+   not just coincidentally matching. */
+@media (min-width: 601px) {
     body.home .topnav {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        max-width: 100%;
-        border-radius: 0;
-        background-color: rgba(62, 68, 68, 1);
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border: none;
-        box-shadow: none;
-        padding: 0;
+        position: fixed;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: calc(100% - 32px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background-color: rgba(8, 8, 8, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
     body.home .topnav a {
-        border-radius: 0;
+        float: none;
+        padding: 10px 26px;
+        border-radius: 999px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    body.home .topnav a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
+    }
+
+    body.home .topnav a.active {
+        background-color: rgba(255, 255, 255, 0.22);
+        color: #fff;
     }
 }
 
