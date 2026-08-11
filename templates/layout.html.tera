@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <header>
-        <div class="topnav" id="myTopnav">
+        <nav class="topnav" id="myTopnav">
             <a href="/" class="active">Home</a>
             <a href="/about">Über uns</a>
             <a href="/projects">Projekte</a>
@@ -19,19 +19,17 @@
             <a href="/impressum">Impressum</a>
             <a href="javascript:void(0);" class="icon" onclick="toggle()"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             </a>
-        </div>
+        </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
+    </main>
 
-  
-        <div class="footer-container">
+    <footer class="footer-container">
         <div class="footer-line"></div>
         <img src="/static/images/SFA_Logo_v02.png" alt="Logo" class="footer-logo">
         <div class="footer-line"></div>
-    </div>
-
-    </main>
+    </footer>
 
     <script src="/static/js/menu.js"></script>
 </body>

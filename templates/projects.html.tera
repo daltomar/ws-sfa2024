@@ -15,7 +15,7 @@
   </p>
 </section>
 
- <img id="psp-logo" src="/static/images/PSP_Logo.png" alt="">
+ <img id="psp-logo" src="/static/images/PSP_Logo.png" alt="Projeto Skate Poético Logo">
 
 <section class="project-box">
 
@@ -25,19 +25,19 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides1">
 
-      <img src="/static/images/PSP_01.png" style="width:100%">
+      <img src="/static/images/PSP_01.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
 
     </div>
 
     <div class="mySlides1">
 
-      <img src="/static/images/PSP_11.png" style="width:100%">
+      <img src="/static/images/PSP_11.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
 
     </div>
 
     <div class="mySlides1">
 
-      <img src="/static/images/PSP_16.png" style="width:100%">
+      <img src="/static/images/PSP_16.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
 
     </div>
 
@@ -97,19 +97,19 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides2">
 
-              <img src="/static/images/VP_04.png" style="width:100%">
+              <img src="/static/images/VP_04.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 1)" loading="lazy">
 
             </div>
 
             <div class="mySlides2">
 
-              <img src="/static/images/VP_05.png" style="width:100%">
+              <img src="/static/images/VP_05.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 2)" loading="lazy">
 
             </div>
 
             <div class="mySlides2">
 
-              <img src="/static/images/VP_01.png" style="width:100%">
+              <img src="/static/images/VP_01.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
 
             </div>
 
@@ -147,6 +147,7 @@
         Die Kinder waren total begeistert und wollten die Skateboards gar nicht zurückgeben. Bei einer von uns ins Leben
         gerufenen Spendenaktion 2020 in diesem Park, haben wir durch Zufall Maiton kennengelernt. Er hat uns sofort bei der
         Skateboard-Verteilung geholfen und wir hoffen, dass diese Partnerschaft lang gehalten wird.
+        </p>
         </section>
 
 
