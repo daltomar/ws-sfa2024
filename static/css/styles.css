@@ -96,6 +96,15 @@ header {
     display: none;
 }
 
+/* main's margin-top (2rem, see the base `main` rule) exists to clear
+   the fixed header on normal in-flow pages. On the homepage,
+   #container_logo's own padding-top already clears the floating nav
+   inside its own 100vh box, so that margin only adds dead space below
+   the viewport and forces a few pixels of pointless page scroll. */
+body.home main {
+    margin-top: 0;
+}
+
 /* Full-bleed blurred background layer, fills the space outside the
    1200px-capped content column on wide screens. Fixed + oversized so
    the blur never shows a hard edge; sits behind everything else. */
