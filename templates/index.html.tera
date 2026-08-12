@@ -8,9 +8,9 @@
 <div class="background">
     <div id="container">
         <div id="container_logo">
-            <img id="logo_text" src="/static/images/sfa_skt_text.png" alt="Skateboard für alle">
+            <img id="logo_text" src="/static/images/logo_text.png" alt="Skateboard für alle">
             <img id="logo" src="/static/images/sfa_skt.gif" alt="Animiertes Skateboard-Logo">
-            <img id="motto" src="/static/images/SFA_motto.png" alt="…and Skateboards for all!">
+            <img id="motto" src="/static/images/slogan.png" alt="Wir fördern Skateboarding">
         </div>
     </div>
 </div>
