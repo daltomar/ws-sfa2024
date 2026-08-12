@@ -219,7 +219,7 @@ body.home main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: calc(5rem + 75px);
+    padding-top: calc(5rem + 100px);
     padding-bottom: 60px;
     max-width: 100%;
     width: 100%;
