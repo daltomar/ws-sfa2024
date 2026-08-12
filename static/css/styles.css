@@ -134,7 +134,7 @@ body.home main {
 @media (min-width: 601px) {
     body.home .topnav {
         position: fixed;
-        top: 16px;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
@@ -145,10 +145,8 @@ body.home main {
         gap: 8px;
         padding: 6px 16px;
         border-radius: 999px;
-        background-color: rgba(8, 8, 8, 0.7);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        background-color: #ffffff;
+        border: 1px solid rgba(8, 8, 8, 0.12);
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
@@ -158,16 +156,17 @@ body.home main {
         border-radius: 999px;
         font-size: 15px;
         white-space: nowrap;
+        color: rgb(8, 8, 8);
     }
 
     body.home .topnav a:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        color: #fff;
+        background-color: rgba(8, 8, 8, 0.08);
+        color: rgb(8, 8, 8);
     }
 
     body.home .topnav a.active {
-        background-color: rgba(255, 255, 255, 0.22);
-        color: #fff;
+        background-color: rgba(8, 8, 8, 0.12);
+        color: rgb(8, 8, 8);
     }
 }
 
