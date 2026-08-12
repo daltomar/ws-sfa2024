@@ -208,11 +208,11 @@ body.home main {
     overflow: hidden;
     /* Notch cut into the top-center, cradling the floating pill nav:
        straight diagonals from the two top corners down to a point
-       25px deep at the horizontal center (~the nav's own vertical
-       middle). The area above these lines shows the page's white
-       background instead of the image - the nav itself (position:
-       fixed) is unaffected, it paints in its own layer regardless. */
-    clip-path: polygon(0 0, 50% 25px, 100% 0, 100% 100%, 0 100%);
+       50px deep at the horizontal center. The area above these lines
+       shows the page's white background instead of the image - the
+       nav itself (position: fixed) is unaffected, it paints in its
+       own layer regardless. */
+    clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Semi-transparent overlay for the watermark effect */
