@@ -121,6 +121,25 @@ body.home main {
     pointer-events: none;
 }
 
+/* Solid white backdrop, same 1200px-capped footprint as .background
+   (not full-viewport like .home-bg). Sits between .home-bg and
+   .background in the stacking order (same z-index, later in source
+   so it paints on top of .home-bg) so it only ever shows through
+   .background's own clip-path notch - it never covers .home-bg in
+   the true side margins beyond 1200px. */
+.hero-backdrop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* Centered floating "pill" nav, homepage only (scoped via body.home).
    Wrapped in a min-width query matching the site's existing 600px
    mobile breakpoint exactly, rather than declaring these rules
@@ -180,13 +199,20 @@ body.home main {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    /* Notch cut into the top-center, cradling the floating pill nav:
+       straight diagonals from the two top corners down to a point
+       60px deep at the horizontal center. The area above these lines
+       shows the page's white background instead of the image - the
+       nav itself (position: fixed) is unaffected, it paints in its
+       own layer regardless. */
+    clip-path: polygon(0 0, 50% 60px, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Semi-transparent overlay for the watermark effect */
