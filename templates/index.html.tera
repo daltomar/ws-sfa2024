@@ -15,7 +15,14 @@
             <img id="motto" src="/static/images/slogan.png" alt="Wir fördern Skateboarding">
         </div>
     </div>
+    <a href="#below-hero" class="scroll-indicator" aria-label="Nach unten scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+    </a>
 </div>
+
+<section id="below-hero" class="below-hero">
+    <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto" class="below-hero-img">
+</section>
 
 <script src="/static/js/intro.js"></script>
 

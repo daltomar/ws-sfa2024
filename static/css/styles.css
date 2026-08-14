@@ -12,7 +12,10 @@ body {
 
 html, body {
     height: 100%;
-  
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 main {
@@ -225,6 +228,50 @@ body.home main {
     height: 100%;
     background-color: rgba(249, 249, 249, 0.7); /* Watermark color with 0.8 opacity */
     z-index: 1; /* Place it over the background image */
+}
+
+/* Bouncing "scroll down" chevron, anchored to the bottom-center of the
+   hero. Sits above both the watermark overlay (z-index: 1) and
+   #container (z-index: 2). */
+.scroll-indicator {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1.75rem;
+    line-height: 0;
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-12px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-6px);
+    }
+}
+
+/* Section below the full-viewport hero, revealed by scrolling past it. */
+.below-hero {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 16px;
+    box-sizing: border-box;
+}
+
+.below-hero-img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
 }
 
 #container {
