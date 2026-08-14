@@ -208,7 +208,7 @@ body.home main {
     overflow: hidden;
     /* Clipped corners, going clockwise from top-left:
        - top-center notch cradling the floating pill nav: straight
-         diagonals from the two top corners down to a point 75px deep
+         diagonals from the two top corners down to a point 60px deep
          at the horizontal center. The nav itself (position: fixed)
          is unaffected, it paints in its own layer regardless.
        - bottom-right: a stepped notch, not a simple chamfer - a 275px
@@ -222,7 +222,7 @@ body.home main {
        white through all of these, same as the top notch. */
     clip-path: polygon(
         0 0,
-        50% 75px,
+        50% 60px,
         100% 0,
         100% calc(100% - 40px),
         calc(100% - 275px) calc(100% - 40px),
