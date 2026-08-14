@@ -206,30 +206,13 @@ body.home main {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
-    /* Clipped corners, going clockwise from top-left:
-       - top-center notch cradling the floating pill nav: straight
-         diagonals from the two top corners down to a point 60px deep
-         at the horizontal center. The nav itself (position: fixed)
-         is unaffected, it paints in its own layer regardless.
-       - bottom-right: a stepped notch, not a simple chamfer - a 275px
-         horizontal run starting 40px above the bottom, then a 45°
-         diagonal down to the bottom edge (equal 40px/40px legs),
-         landing 315px in from the right edge.
-       - bottom-left: a chamfer with a 35px leg up the left edge and
-         a 40px leg along the bottom (no longer a pure 45°, legs
-         differ slightly).
-       The .hero-backdrop layer behind .background (see above) shows
-       white through all of these, same as the top notch. */
-    clip-path: polygon(
-        0 0,
-        50% 60px,
-        100% 0,
-        100% calc(100% - 40px),
-        calc(100% - 275px) calc(100% - 40px),
-        calc(100% - 315px) 100%,
-        40px 100%,
-        0 calc(100% - 35px)
-    );
+    /* Notch cut into the top-center, cradling the floating pill nav:
+       straight diagonals from the two top corners down to a point
+       60px deep at the horizontal center. The area above these lines
+       shows the page's white background instead of the image - the
+       nav itself (position: fixed) is unaffected, it paints in its
+       own layer regardless. */
+    clip-path: polygon(0 0, 50% 60px, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Semi-transparent overlay for the watermark effect */
