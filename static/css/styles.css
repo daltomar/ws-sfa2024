@@ -488,129 +488,211 @@ body.home main {
 }
 
 /*                          Projects Page */
+/* Scoped entirely under body.projects-page (set via the template's
+   body_class block) so none of this leaks onto other pages that
+   share layout.html.tera. */
 
-.p1-header {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 1px;
-    max-width: 85%;
+/* Readable-column wrapper: caps line length regardless of the site's
+   wider 1200px body, with consistent side padding so text doesn't
+   touch the viewport edge on mobile. */
+body.projects-page .projects-content {
+    width: 100%;
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #252220;
 }
 
-.project-box {
-    max-width: 95% ;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 75px;
+body.projects-page .page-title {
+    margin: 60px 0 24px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
 }
 
-.p2-header {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    max-width: 85%;
+body.projects-page .page-intro {
+    margin: 0 0 3rem 0;
 }
 
-.projects-text {
+body.projects-page .projects-content p {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: black;
-    padding-left: 4px;
-    padding-right: 4px;
+    line-height: 1.6;
     text-align: justify;
     hyphens: auto;
 }
 
-@media (max-width: 768px) {
-    #psp-logo{
-        max-width: 250px;
-        height: auto;
-    }
+/* Blue is reserved for actual links; everything else uses the page's
+   warm near-black. */
+body.projects-page .projects-content a {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
 
+body.projects-page .projects-content a:hover {
+    color: #123d78;
 }
 
 @media (min-width: 768px) {
-    .p1-header{
-        font-size: x-large;
-    }
-    .p2-header{
-        font-size: x-large;
-    }
-    .projects-text {
-        font-size:larger;
+    body.projects-page .projects-content p {
+        font-size: larger;
     }
 }
 
+/* ---- Reusable project section pattern ----
+   Each project is a self-contained <section class="project"> with a
+   heading, an optional logo, a carousel, body text and an optional
+   outbound link. Dropping in a new project is just copying this
+   structure - no per-project CSS needed. */
+body.projects-page .project {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 0 4rem 0;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(37, 34, 32, 0.12);
+}
 
-/* -------------------Slideshow container */
-.slideshow-container {
-    max-width: 100%;
+/* No trailing divider/space after the last project. */
+body.projects-page .project:last-of-type {
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+body.projects-page .project__heading {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+body.projects-page .project__logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+body.projects-page .project__body p {
+    margin: 0 0 1rem 0;
+}
+
+body.projects-page .project__body p:last-child {
+    margin-bottom: 0;
+}
+
+body.projects-page .project__link {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    body.projects-page .project__heading {
+        font-size: x-large;
+    }
+}
+
+/* -------------------Carousel (shared by every project's slideshow) */
+body.projects-page .carousel {
+    width: 100%;
+}
+
+body.projects-page .carousel__track {
     position: relative;
-    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
+body.projects-page .carousel__slide {
+    display: none;
+}
+
+body.projects-page .carousel__slide.is-active {
+    display: block;
+}
+
+body.projects-page .carousel__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Soft, semi-transparent circular prev/next buttons over the image. */
+body.projects-page .carousel__control {
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.prev {
-    left: 0;
-    text-align: left !important;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-  
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* The dots/bullets/indicators */
-.dot1 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-  
-.active, .dot1:hover {
-    background-color: #717171;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.dot2 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+body.projects-page .carousel__control:hover {
+    background-color: rgba(0, 0, 0, 0.55);
 }
-  
-.active, .dot2:hover {
-    background-color: #717171;
+
+body.projects-page .carousel__control--prev {
+    left: 12px;
+}
+
+body.projects-page .carousel__control--next {
+    right: 12px;
+}
+
+/* Dots: larger than the browser-default tiny click targets, with an
+   unambiguous active state. */
+body.projects-page .carousel__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+body.projects-page .carousel__dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(37, 34, 32, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+body.projects-page .carousel__dot:hover {
+    background-color: rgba(37, 34, 32, 0.45);
+}
+
+body.projects-page .carousel__dot.is-active {
+    background-color: #252220;
+    transform: scale(1.25);
+}
+
+/* Optional per-project caption under the carousel - omitted entirely
+   for projects that don't have one, no fallback styling needed. */
+body.projects-page .carousel__caption {
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(37, 34, 32, 0.7);
 }
 
 /*                                                   News Page */
