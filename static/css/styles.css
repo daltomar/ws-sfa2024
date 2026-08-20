@@ -499,7 +499,12 @@ body.projects-page .projects-content {
     width: 100%;
     max-width: 65ch;
     margin: 0 auto;
-    padding: 0 16px;
+    /* Bottom padding clears the fixed, always-on-top .footer-container
+       (position: fixed; bottom: 0 - removed from normal flow, so
+       nothing else reserves space for it). ~90px is the footer's own
+       height at its tallest (80px logo + 10px padding); the rest is
+       breathing room so the last line of text isn't flush against it. */
+    padding: 0 16px 140px;
     box-sizing: border-box;
     text-align: left;
     color: #252220;

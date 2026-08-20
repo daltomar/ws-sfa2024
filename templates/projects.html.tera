@@ -39,9 +39,9 @@
         <div class="carousel__slide">
           <img src="/static/images/PSP_16.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
         </div>
+        <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
+        <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
       </div>
-      <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
-      <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
       <div class="carousel__dots" data-carousel-dots></div>
       <!-- Optional caption slot, omit entirely if a project has none:
       <p class="carousel__caption">Kurze Bildunterschrift</p>
@@ -90,9 +90,9 @@
         <div class="carousel__slide">
           <img src="/static/images/VP_01.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
         </div>
+        <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
+        <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
       </div>
-      <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
-      <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
       <div class="carousel__dots" data-carousel-dots></div>
     </div>
 
