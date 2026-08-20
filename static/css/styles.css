@@ -580,11 +580,16 @@ body.projects-page .project__heading {
 
 /* Logo (left) + text box (right). Stacks on narrow screens; the text
    box is flex: 1 1 auto so it just fills the row on its own when a
-   project has no logo (no image element = one flex child, not two). */
+   project has no logo (no image element = one flex child, not two).
+   align-items: stretch (the default, stated explicitly) makes the
+   text box match the logo's rendered height on the row layout - the
+   logo keeps its own aspect-ratio height regardless (images with an
+   intrinsic ratio aren't stretched), so it's the one setting the row
+   height and the text box's border just grows to meet it. */
 body.projects-page .project__intro {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 1.25rem;
 }
 
@@ -606,6 +611,8 @@ body.projects-page .project__intro-text {
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
     padding: 1rem 1.25rem;
     border: 1px solid rgba(37, 34, 32, 0.12);
     border-radius: 8px;
