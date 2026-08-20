@@ -143,18 +143,18 @@ body.home main {
     pointer-events: none;
 }
 
-/* Centered floating "pill" nav, homepage only (scoped via body.home).
-   Wrapped in a min-width query matching the site's existing 600px
-   mobile breakpoint exactly, rather than declaring these rules
-   unconditionally and trying to undo each property again below
-   600px - that approach previously missed resetting link padding/
-   font-size/white-space, leaking the desktop pill's sizing into the
-   mobile hamburger dropdown. Scoping to min-width means there is
-   nothing to undo: below 600px none of these rules exist, so the
-   homepage's mobile nav is guaranteed identical to every other page,
-   not just coincidentally matching. */
+/* Centered floating "pill" nav, site-wide at desktop widths (originally
+   homepage-only, scoped via body.home; promoted site-wide to evaluate
+   it across every page). Wrapped in a min-width query matching the
+   site's existing 600px mobile breakpoint exactly, rather than
+   declaring these rules unconditionally and trying to undo each
+   property again below 600px - that approach previously missed
+   resetting link padding/font-size/white-space, leaking the desktop
+   pill's sizing into the mobile hamburger dropdown. Scoping to
+   min-width means there is nothing to undo: below 600px none of these
+   rules exist, so mobile nav stays identical to how it already was. */
 @media (min-width: 601px) {
-    body.home .topnav {
+    .topnav {
         position: fixed;
         top: 0;
         left: 50%;
@@ -172,7 +172,7 @@ body.home main {
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     }
 
-    body.home .topnav a {
+    .topnav a {
         float: none;
         padding: 10px 26px;
         border-radius: 999px;
@@ -181,12 +181,12 @@ body.home main {
         color: rgb(8, 8, 8);
     }
 
-    body.home .topnav a:hover {
+    .topnav a:hover {
         background-color: rgba(8, 8, 8, 0.08);
         color: rgb(8, 8, 8);
     }
 
-    body.home .topnav a.active {
+    .topnav a.active {
         background-color: rgba(8, 8, 8, 0.12);
         color: rgb(8, 8, 8);
     }
