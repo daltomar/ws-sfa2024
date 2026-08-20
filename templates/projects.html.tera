@@ -26,7 +26,21 @@
   <section class="project">
     <h2 class="project__heading">Projeto Skate Poético</h2>
 
-    <img class="project__logo" src="/static/images/PSP_Logo.png" alt="Logo des Projeto Skate Poético">
+    <!-- Logo + intro text box: the logo is optional (see the Vila
+         Prudente section below, which has none), the text box always
+         renders and fills the row on its own when there's no logo. -->
+    <div class="project__intro">
+      <img class="project__logo" src="/static/images/PSP_Logo.png" alt="Logo des Projeto Skate Poético">
+      <div class="project__intro-text">
+        <p>
+          <!-- Platzhaltertext, durch echten Text ersetzen -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse.
+        </p>
+      </div>
+    </div>
 
     <div class="carousel" data-carousel>
       <div class="carousel__track">
@@ -78,6 +92,19 @@
 
   <section class="project">
     <h2 class="project__heading">Vila Prudente Skate Park</h2>
+
+    <!-- No logo for this project - the text box fills the row alone. -->
+    <div class="project__intro">
+      <div class="project__intro-text">
+        <p>
+          <!-- Platzhaltertext, durch echten Text ersetzen -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse.
+        </p>
+      </div>
+    </div>
 
     <div class="carousel" data-carousel>
       <div class="carousel__track">
