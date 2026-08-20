@@ -554,21 +554,60 @@ body.projects-page .projects-content a:hover {
    Each project is a self-contained <section class="project"> with a
    heading, an optional logo, a carousel, body text and an optional
    outbound link. Dropping in a new project is just copying this
-   structure - no per-project CSS needed. */
+   structure - no per-project CSS needed. Permanent bordered card,
+   whether collapsed or expanded via its <details>. */
 body.projects-page .project {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin: 0 0 4rem 0;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(37, 34, 32, 0.12);
+    margin: 0 0 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(37, 34, 32, 0.15);
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
-/* No trailing divider/space after the last project. */
 body.projects-page .project:last-of-type {
-    margin-bottom: 2rem;
-    padding-bottom: 0;
-    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Collapsible "Weiterlesen" content: everything past the intro row
+   (carousel, body text, optional link) lives inside this <details>.
+   Native open/closed handling - no JS needed, and browsers hide the
+   non-summary children internally, so it can't be broken by any
+   display/spacing rules applied to those children below. */
+body.projects-page .project__more {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body.projects-page .project__weiterlesen {
+    cursor: pointer;
+    color: #1a5fb4;
+    text-decoration: underline;
+    list-style: none;
+}
+
+body.projects-page .project__weiterlesen::-webkit-details-marker {
+    display: none;
+}
+
+body.projects-page .project__weiterlesen:hover {
+    color: #123d78;
+}
+
+/* Label swap via the native [open] attribute - no JS. */
+body.projects-page .project__weiterlesen-label--open {
+    display: none;
+}
+
+body.projects-page .project__more[open] .project__weiterlesen-label--open {
+    display: inline;
+}
+
+body.projects-page .project__more[open] .project__weiterlesen-label--closed {
+    display: none;
 }
 
 body.projects-page .project__heading {
@@ -614,9 +653,7 @@ body.projects-page .project__intro-text {
     display: flex;
     align-items: center;
     padding: 1rem 1.25rem;
-    border: 1px solid rgba(37, 34, 32, 0.12);
-    border-radius: 8px;
-    background-color: rgba(37, 34, 32, 0.03);
+    background-color: transparent;
 }
 
 body.projects-page .project__intro-text p {
