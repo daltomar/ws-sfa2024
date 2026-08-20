@@ -494,10 +494,14 @@ body.home main {
 
 /* Readable-column wrapper: caps line length regardless of the site's
    wider 1200px body, with consistent side padding so text doesn't
-   touch the viewport edge on mobile. */
+   touch the viewport edge on mobile. Width is set in px rather than
+   ch to roughly line up with the nav pill above it (header nav has no
+   fixed width - it hugs its six links' text - so this is a one-time
+   calculated approximation, not a live measurement; nudge this value
+   if it doesn't sit flush once you see it rendered). */
 body.projects-page .projects-content {
     width: 100%;
-    max-width: 65ch;
+    max-width: 745px;
     margin: 0 auto;
     /* Bottom padding clears the fixed, always-on-top .footer-container
        (position: fixed; bottom: 0 - removed from normal flow, so
