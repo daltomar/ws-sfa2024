@@ -35,8 +35,8 @@
       <div class="project__intro-text">
         <p>
           <!-- Platzhaltertext, durch echten Text ersetzen -->
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Stadtviertel Jardim Romano, Sao Paulo, Brasilien.<br>
+          Skateboard und Kultur.
         </p>
       </div>
     </div>
@@ -95,6 +95,81 @@
       <p class="project__link"><a href="https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
     </details>
   </section>
+
+
+   <section class="project">
+    <h2 class="project__heading">Projeto Demorô Skate é Vida</h2>
+
+    <!-- Logo + intro text box: the logo is optional (see the Vila
+         Prudente section below, which has none), the text box always
+         renders and fills the row on its own when there's no logo. -->
+    
+    <div class="project__intro">
+      <img class="project__logo" src="/static/images/PDSV-Logo.jpg" alt="Logo des Projeto Demorô Skate é Vida">
+      <div class="project__intro-text">
+        <p>
+          <!-- Platzhaltertext, durch echten Text ersetzen -->
+          Stadtviertel Heliópolis, Sao Paulo, Brasilien<br>
+          Regelmäßige Skateboard-Unterricht für Kinder.
+        </p>
+      </div>
+    </div>
+
+    <details class="project__more">
+      <summary class="project__weiterlesen">
+        <span class="project__weiterlesen-label--closed">Weiterlesen</span>
+        <span class="project__weiterlesen-label--open">Weniger anzeigen</span>
+      </summary>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__track">
+          <div class="carousel__slide is-active">
+            <img src="/static/images/PSP_01.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/PSP_11.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/PSP_16.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
+          </div>
+          <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
+          <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
+        </div>
+        <div class="carousel__dots" data-carousel-dots></div>
+        <!-- Optional caption slot, omit entirely if a project has none:
+        <p class="carousel__caption">Kurze Bildunterschrift</p>
+        -->
+      </div>
+
+      <div class="project__body">
+        <p>
+          Das Projekt „Projeto Skate Poético“ – PROSKAP wurde 2016 von Anderson Silveira dos Santos
+          (bekannt als „Nando“) gegründet und heute auch von Kevin Nascimento da Silva und Rafael Souza
+          Alves Diniz betreibt. Die Aktivitäten finden im Stadtviertel Jardim Romano, ein Armenviertel
+          im äußersten Osten von São Paulo statt. Das Projekt verbindet Skateboard und Lyrik und versucht
+          nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen Kinder der Region zu bringen.
+          Am Anfang gab es nur ein paar kleine Aktivitäten wie „Boards-Customization“, eine Diskussionsrunde
+          und kleine Meisterschaften. Im Jahr 2017 sind die Geschichtslehrer und Skater Kevin Nascimento da Silva
+          und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
+          Kalender besser organisiert.
+        </p>
+        <p>
+          Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
+          (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape-Schneiden und Bemalen, sowie
+          Lesungen und verschiedene Spielen anbietet. Es gibt leider keine offizielle Unterstützung. Bei dem Projekt
+          handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringen. Für die Kinder ist
+          die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen.
+          Bekannt wurde der Stadtteil „Jardim Romano“ im Jahr 2009, als eine Rekord-Flut das ganze Stadtviertel für einen Monat
+          unter Wasser setzte. Die Region gehört zu den ärmsten Stadtvierteln Sao Paulos und hat nicht viele Angebote für Kinder
+          und Jugendliche.
+          Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
+        </p>
+      </div>
+
+      <p class="project__link"><a href="https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
+    </details>
+  </section>
+
 
   <section class="project">
     <h2 class="project__heading">Vila Prudente Skate Park</h2>
