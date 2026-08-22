@@ -792,8 +792,16 @@ body.projects-page .carousel__caption {
    cause: .footer-container is position: fixed, so it's removed from
    normal flow and nothing else reserves space for it - it just
    overlaps whatever content is scrolled to the bottom. ~90px is the
-   footer's own height at its tallest, the rest is breathing room. */
+   footer's own height at its tallest, the rest is breathing room.
+
+   width: 100% matters here: .news_container is a flex item of <main>
+   (display: flex; align-items: center - not stretch), so with width
+   left at its default auto it would shrink-wrap to its content's
+   preferred size instead of filling out to max-width, rendering
+   narrower than the 745px column. .projects-content sets the same
+   width: 100% for the same reason. */
 .news_container {
+    width: 100%;
     margin: 25px auto 0 auto;
     padding: 25px 16px 140px;
     max-width: 745px;
