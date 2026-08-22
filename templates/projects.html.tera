@@ -99,8 +99,8 @@
   <section class="project">
     <h2 class="project__heading">Vila Prudente Skate Park</h2>
 
-    <!-- No logo for this project - the text box fills the row alone. -->
     <div class="project__intro">
+      <img class="project__logo" src="/static/images/VP_Logo.jpg" alt="Logo des Vila Prudente Skate Park">
       <div class="project__intro-text">
         <p>
           <!-- Platzhaltertext, durch echten Text ersetzen -->
