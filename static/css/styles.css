@@ -781,12 +781,17 @@ body.projects-page .carousel__caption {
 
 /*                                                   News Page */
 
+/* Capped at the same width as .projects-content (static/css/styles.css,
+   "Projects Page" section) so the readable column lines up across
+   pages instead of jumping wider/narrower on navigation. Also fixes a
+   latent bug: the old rule declared margin-top: 25px then a later
+   margin: auto shorthand that silently reset it back to 0 - folded
+   into one shorthand so the top margin actually applies. */
 .news_container {
-    margin-top: 25px;
-    padding-top: 25px;
-    padding-bottom: 35px;
-    max-width: 100%;
-    margin: auto;
+    margin: 25px auto 0 auto;
+    padding: 25px 16px 35px;
+    max-width: 745px;
+    box-sizing: border-box;
 }
 
 .news_box {
