@@ -800,6 +800,11 @@ body.projects-page .carousel__caption {
     box-sizing: border-box;
 }
 
+/* box-sizing: border-box so the 1rem padding is carved out of the
+   100% width instead of added on top of it - without this, each card
+   rendered exactly as wide as .news_container's own outer edge,
+   silently eating the container's side padding instead of sitting
+   inset from it. */
 .news_box {
     max-width: 100%;
     margin: auto;
@@ -808,6 +813,7 @@ body.projects-page .carousel__caption {
     padding: 1rem 1rem;
     background-color: white;
     border: black;
+    box-sizing: border-box;
 }
 
 .newstext {
