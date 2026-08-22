@@ -820,15 +820,14 @@ body.projects-page .carousel__caption {
     margin-bottom: 30px;
     padding: 1rem 1rem;
     background-color: white;
-    /* Was `border: black` - invalid shorthand (no width/style), so it
-       rendered no border at all. With no visible edge, the box's own
-       padding read as an extra, unexplained inset beyond
-       .news_container's - now matches .project's border treatment
-       (static/css/styles.css, "Projects Page" section) so the card's
-       actual boundary is visible at the same 16px inset as the
-       projects page. */
-    border: 1px solid rgba(37, 34, 32, 0.15);
-    border-radius: 12px;
+    /* No border by design - was `border: black` (invalid shorthand,
+       already rendered nothing) before a brief attempt to make the
+       box's edge visible; reverted per feedback, no border wanted
+       here. .news_box's own 1rem padding (on top of .news_container's)
+       means news text sits inset further than .page-intro on the
+       projects page, which has no equivalent wrapping box - accepted
+       as-is rather than restructuring to match exactly. */
+    border: none;
     box-sizing: border-box;
 }
 
