@@ -1,157 +1,164 @@
 {% extends "layout" %}
 
+{% block body_class %}projects-page{% endblock %}
+
 {% block content %}
 
-<h1 id="psp-header" class="p1-header"><span>Projekte</span></h1>
-<section class="project-box">
-  <p class="projects-text">
-      <br />
-      Wir verteilen die Spenden in der Regel einmal im Jahr. Bisher haben wir alle Aktionen
-       persönlich durchgeführt und arbeiten derzeit auf zwei Ebenen. Das Projekt Skate Poético
-        ist eine strukturiertere und regelmäßigere Initiative, die das ganze Jahr über Aktivitäten
-         anbietet. Auf der Vila Prudente Skate Plaza wird normalerweise eine eher improvisierte Aktivität
-          mit Unterstützung eines professionellen Skaters aus der Region durchgeführt, der ebenfalls in sozialen
-           Projekten aktiv ist. Lies unten mehr über jedes Projekt.
-  </p>
-</section>
+<div class="projects-content">
 
- <img id="psp-logo" src="/static/images/PSP_Logo.png" alt="Projeto Skate Poético Logo">
+  <h1 class="page-title">Projekte</h1>
 
-<section class="project-box">
-
-<!-- Slideshow container -->
-<div class="slideshow-container">
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides1">
-
-      <img src="/static/images/PSP_01.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
-
-    </div>
-
-    <div class="mySlides1">
-
-      <img src="/static/images/PSP_11.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
-
-    </div>
-
-    <div class="mySlides1">
-
-      <img src="/static/images/PSP_16.png" style="width:100%" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
-
-    </div>
-
-<!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
-  </div>
-  <br>
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-      <span class="dot1" onclick="currentSlide1(1)"></span>
-      <span class="dot1" onclick="currentSlide1(2)"></span>
-      <span class="dot1" onclick="currentSlide1(3)"></span>
-  </div>
-
-
-
-  <p class="projects-text">
-      <br />
-    Das Projekt “Projeto Skate Poético” - PROSKAP wurde 2016 von Anderson Silveira dos Santos
-    (bekannt als “Nando”) gegründet und heute auch von Kevin Nascimento da Silva und Rafael Souza
-    Alves Diniz betreibt. Die Aktivitäten finden im Stadtviertel Jardim Romano, ein Armenviertel
-    im äußersten Osten von São Paulo statt. Das Projekt verbindet Skateboard und Lyrik und versucht
-    nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen Kinder der Region zu bringen.
-    <br />
-    Am Anfang gab es nur ein paar kleine Aktivitäten wie “Boards-Customization”, eine Diskussionsrunde
-    und kleine Meisterschaften. Im Jahr 2017 sind die Geschichtslehrer und Skater Kevin Nascimento da Silva
-    und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
-    Kalender besser organisiert.
-     </p>
-  
-
-
-
-    <p class="projects-text">
-    Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
-    (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape- Schneiden und Bemalen, sowie
-    Lesungen und verschiedene  Spielen anbietet. Es gibt leider keine offizielle Unterstützung. Bei dem Projekt
-    handelt es sich um eine Ehrenamtliche Gruppe , die Kunst und Kultur zu den Kindern bringen. Für die Kinder ist
-    die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen.
-    <br />
-    Bekannt wurde der Stadtteil “Jardim Romano” im Jahr 2009, als eine Rekord-Flut das ganze Stadtviertel für einen Monat
-    unter Wasser setzte. Die Region gehört zu den ärmsten Stadtvierteln Sao Paulos und hat nicht viele Angebote für Kinder
-    und Jugendliche.
-    <br />
-    Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
+  <p class="page-intro">
+    Wir verteilen die Spenden in der Regel einmal im Jahr. Bisher haben wir alle Aktionen
+    persönlich durchgeführt und arbeiten derzeit auf zwei Ebenen. Das Projekt Skate Poético
+    ist eine strukturiertere und regelmäßigere Initiative, die das ganze Jahr über Aktivitäten
+    anbietet. Auf der Vila Prudente Skate Plaza wird normalerweise eine eher improvisierte Aktivität
+    mit Unterstützung eines professionellen Skaters aus der Region durchgeführt, der ebenfalls in sozialen
+    Projekten aktiv ist. Lies unten mehr über jedes Projekt.
   </p>
 
-  <p class="projects-text"><a href= "https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
-</section>
+  <!-- ============================================================
+       Reusable project section pattern: heading -> intro row (optional
+       logo + text box) -> collapsible "Weiterlesen" details (carousel ->
+       body text -> optional outbound link). To add a new project, copy
+       this whole <section class="project"> block and swap the content -
+       no new CSS or JS is needed.
+       ============================================================ -->
+  <section class="project">
+    <h2 class="project__heading">Projeto Skate Poético</h2>
 
-    <h2 id="vpsp-header" class="p2-header"><span>Vila Prudente Skate Park</span></h2>
-    <section class="project-box">
-      
-      <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides2">
-
-              <img src="/static/images/VP_04.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 1)" loading="lazy">
-
-            </div>
-
-            <div class="mySlides2">
-
-              <img src="/static/images/VP_05.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 2)" loading="lazy">
-
-            </div>
-
-            <div class="mySlides2">
-
-              <img src="/static/images/VP_01.png" style="width:100%" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
-
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides2(1)">&#10095;</a>
-          </div>
-          <br>
-          <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot2" onclick="currentSlide2(1)"></span>
-            <span class="dot2" onclick="currentSlide2(2)"></span>
-            <span class="dot2" onclick="currentSlide2(3)"></span>
-        </div>
-
-      
-      <p class="projects-text">
-        <br />
-        Mailton dos Santos ist ein professioneller Skateboarder, der sich aktiv an sozialen
-        Projekten beteiligt, die Kinder und Jugendliche unterstützen. Mailton begann 2001
-        Skateboard zu fahren und wurde 2011 Profi-Skateboarder. Im selben Jahr tourte er durch
-        Europa und später auch durch Lateinamerika und Kalifornien.
-        <br />
-        Mailton besucht regelmäßig die Skateparks in Osten São Paulos. Dabei wurde er häufig von Kindern
-        angesprochen, die kurz mit seinem Skateboard fahren wollten. Darum begann er sich sozial zu engagieren.
-        Aktuell ist Mailton Teammitglieder der sozialen Organisation „Social Skate“, die derzeit rund 150 Kinder
-        und deren Familien mit pädagogischen und sportlichen Aktivitäten betreut. Darüber hinaus beteiligt er sich
-        auch an der kirchlich Gruppe „Cristo na Base“, die verschiedenen Angebote für Kinder und Jungendliche Osts
-        São Paulos fördert.
-       </p>
-  
-        <p class="projects-text">
-        Der Skate Park in Stadtteil Vila Prudente gehört zu den Skateparks, die häufig von Mailton besucht werden.
-        Dort ist unsere Idee von “Skateboard für alle” geboren, vor allem weil wir von vielen Kindern angesprochen wurden.
-        Die Kinder waren total begeistert und wollten die Skateboards gar nicht zurückgeben. Bei einer von uns ins Leben
-        gerufenen Spendenaktion 2020 in diesem Park, haben wir durch Zufall Maiton kennengelernt. Er hat uns sofort bei der
-        Skateboard-Verteilung geholfen und wir hoffen, dass diese Partnerschaft lang gehalten wird.
+    <!-- Logo + intro text box: the logo is optional (see the Vila
+         Prudente section below, which has none), the text box always
+         renders and fills the row on its own when there's no logo. -->
+    <div class="project__intro">
+      <img class="project__logo" src="/static/images/PSP_Logo.png" alt="Logo des Projeto Skate Poético">
+      <div class="project__intro-text">
+        <p>
+          <!-- Platzhaltertext, durch echten Text ersetzen -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        </section>
+      </div>
+    </div>
 
+    <details class="project__more">
+      <summary class="project__weiterlesen">
+        <span class="project__weiterlesen-label--closed">Weiterlesen</span>
+        <span class="project__weiterlesen-label--open">Weniger anzeigen</span>
+      </summary>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__track">
+          <div class="carousel__slide is-active">
+            <img src="/static/images/PSP_01.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/PSP_11.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/PSP_16.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
+          </div>
+          <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
+          <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
+        </div>
+        <div class="carousel__dots" data-carousel-dots></div>
+        <!-- Optional caption slot, omit entirely if a project has none:
+        <p class="carousel__caption">Kurze Bildunterschrift</p>
+        -->
+      </div>
+
+      <div class="project__body">
+        <p>
+          Das Projekt „Projeto Skate Poético“ – PROSKAP wurde 2016 von Anderson Silveira dos Santos
+          (bekannt als „Nando“) gegründet und heute auch von Kevin Nascimento da Silva und Rafael Souza
+          Alves Diniz betreibt. Die Aktivitäten finden im Stadtviertel Jardim Romano, ein Armenviertel
+          im äußersten Osten von São Paulo statt. Das Projekt verbindet Skateboard und Lyrik und versucht
+          nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen Kinder der Region zu bringen.
+          Am Anfang gab es nur ein paar kleine Aktivitäten wie „Boards-Customization“, eine Diskussionsrunde
+          und kleine Meisterschaften. Im Jahr 2017 sind die Geschichtslehrer und Skater Kevin Nascimento da Silva
+          und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
+          Kalender besser organisiert.
+        </p>
+        <p>
+          Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
+          (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape-Schneiden und Bemalen, sowie
+          Lesungen und verschiedene Spielen anbietet. Es gibt leider keine offizielle Unterstützung. Bei dem Projekt
+          handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringen. Für die Kinder ist
+          die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen.
+          Bekannt wurde der Stadtteil „Jardim Romano“ im Jahr 2009, als eine Rekord-Flut das ganze Stadtviertel für einen Monat
+          unter Wasser setzte. Die Region gehört zu den ärmsten Stadtvierteln Sao Paulos und hat nicht viele Angebote für Kinder
+          und Jugendliche.
+          Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
+        </p>
+      </div>
+
+      <p class="project__link"><a href="https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
+    </details>
+  </section>
+
+  <section class="project">
+    <h2 class="project__heading">Vila Prudente Skate Park</h2>
+
+    <div class="project__intro">
+      <img class="project__logo" src="/static/images/VP_Logo.jpg" alt="Logo des Vila Prudente Skate Park">
+      <div class="project__intro-text">
+        <p>
+          <!-- Platzhaltertext, durch echten Text ersetzen -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+
+    <details class="project__more">
+      <summary class="project__weiterlesen">
+        <span class="project__weiterlesen-label--closed">Weiterlesen</span>
+        <span class="project__weiterlesen-label--open">Weniger anzeigen</span>
+      </summary>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__track">
+          <div class="carousel__slide is-active">
+            <img src="/static/images/VP_04.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 1)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/VP_05.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 2)" loading="lazy">
+          </div>
+          <div class="carousel__slide">
+            <img src="/static/images/VP_01.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
+          </div>
+          <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
+          <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
+        </div>
+        <div class="carousel__dots" data-carousel-dots></div>
+      </div>
+
+      <div class="project__body">
+        <p>
+          Mailton dos Santos ist ein professioneller Skateboarder, der sich aktiv an sozialen
+          Projekten beteiligt, die Kinder und Jugendliche unterstützen. Mailton begann 2001
+          Skateboard zu fahren und wurde 2011 Profi-Skateboarder. Im selben Jahr tourte er durch
+          Europa und später auch durch Lateinamerika und Kalifornien.
+          Mailton besucht regelmäßig die Skateparks in Osten São Paulos. Dabei wurde er häufig von Kindern
+          angesprochen, die kurz mit seinem Skateboard fahren wollten. Darum begann er sich sozial zu engagieren.
+          Aktuell ist Mailton Teammitglieder der sozialen Organisation „Social Skate“, die derzeit rund 150 Kinder
+          und deren Familien mit pädagogischen und sportlichen Aktivitäten betreut. Darüber hinaus beteiligt er sich
+          auch an der kirchlich Gruppe „Cristo na Base“, die verschiedenen Angebote für Kinder und Jungendliche Osts
+          São Paulos fördert.
+        </p>
+        <p>
+          Der Skate Park in Stadtteil Vila Prudente gehört zu den Skateparks, die häufig von Mailton besucht werden.
+          Dort ist unsere Idee von „Skateboard für alle“ geboren, vor allem weil wir von vielen Kindern angesprochen wurden.
+          Die Kinder waren total begeistert und wollten die Skateboards gar nicht zurückgeben. Bei einer von uns ins Leben
+          gerufenen Spendenaktion 2020 in diesem Park, haben wir durch Zufall Maiton kennengelernt. Er hat uns sofort bei der
+          Skateboard-Verteilung geholfen und wir hoffen, dass diese Partnerschaft lang gehalten wird.
+        </p>
+      </div>
+    </details>
+  </section>
+
+</div>
 
 <script src="/static/js/projects.js"></script>
-
 
 {% endblock %}
