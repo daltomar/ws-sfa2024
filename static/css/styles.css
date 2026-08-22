@@ -786,10 +786,16 @@ body.projects-page .carousel__caption {
    pages instead of jumping wider/narrower on navigation. Also fixes a
    latent bug: the old rule declared margin-top: 25px then a later
    margin: auto shorthand that silently reset it back to 0 - folded
-   into one shorthand so the top margin actually applies. */
+   into one shorthand so the top margin actually applies.
+
+   Bottom padding matches .projects-content's fix for the same root
+   cause: .footer-container is position: fixed, so it's removed from
+   normal flow and nothing else reserves space for it - it just
+   overlaps whatever content is scrolled to the bottom. ~90px is the
+   footer's own height at its tallest, the rest is breathing room. */
 .news_container {
     margin: 25px auto 0 auto;
-    padding: 25px 16px 35px;
+    padding: 25px 16px 140px;
     max-width: 745px;
     box-sizing: border-box;
 }
