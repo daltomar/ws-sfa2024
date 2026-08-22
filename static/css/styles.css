@@ -820,7 +820,15 @@ body.projects-page .carousel__caption {
     margin-bottom: 30px;
     padding: 1rem 1rem;
     background-color: white;
-    border: black;
+    /* Was `border: black` - invalid shorthand (no width/style), so it
+       rendered no border at all. With no visible edge, the box's own
+       padding read as an extra, unexplained inset beyond
+       .news_container's - now matches .project's border treatment
+       (static/css/styles.css, "Projects Page" section) so the card's
+       actual boundary is visible at the same 16px inset as the
+       projects page. */
+    border: 1px solid rgba(37, 34, 32, 0.15);
+    border-radius: 12px;
     box-sizing: border-box;
 }
 
