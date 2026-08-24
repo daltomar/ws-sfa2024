@@ -427,14 +427,27 @@ body.home main {
 }
 
 /* --------------------------------------------About page */
+/* Also used as-is by /impressum and /datenschutz (same .about_box /
+   .about-header / .about-text classes), so this width change applies
+   to all three pages, matching /projects and /news. */
 
+/* width: 100% matters here: .about_box is a flex item of <main>
+   (display: flex; align-items: center - not stretch), so with width
+   left at its default auto it would shrink-wrap to its content's
+   preferred size instead of filling out to max-width, rendering
+   narrower than the 745px column (same fix as .news_container and
+   .projects-content needed). */
 .about_box {
-    max-width: 95%;
+    width: 100%;
+    max-width: 745px;
     margin-top: 100px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
 }
 
 .about-pic-container {
