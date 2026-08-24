@@ -447,6 +447,12 @@ body.home main {
     padding-top: 50px;
     padding-left: 16px;
     padding-right: 16px;
+    /* Clears the fixed, always-on-top .footer-container (position:
+       fixed; bottom: 0 - removed from normal flow, so nothing else
+       reserves space for it, same root cause fixed on /projects and
+       /news). Most noticeable on /datenschutz, whose full privacy
+       policy text is long enough to scroll past the viewport. */
+    padding-bottom: 140px;
     box-sizing: border-box;
 }
 
