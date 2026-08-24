@@ -781,14 +781,38 @@ body.projects-page .carousel__caption {
 
 /*                                                   News Page */
 
+/* Capped at the same width as .projects-content (static/css/styles.css,
+   "Projects Page" section) so the readable column lines up across
+   pages instead of jumping wider/narrower on navigation. Also fixes a
+   latent bug: the old rule declared margin-top: 25px then a later
+   margin: auto shorthand that silently reset it back to 0 - folded
+   into one shorthand so the top margin actually applies.
+
+   Bottom padding matches .projects-content's fix for the same root
+   cause: .footer-container is position: fixed, so it's removed from
+   normal flow and nothing else reserves space for it - it just
+   overlaps whatever content is scrolled to the bottom. ~90px is the
+   footer's own height at its tallest, the rest is breathing room.
+
+   width: 100% matters here: .news_container is a flex item of <main>
+   (display: flex; align-items: center - not stretch), so with width
+   left at its default auto it would shrink-wrap to its content's
+   preferred size instead of filling out to max-width, rendering
+   narrower than the 745px column. .projects-content sets the same
+   width: 100% for the same reason. */
 .news_container {
-    margin-top: 25px;
-    padding-top: 25px;
-    padding-bottom: 35px;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    margin: 25px auto 0 auto;
+    padding: 25px 16px 140px;
+    max-width: 745px;
+    box-sizing: border-box;
 }
 
+/* box-sizing: border-box so the 1rem padding is carved out of the
+   100% width instead of added on top of it - without this, each card
+   rendered exactly as wide as .news_container's own outer edge,
+   silently eating the container's side padding instead of sitting
+   inset from it. */
 .news_box {
     max-width: 100%;
     margin: auto;
@@ -796,7 +820,15 @@ body.projects-page .carousel__caption {
     margin-bottom: 30px;
     padding: 1rem 1rem;
     background-color: white;
-    border: black;
+    /* No border by design - was `border: black` (invalid shorthand,
+       already rendered nothing) before a brief attempt to make the
+       box's edge visible; reverted per feedback, no border wanted
+       here. .news_box's own 1rem padding (on top of .news_container's)
+       means news text sits inset further than .page-intro on the
+       projects page, which has no equivalent wrapping box - accepted
+       as-is rather than restructuring to match exactly. */
+    border: none;
+    box-sizing: border-box;
 }
 
 .newstext {
