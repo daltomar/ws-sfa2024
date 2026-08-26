@@ -22,7 +22,13 @@
 
 <section class="index-intro" id="intro">
   <div class="index-intro__lede">
-    <h1 class="index-intro__headline">TODO: kurze Mission-Headline</h1>
+    <h1 class="index-intro__headline">
+      <!-- Reused from the old #below-hero section: the motto image
+           itself carries the mission statement, so it stands in for
+           headline text here (mirrors the hero's own image+alt-text
+           pattern for #logo_text/#motto rather than a plain heading). -->
+      <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto">
+    </h1>
     <p class="index-intro__subline">TODO: eine unterstützende Zeile.</p>
   </div>
 
@@ -43,8 +49,8 @@
       <p>TODO: 2–4 Sätze - trägt das meiste Gewicht.</p>
     </article>
     <div class="index-intro__photo" data-reveal>
-      <!-- Reused from the old #below-hero section, which this replaces -->
-      <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto" loading="lazy">
+      <!-- TODO: echtes Foto einsetzen, src ersetzen -->
+      <img src="" alt="TODO: Foto beschreiben" loading="lazy">
     </div>
   </div>
 

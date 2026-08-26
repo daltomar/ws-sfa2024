@@ -287,11 +287,18 @@ body.home main {
     text-align: center;
 }
 
+/* Wraps an <img> (the motto image stands in for headline text, same
+   pattern as the hero's own image+alt-text logo/motto), so this sizes
+   the image rather than text. */
 .index-intro__headline {
     margin: 0 0 0.75rem 0;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #252220;
+    line-height: 0;
+}
+
+.index-intro__headline img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
 }
 
 .index-intro__subline {
