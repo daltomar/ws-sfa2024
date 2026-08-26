@@ -15,16 +15,54 @@
             <img id="motto" src="/static/images/slogan.png" alt="Wir fördern Skateboarding">
         </div>
     </div>
-    <a href="#below-hero" class="scroll-indicator" aria-label="Nach unten scrollen">
+    <a href="#intro" class="scroll-indicator" aria-label="Nach unten scrollen">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
     </a>
 </div>
 
-<section id="below-hero" class="below-hero">
-    <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto" class="below-hero-img">
+<section class="index-intro" id="intro">
+  <div class="index-intro__lede">
+    <h1 class="index-intro__headline">TODO: kurze Mission-Headline</h1>
+    <p class="index-intro__subline">TODO: eine unterstützende Zeile.</p>
+  </div>
+
+  <div class="index-intro__row index-intro__row--a">
+    <article class="index-intro__beat" data-reveal>
+      <h2>Wer wir sind</h2>
+      <p>TODO: 2–4 Sätze, Wir-Perspektive.</p>
+    </article>
+    <article class="index-intro__beat" data-reveal>
+      <h2>Was wir tun</h2>
+      <p>TODO: 2–4 Sätze.</p>
+    </article>
+  </div>
+
+  <div class="index-intro__row index-intro__row--b">
+    <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
+      <h2>Wie wir arbeiten</h2>
+      <p>TODO: 2–4 Sätze - trägt das meiste Gewicht.</p>
+    </article>
+    <div class="index-intro__photo" data-reveal>
+      <!-- Reused from the old #below-hero section, which this replaces -->
+      <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto" loading="lazy">
+    </div>
+  </div>
+
+  <div class="index-intro__row index-intro__row--c">
+    <div class="index-intro__photo" data-reveal>
+      <!-- TODO: echtes Foto einsetzen, src ersetzen -->
+      <img src="" alt="TODO: Foto beschreiben" loading="lazy">
+    </div>
+    <article class="index-intro__beat" data-reveal>
+      <h2>Wie du helfen kannst</h2>
+      <p>TODO: 2–4 Sätze, sanfte Einladung, keine Forderung.</p>
+      <p><a class="index-intro__link" href="/hilfmit">Mehr erfahren →</a></p>
+    </article>
+  </div>
 </section>
 
 <script src="/static/js/intro.js"></script>
+<script src="/static/js/index-intro.js"></script>
 
 
 {% endblock %}
