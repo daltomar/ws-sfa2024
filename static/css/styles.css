@@ -269,12 +269,17 @@ body.home main {
    stylesheet to reuse, so values below match the site's established
    literal palette/spacing by direct precedent instead: warm near-black
    #252220 and link blue #1a5fb4 (Projects page), the rgba(37, 34, 32, X)
-   tint/border family, 12px card radius, and the 745px readable-column
-   width already used by .projects-content / .news_container /
-   .about_box / .banner-hilf-container. */
+   tint/border family, and 12px card radius.
+
+   Width is capped at 1200px, matching .background (the hero directly
+   above it) rather than the 745px readable column used by the rest of
+   the site's pages - narrowing this section to 745px to match those
+   other pages was tried and reverted (looked worse), so this section
+   is intentionally as wide as the hero instead, not as wide as
+   /projects, /news, /about, etc. */
 .index-intro {
     width: 100%;
-    max-width: 745px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 16px;
     box-sizing: border-box;
