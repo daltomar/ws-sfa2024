@@ -124,19 +124,25 @@ body.home main {
     pointer-events: none;
 }
 
-/* Solid white backdrop, same 1200px-capped footprint as .background
-   (not full-viewport like .home-bg). Sits between .home-bg and
-   .background in the stacking order (same z-index, later in source
-   so it paints on top of .home-bg) so it only ever shows through
-   .background's own clip-path notch - it never covers .home-bg in
-   the true side margins beyond 1200px. */
+/* Solid white backdrop, same footprint as .background (not
+   full-viewport like .home-bg). Sits between .home-bg and .background
+   in the stacking order (same z-index, later in source so it paints
+   on top of .home-bg) so it only ever shows through .background's own
+   clip-path notch - it never covers .home-bg in the true side margins
+   beyond .background's own max-width. Capped at 745px, matching the
+   rest of the site's readable-column width (.projects-content /
+   .news_container / .about_box / .banner-hilf-container /
+   .index-intro) rather than the old 1200px full-body width - kept in
+   lockstep with .background below, since a mismatch here would show a
+   flat white margin instead of the blurred .home-bg where the two
+   diverge. */
 .hero-backdrop {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1200px;
+    max-width: 745px;
     height: 100vh;
     background-color: #ffffff;
     z-index: -1;
@@ -192,6 +198,12 @@ body.home main {
     }
 }
 
+/* Capped at 745px - the same readable-column width used by every
+   other page (.projects-content / .news_container / .about_box /
+   .banner-hilf-container / .index-intro below) - so the hero reads as
+   part of one consistent site width instead of spanning the old
+   1200px full-body max-width. .hero-backdrop above is kept at the
+   exact same max-width for the same reason documented there. */
 .background {
     background-image: url('/static/images/SFA_bck.png');
     background-size: cover;  /*Ensure the background image covers the entire viewport */
@@ -204,7 +216,8 @@ body.home main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0;
+    max-width: 745px;
+    margin: 0 auto;
     padding: 0;
     position: relative;
     box-sizing: border-box;
