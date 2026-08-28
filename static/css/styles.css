@@ -286,8 +286,11 @@ body.home main {
     background-color: #ffffff;
 }
 
+/* No longer capped at a text-readability width (460px) - now holds
+   only the motto image (the subline text paragraph was removed), so
+   it's free to match the image's own width below. */
 .index-intro__lede {
-    max-width: 460px;
+    max-width: 745px;
     margin: 0 auto 3rem auto;
     text-align: center;
 }
@@ -300,16 +303,14 @@ body.home main {
     line-height: 0;
 }
 
+/* Sized to the site's nav-pill width (745px, same value used for
+   .projects-content - see that rule's comment for how it was derived
+   from the pill nav's own CSS) per explicit request to match the top
+   menu's width. */
 .index-intro__headline img {
-    max-width: 280px;
+    max-width: 745px;
     width: 100%;
     height: auto;
-}
-
-.index-intro__subline {
-    margin: 0;
-    color: #252220;
-    line-height: 1.6;
 }
 
 .index-intro__row {

@@ -29,7 +29,6 @@
            pattern for #logo_text/#motto rather than a plain heading). -->
       <img src="/static/images/SFA_motto.png" alt="Skateboard für alle Motto">
     </h1>
-    <p class="index-intro__subline">TODO: eine unterstützende Zeile.</p>
   </div>
 
   <div class="index-intro__row index-intro__row--a">
