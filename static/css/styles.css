@@ -257,21 +257,167 @@ body.home main {
     }
 }
 
-/* Section below the full-viewport hero, revealed by scrolling past it. */
-.below-hero {
+/* ------------------------------------------------------------------
+   Homepage "index-intro" section: compact mission-in-four-beats block
+   below the hero, replacing the old .below-hero motto section (its
+   image now lives inside this section instead). Homepage-only, but
+   this page shares layout.html.tera with every other page, so every
+   rule here is scoped under .index-intro - no bare element or generic
+   class selectors that could leak elsewhere.
+
+   No CSS custom properties/design tokens exist anywhere else in this
+   stylesheet to reuse, so values below match the site's established
+   literal palette/spacing by direct precedent instead: warm near-black
+   #252220 and link blue #1a5fb4 (Projects page), the rgba(37, 34, 32, X)
+   tint/border family, and 12px card radius.
+
+   Width is capped at 1200px, matching .background (the hero directly
+   above it) rather than the 745px readable column used by the rest of
+   the site's pages - narrowing this section to 745px to match those
+   other pages was tried and reverted (looked worse), so this section
+   is intentionally as wide as the hero instead, not as wide as
+   /projects, /news, /about, etc. */
+.index-intro {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 16px;
+    box-sizing: border-box;
     background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 16px;
+}
+
+/* No longer capped at a text-readability width (460px) - now holds
+   only the motto image (the subline text paragraph was removed), so
+   it's free to match the image's own width below. */
+.index-intro__lede {
+    max-width: 745px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+/* Wraps an <img> (the motto image stands in for headline text, same
+   pattern as the hero's own image+alt-text logo/motto), so this sizes
+   the image rather than text. */
+.index-intro__headline {
+    margin: 0 0 0.75rem 0;
+    line-height: 0;
+}
+
+/* Sized to the site's nav-pill width (745px, same value used for
+   .projects-content - see that rule's comment for how it was derived
+   from the pill nav's own CSS) per explicit request to match the top
+   menu's width. */
+.index-intro__headline img {
+    max-width: 745px;
+    width: 100%;
+    height: auto;
+}
+
+.index-intro__row {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.index-intro__row--a {
+    grid-template-columns: 1fr 1fr;
+}
+
+.index-intro__row--b {
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.index-intro__row--c {
+    grid-template-columns: 1fr 1.4fr;
+}
+
+.index-intro__beat {
+    padding: 1.5rem;
     box-sizing: border-box;
 }
 
-.below-hero-img {
-    max-width: 600px;
+.index-intro__beat h2 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #252220;
+}
+
+.index-intro__beat p {
+    margin: 0;
+    color: #252220;
+    line-height: 1.6;
+}
+
+.index-intro__beat p + p {
+    margin-top: 1rem;
+}
+
+/* The one visually emphasized beat - carries the most substance. */
+.index-intro__beat--tinted {
+    background-color: rgba(37, 34, 32, 0.04);
+    border-radius: 12px;
+}
+
+/* Photo slot: holds its space gracefully with or without a real image
+   dropped into the <img src>. */
+.index-intro__photo {
+    display: flex;
+    min-height: 220px;
+    background-color: rgba(37, 34, 32, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.index-intro__photo img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.index-intro__link {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
+
+.index-intro__link:hover {
+    color: #123d78;
+}
+
+.index-intro__link:focus-visible {
+    outline: 2px solid #1a5fb4;
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .index-intro__row--a,
+    .index-intro__row--b,
+    .index-intro__row--c {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Subtle scroll-in fade, additive only: reduced-motion (or a browser
+   without the media query) sees the final, fully visible state with
+   no animation at all - content is never gated behind JS running. */
+.index-intro [data-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .index-intro [data-reveal] {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .index-intro [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 #container {
