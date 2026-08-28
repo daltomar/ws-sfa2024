@@ -108,10 +108,14 @@ body.home main {
     margin-top: 0;
 }
 
-/* Full-bleed blurred background layer, fills the space outside the
-   1200px-capped content column on wide screens. Fixed + oversized so
-   the blur never shows a hard edge; sits behind everything else. */
-.home-bg {
+/* Full-bleed blurred background layer, rendered once from
+   layout.html.tera so every page gets it (originally homepage-only as
+   .home-bg, behind just the hero; promoted site-wide as an experiment
+   - trying the same subtle backdrop everywhere rather than only
+   behind the hero). Fills the space outside each page's own
+   content-column width. Fixed + oversized so the blur never shows a
+   hard edge; sits behind everything else on every page. */
+.page-bg {
     position: fixed;
     inset: -30px;
     background-image: url('/static/images/SFA_bck.png');
@@ -125,11 +129,12 @@ body.home main {
 }
 
 /* Solid white backdrop, same 1200px-capped footprint as .background
-   (not full-viewport like .home-bg). Sits between .home-bg and
+   (not full-viewport like .page-bg). Sits between .page-bg and
    .background in the stacking order (same z-index, later in source
-   so it paints on top of .home-bg) so it only ever shows through
-   .background's own clip-path notch - it never covers .home-bg in
-   the true side margins beyond 1200px. */
+   so it paints on top of .page-bg) so it only ever shows through
+   .background's own clip-path notch - it never covers .page-bg in
+   the true side margins beyond 1200px. Homepage-only still, unlike
+   .page-bg above. */
 .hero-backdrop {
     position: fixed;
     top: 0;

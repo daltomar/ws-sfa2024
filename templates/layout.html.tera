@@ -9,6 +9,7 @@
     <link rel="icon" href="/static/images/favicon.png" type="image/x-icon">
 </head>
 <body class="{% block body_class %}{% endblock %}">
+    <div class="page-bg" aria-hidden="true"></div>
     <header>
         <nav class="topnav" id="myTopnav">
             <a href="/" class="active">Home</a>
