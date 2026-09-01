@@ -598,12 +598,7 @@ body.home main {
     padding-top: 50px;
     padding-left: 16px;
     padding-right: 16px;
-    /* Clears the fixed, always-on-top .footer-container (position:
-       fixed; bottom: 0 - removed from normal flow, so nothing else
-       reserves space for it, same root cause fixed on /projects and
-       /news). Most noticeable on /datenschutz, whose full privacy
-       policy text is long enough to scroll past the viewport. */
-    padding-bottom: 140px;
+    padding-bottom: 50px;
     box-sizing: border-box;
 }
 
@@ -673,12 +668,7 @@ body.projects-page .projects-content {
     width: 100%;
     max-width: 745px;
     margin: 0 auto;
-    /* Bottom padding clears the fixed, always-on-top .footer-container
-       (position: fixed; bottom: 0 - removed from normal flow, so
-       nothing else reserves space for it). ~90px is the footer's own
-       height at its tallest (80px logo + 10px padding); the rest is
-       breathing room so the last line of text isn't flush against it. */
-    padding: 0 16px 140px;
+    padding: 0 16px 50px;
     box-sizing: border-box;
     text-align: left;
     color: #252220;
@@ -958,12 +948,6 @@ body.projects-page .carousel__caption {
    margin: auto shorthand that silently reset it back to 0 - folded
    into one shorthand so the top margin actually applies.
 
-   Bottom padding matches .projects-content's fix for the same root
-   cause: .footer-container is position: fixed, so it's removed from
-   normal flow and nothing else reserves space for it - it just
-   overlaps whatever content is scrolled to the bottom. ~90px is the
-   footer's own height at its tallest, the rest is breathing room.
-
    width: 100% matters here: .news_container is a flex item of <main>
    (display: flex; align-items: center - not stretch), so with width
    left at its default auto it would shrink-wrap to its content's
@@ -973,7 +957,7 @@ body.projects-page .carousel__caption {
 .news_container {
     width: 100%;
     margin: 25px auto 0 auto;
-    padding: 25px 16px 140px;
+    padding: 25px 16px 50px;
     max-width: 745px;
     box-sizing: border-box;
 }
@@ -1135,17 +1119,25 @@ body.projects-page .carousel__caption {
 
 /*                                                   Footer */
 
+/* In normal flow (not position: fixed) so it sits after the page's
+   own content instead of overlapping it. body is display: flex;
+   flex-direction: column; min-height: 100vh with main: flex: 1, so
+   this margin-top: auto still pushes the footer down to the bottom
+   of the viewport on short pages (the classic sticky-footer trick) -
+   on pages long enough to scroll, it simply lands after the content
+   in normal flow instead of covering it. */
 .footer-container {
     display: flex;
     align-items: center; /* Vertically center the lines with the logo */
     justify-content: center; /* Horizontally center the whole element */
-    /* position: relative; */
-    position: fixed;
     width: 95%;
     padding: 5px 0;
     margin-top: auto; /* Push the logo container to the bottom */
-    z-index: 100;
-    bottom: 0;
+    margin-left: auto;
+    margin-right: auto; /* body's default align-items: stretch doesn't
+       center a flex item with a definite width like this one - without
+       these, the footer would hug the left edge instead of the
+       center. */
     background: transparent;
     max-width: 1200px;
 }
