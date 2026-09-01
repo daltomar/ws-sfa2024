@@ -1146,7 +1146,7 @@ body.projects-page .carousel__caption {
     margin-top: auto; /* Push the logo container to the bottom */
     z-index: 100;
     bottom: 0;
-    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0) 50%);
+    background: transparent;
     max-width: 1200px;
 }
 
