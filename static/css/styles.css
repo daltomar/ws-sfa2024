@@ -1207,3 +1207,15 @@ body.projects-page .carousel__caption {
     max-width: 1200px;
 }
 
+/* Cap the lines to the same 820px .content-backdrop uses, so the
+   footer visually lines up with the white content column above it
+   instead of spanning near the full page width. Scoped to the same
+   min-width: 601px breakpoint as .content-backdrop, which is
+   desktop-only - mobile has no such column to match, so its lines
+   stay as they were. */
+@media (min-width: 601px) {
+    .footer-line {
+        max-width: 820px;
+    }
+}
+
