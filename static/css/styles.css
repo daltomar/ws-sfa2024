@@ -108,10 +108,14 @@ body.home main {
     margin-top: 0;
 }
 
-/* Full-bleed blurred background layer, fills the space outside the
-   1200px-capped content column on wide screens. Fixed + oversized so
-   the blur never shows a hard edge; sits behind everything else. */
-.home-bg {
+/* Full-bleed blurred background layer, rendered once from
+   layout.html.tera so every page gets it (originally homepage-only as
+   .home-bg, behind just the hero; promoted site-wide as an experiment
+   - trying the same subtle backdrop everywhere rather than only
+   behind the hero). Fills the space outside each page's own
+   content-column width. Fixed + oversized so the blur never shows a
+   hard edge; sits behind everything else on every page. */
+.page-bg {
     position: fixed;
     inset: -30px;
     background-image: url('/static/images/SFA_bck.png');
@@ -124,12 +128,62 @@ body.home main {
     pointer-events: none;
 }
 
+/* Solid white panel behind ordinary page content, giving text a white
+   backing instead of sitting directly on the faint .page-bg blur.
+   Desktop-only (min-width: 601px, same breakpoint as the pill nav
+   below) since the width target here is the pill nav's own rendered
+   width, which only exists at that breakpoint - mobile's nav is a
+   different full-width bar, so this concept doesn't translate down
+   and mobile keeps its current page-bg-only look, unchanged.
+
+   Hidden on the homepage (body.home): its hero already has its own
+   dedicated white backdrop/notch treatment (.background /
+   .hero-backdrop below) and the index-intro section beneath it is
+   deliberately wider than this column, so layering this panel in too
+   would just conflict rather than help.
+
+   Same fixed + 100vh technique as .hero-backdrop so it stays behind
+   scrolled content on long pages (e.g. /datenschutz) instead of only
+   covering the first screen.
+
+   Width: 745px x 1.1 = ~820px, per request to make it 10% wider than
+   the top nav pill. 745px is reused from the existing "roughly lines
+   up with the nav pill" approximation already used by .about_box /
+   .projects-content / .news_container (see the "Projects Page"
+   section below) - the pill itself has no fixed width, it hugs its
+   six links, so this is an eyeballed estimate, not a measurement;
+   nudge this alongside 745px if they visually drift apart. */
+.content-backdrop {
+    display: none;
+}
+
+@media (min-width: 601px) {
+    .content-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 820px;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+body.home .content-backdrop {
+    display: none;
+}
+
 /* Solid white backdrop, same 1200px-capped footprint as .background
-   (not full-viewport like .home-bg). Sits between .home-bg and
+   (not full-viewport like .page-bg). Sits between .page-bg and
    .background in the stacking order (same z-index, later in source
-   so it paints on top of .home-bg) so it only ever shows through
-   .background's own clip-path notch - it never covers .home-bg in
-   the true side margins beyond 1200px. */
+   so it paints on top of .page-bg) so it only ever shows through
+   .background's own clip-path notch - it never covers .page-bg in
+   the true side margins beyond 1200px. Homepage-only still, unlike
+   .page-bg above. */
 .hero-backdrop {
     position: fixed;
     top: 0;
@@ -593,12 +647,7 @@ body.home main {
     padding-top: 50px;
     padding-left: 16px;
     padding-right: 16px;
-    /* Clears the fixed, always-on-top .footer-container (position:
-       fixed; bottom: 0 - removed from normal flow, so nothing else
-       reserves space for it, same root cause fixed on /projects and
-       /news). Most noticeable on /datenschutz, whose full privacy
-       policy text is long enough to scroll past the viewport. */
-    padding-bottom: 140px;
+    padding-bottom: 50px;
     box-sizing: border-box;
 }
 
@@ -668,12 +717,7 @@ body.projects-page .projects-content {
     width: 100%;
     max-width: 745px;
     margin: 0 auto;
-    /* Bottom padding clears the fixed, always-on-top .footer-container
-       (position: fixed; bottom: 0 - removed from normal flow, so
-       nothing else reserves space for it). ~90px is the footer's own
-       height at its tallest (80px logo + 10px padding); the rest is
-       breathing room so the last line of text isn't flush against it. */
-    padding: 0 16px 140px;
+    padding: 0 16px 50px;
     box-sizing: border-box;
     text-align: left;
     color: #252220;
@@ -953,12 +997,6 @@ body.projects-page .carousel__caption {
    margin: auto shorthand that silently reset it back to 0 - folded
    into one shorthand so the top margin actually applies.
 
-   Bottom padding matches .projects-content's fix for the same root
-   cause: .footer-container is position: fixed, so it's removed from
-   normal flow and nothing else reserves space for it - it just
-   overlaps whatever content is scrolled to the bottom. ~90px is the
-   footer's own height at its tallest, the rest is breathing room.
-
    width: 100% matters here: .news_container is a flex item of <main>
    (display: flex; align-items: center - not stretch), so with width
    left at its default auto it would shrink-wrap to its content's
@@ -968,7 +1006,7 @@ body.projects-page .carousel__caption {
 .news_container {
     width: 100%;
     margin: 25px auto 0 auto;
-    padding: 25px 16px 140px;
+    padding: 25px 16px 50px;
     max-width: 745px;
     box-sizing: border-box;
 }
@@ -1130,18 +1168,26 @@ body.projects-page .carousel__caption {
 
 /*                                                   Footer */
 
+/* In normal flow (not position: fixed) so it sits after the page's
+   own content instead of overlapping it. body is display: flex;
+   flex-direction: column; min-height: 100vh with main: flex: 1, so
+   this margin-top: auto still pushes the footer down to the bottom
+   of the viewport on short pages (the classic sticky-footer trick) -
+   on pages long enough to scroll, it simply lands after the content
+   in normal flow instead of covering it. */
 .footer-container {
     display: flex;
     align-items: center; /* Vertically center the lines with the logo */
     justify-content: center; /* Horizontally center the whole element */
-    /* position: relative; */
-    position: fixed;
     width: 95%;
     padding: 5px 0;
     margin-top: auto; /* Push the logo container to the bottom */
-    z-index: 100;
-    bottom: 0;
-    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0) 50%);
+    margin-left: auto;
+    margin-right: auto; /* body's default align-items: stretch doesn't
+       center a flex item with a definite width like this one - without
+       these, the footer would hug the left edge instead of the
+       center. */
+    background: transparent;
     max-width: 1200px;
 }
 
@@ -1159,5 +1205,26 @@ body.projects-page .carousel__caption {
     background-color: rgba(62, 68, 68, 1);
     width: 90%;
     max-width: 1200px;
+}
+
+/* Cap .footer-container itself (not .footer-line - see below) to the
+   same 820px .content-backdrop uses, so the whole line+logo+line
+   assembly lines up with the white content column above it instead of
+   spanning near the full page width. Scoped to the same
+   min-width: 601px breakpoint as .content-backdrop, which is
+   desktop-only - mobile has no such column to match, so it stays as
+   it was.
+
+   .footer-line's own width/max-width (above) can't do this job: it's
+   a flex item of .footer-container (display: flex, row direction),
+   so flexbox's default flex-shrink already compresses both lines to
+   fit .footer-container's actual rendered width - on desktop that's
+   ~1140px (95% of the 1200px-capped body) minus the logo, which is
+   already well under any max-width put on .footer-line itself. The
+   container's own width is the real constraint. */
+@media (min-width: 601px) {
+    .footer-container {
+        max-width: 820px;
+    }
 }
 
