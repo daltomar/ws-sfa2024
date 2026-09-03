@@ -388,13 +388,14 @@ body.home .content-backdrop {
 
 .index-intro__beat h2 {
     margin: 0 0 0.75rem 0;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #252220;
 }
 
 .index-intro__beat p {
     margin: 0;
+    font-size: 1.15rem;
     color: #252220;
     line-height: 1.6;
 }
