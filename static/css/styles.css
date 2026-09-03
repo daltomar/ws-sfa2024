@@ -160,8 +160,15 @@ body.home main {
    main's own content, so it structurally can't reach the footer (or
    header) - and it still covers the full scrollable height of long
    pages, since main's box grows to fit all of its content regardless
-   of viewport height. No z-index needed: being the first child in
-   DOM order, it already paints behind every other node inside main.
+   of viewport height. z-index: -1 is still required despite being
+   first in DOM order: a positioned element with z-index: auto paints
+   *above* normal in-flow content in the same stacking context
+   regardless of DOM order (browsers paint positioned descendants as a
+   later layer than in-flow ones) - without it, this white panel
+   painted over every page's plain-text content and hid it entirely,
+   while images/carousels stayed visible only because they sit inside
+   their own already-positioned wrapper elements, which form separate
+   stacking contexts painted alongside this one, not underneath it.
 
    Width: 745px x 1.1 = ~820px, per request to make it 10% wider than
    the top nav pill. 745px is reused from the existing "roughly lines
@@ -185,6 +192,7 @@ body.home main {
         max-width: 820px;
         height: 100%;
         background-color: #ffffff;
+        z-index: -1;
         pointer-events: none;
     }
 }
