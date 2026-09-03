@@ -1172,29 +1172,36 @@ body.projects-page .carousel__caption {
    on pages long enough to scroll, it simply lands after the content
    in normal flow instead of covering it.
 
-   Traditional-footer layout: a single top rule (.footer-line) with
-   the logo+text brand row left-aligned beneath it, replacing the old
-   symmetric line-logo-line row. Column direction stacks the line
-   above the brand row; align-items: flex-start keeps the (now
-   narrower, not full-width) brand row pinned to the left instead of
-   the old centered arrangement. */
+   Traditional-footer layout: a single top rule with the logo+text
+   brand row left-aligned beneath it, replacing the old symmetric
+   line-logo-line row. Column direction stacks the border above the
+   brand row; align-items: flex-start keeps the (now narrower, not
+   full-width) brand row pinned to the left instead of the old
+   centered arrangement.
+
+   The top rule is a border-top on this element itself, not a
+   separate inner div - a previous version used an inner .footer-line
+   div with the container's own top padding above it, which let the
+   (then-tinted) background leak above the line since the padding box
+   extends past the line div. A border sits at the true outer edge of
+   the box by definition, so background (background-clip defaults to
+   border-box, but the border itself paints over/at that edge) can
+   never render above it - this is structurally guaranteed, not just
+   because the background happens to be transparent right now. */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 95%;
-    padding: 5px 0;
+    padding: 0 0 5px 0;
     margin-top: auto; /* Push the footer down to the bottom */
     margin-left: auto;
     margin-right: auto; /* body's default align-items: stretch doesn't
        center a flex item with a definite width like this one - without
        these, the footer would hug the left edge instead of the
        center. */
-    /* Slightly darker than plain transparent - same subtle tint
-       recipe used elsewhere on the site (see .index-intro__beat
-       --tinted) - so the footer reads as its own region instead of
-       fully dissolving into the page-bg backdrop above it. */
-    background-color: rgba(37, 34, 32, 0.04);
+    border-top: 3px solid rgba(62, 68, 68, 1);
+    background: transparent;
     max-width: 1200px;
 }
 
@@ -1219,17 +1226,7 @@ body.projects-page .carousel__caption {
 
 .footer-text {
     font-size: 0.95rem;
-    color: rgba(62, 68, 68, 1); /* matches .footer-line's color */
-}
-
-/* Style for the line - now a single top rule instead of flanking the
-   logo, so it needs its own full width rather than sharing 90% with
-   a twin. Thicker (2px -> 3px) so it reads clearly against the
-   footer's new tinted background instead of blending into it. */
-.footer-line {
-    height: 3px;
-    background-color: rgba(62, 68, 68, 1);
-    width: 100%;
+    color: rgba(62, 68, 68, 1); /* matches the top rule's color */
 }
 
 /* Cap .footer-container itself to the same 820px .content-backdrop

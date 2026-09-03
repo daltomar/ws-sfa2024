@@ -28,7 +28,6 @@
     </main>
 
     <footer class="footer-container">
-        <div class="footer-line"></div>
         <div class="footer-brand">
             <img src="/static/images/SFA_Logo_v02.png" alt="Logo" class="footer-logo">
             <span class="footer-text">Skateboard für alle 2026</span>
