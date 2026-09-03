@@ -1190,7 +1190,11 @@ body.projects-page .carousel__caption {
        center a flex item with a definite width like this one - without
        these, the footer would hug the left edge instead of the
        center. */
-    background: transparent;
+    /* Slightly darker than plain transparent - same subtle tint
+       recipe used elsewhere on the site (see .index-intro__beat
+       --tinted) - so the footer reads as its own region instead of
+       fully dissolving into the page-bg backdrop above it. */
+    background-color: rgba(37, 34, 32, 0.04);
     max-width: 1200px;
 }
 
@@ -1203,11 +1207,14 @@ body.projects-page .carousel__caption {
 }
 
 /* Style for the logo - slightly smaller than before (80px -> 60px)
-   now that it sits inline with text instead of centered alone. */
+   now that it sits inline with text instead of centered alone. Small
+   left padding keeps it from sitting flush against the footer's own
+   edge. */
 .footer-logo {
     width: 11vw;
     max-width: 60px;
     height: auto;
+    padding-left: 8px;
 }
 
 .footer-text {
@@ -1217,9 +1224,10 @@ body.projects-page .carousel__caption {
 
 /* Style for the line - now a single top rule instead of flanking the
    logo, so it needs its own full width rather than sharing 90% with
-   a twin. */
+   a twin. Thicker (2px -> 3px) so it reads clearly against the
+   footer's new tinted background instead of blending into it. */
 .footer-line {
-    height: 2px;
+    height: 3px;
     background-color: rgba(62, 68, 68, 1);
     width: 100%;
 }
