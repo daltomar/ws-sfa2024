@@ -373,16 +373,8 @@ body.home .content-backdrop {
     margin-bottom: 1.5rem;
 }
 
-.index-intro__row--a {
+.index-intro__row--top {
     grid-template-columns: 1fr 1fr;
-}
-
-.index-intro__row--b {
-    grid-template-columns: 1.4fr 1fr;
-}
-
-.index-intro__row--c {
-    grid-template-columns: 1fr 1.4fr;
 }
 
 .index-intro__beat {
@@ -413,22 +405,29 @@ body.home .content-backdrop {
     border-radius: 12px;
 }
 
-/* Photo slot: holds its space gracefully with or without a real image
-   dropped into the <img src>. */
-.index-intro__photo {
-    display: flex;
-    min-height: 220px;
-    background-color: rgba(37, 34, 32, 0.06);
-    border-radius: 12px;
-    overflow: hidden;
-    box-sizing: border-box;
+/* Closing beat, standing alone below the globe rather than paired in
+   a two-column row - capped narrower and centered so its short
+   sign-off text doesn't stretch full width. */
+.index-intro__beat--centered {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.index-intro__photo img {
-    display: block;
+/* Centers the globe illustration between the "Wer wir sind" / "Wie
+   wir arbeiten" row above and the closing beat below. Capped well
+   under the SVG's own 400px intrinsic width so it reads as an
+   illustration accent, not a full-width banner. */
+.index-intro__globe {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.index-intro__globe img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 260px;
+    height: auto;
 }
 
 .index-intro__link {
@@ -446,9 +445,7 @@ body.home .content-backdrop {
 }
 
 @media (max-width: 640px) {
-    .index-intro__row--a,
-    .index-intro__row--b,
-    .index-intro__row--c {
+    .index-intro__row--top {
         grid-template-columns: 1fr;
     }
 }
