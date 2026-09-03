@@ -373,15 +373,11 @@ body.home .content-backdrop {
     margin-bottom: 1.5rem;
 }
 
-.index-intro__row--a {
-    grid-template-columns: 1fr 1fr;
-}
-
-.index-intro__row--b {
+.index-intro__row--top {
     grid-template-columns: 1.4fr 1fr;
 }
 
-.index-intro__row--c {
+.index-intro__row--bottom {
     grid-template-columns: 1fr 1.4fr;
 }
 
@@ -392,13 +388,14 @@ body.home .content-backdrop {
 
 .index-intro__beat h2 {
     margin: 0 0 0.75rem 0;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #252220;
 }
 
 .index-intro__beat p {
     margin: 0;
+    font-size: 1.15rem;
     color: #252220;
     line-height: 1.6;
 }
@@ -446,9 +443,8 @@ body.home .content-backdrop {
 }
 
 @media (max-width: 640px) {
-    .index-intro__row--a,
-    .index-intro__row--b,
-    .index-intro__row--c {
+    .index-intro__row--top,
+    .index-intro__row--bottom {
         grid-template-columns: 1fr;
     }
 }
