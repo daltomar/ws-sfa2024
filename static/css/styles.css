@@ -1170,14 +1170,21 @@ body.projects-page .carousel__caption {
    this margin-top: auto still pushes the footer down to the bottom
    of the viewport on short pages (the classic sticky-footer trick) -
    on pages long enough to scroll, it simply lands after the content
-   in normal flow instead of covering it. */
+   in normal flow instead of covering it.
+
+   Traditional-footer layout: a single top rule (.footer-line) with
+   the logo+text brand row left-aligned beneath it, replacing the old
+   symmetric line-logo-line row. Column direction stacks the line
+   above the brand row; align-items: flex-start keeps the (now
+   narrower, not full-width) brand row pinned to the left instead of
+   the old centered arrangement. */
 .footer-container {
     display: flex;
-    align-items: center; /* Vertically center the lines with the logo */
-    justify-content: center; /* Horizontally center the whole element */
+    flex-direction: column;
+    align-items: flex-start;
     width: 95%;
     padding: 5px 0;
-    margin-top: auto; /* Push the logo container to the bottom */
+    margin-top: auto; /* Push the footer down to the bottom */
     margin-left: auto;
     margin-right: auto; /* body's default align-items: stretch doesn't
        center a flex item with a definite width like this one - without
@@ -1187,37 +1194,42 @@ body.projects-page .carousel__caption {
     max-width: 1200px;
 }
 
-/* Style for the logo */
-.footer-logo {
-    width: 15vw;
-    max-width: 80px;
-    height: auto;
-
+/* Logo + brand text row, left-aligned under the top line. */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
 }
 
-/* Style for the lines */
+/* Style for the logo - slightly smaller than before (80px -> 60px)
+   now that it sits inline with text instead of centered alone. */
+.footer-logo {
+    width: 11vw;
+    max-width: 60px;
+    height: auto;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: rgba(62, 68, 68, 1); /* matches .footer-line's color */
+}
+
+/* Style for the line - now a single top rule instead of flanking the
+   logo, so it needs its own full width rather than sharing 90% with
+   a twin. */
 .footer-line {
     height: 2px;
     background-color: rgba(62, 68, 68, 1);
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
 }
 
-/* Cap .footer-container itself (not .footer-line - see below) to the
-   same 820px .content-backdrop uses, so the whole line+logo+line
-   assembly lines up with the white content column above it instead of
-   spanning near the full page width. Scoped to the same
-   min-width: 601px breakpoint as .content-backdrop, which is
-   desktop-only - mobile has no such column to match, so it stays as
-   it was.
-
-   .footer-line's own width/max-width (above) can't do this job: it's
-   a flex item of .footer-container (display: flex, row direction),
-   so flexbox's default flex-shrink already compresses both lines to
-   fit .footer-container's actual rendered width - on desktop that's
-   ~1140px (95% of the 1200px-capped body) minus the logo, which is
-   already well under any max-width put on .footer-line itself. The
-   container's own width is the real constraint. */
+/* Cap .footer-container itself to the same 820px .content-backdrop
+   uses, so the top line and brand row line up with the white content
+   column above it instead of spanning near the full page width.
+   Scoped to the same min-width: 601px breakpoint as .content-backdrop,
+   which is desktop-only - mobile has no such column to match, so it
+   stays as it was. */
 @media (min-width: 601px) {
     .footer-container {
         max-width: 820px;
