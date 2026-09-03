@@ -35,18 +35,23 @@
   <div class="index-intro__row index-intro__row--a">
     <article class="index-intro__beat" data-reveal>
       <h2>Wer wir sind</h2>
-      <p>TODO: 2–4 Sätze, Wir-Perspektive.</p>
+      <p>Als brasilianischen in Deutschland besuchen wir jährlich São Paulo, wo wir sehen,
+         wie viele Kinder in den Skateparks kein eigenes Skateboard haben.
+         Das hat uns zur Idee von „Skateboard für alle" gebracht: Wir wollen möglichst vielen
+         Kindern und Jugendlichen ermöglichen, Skateboarding zu erleben.</p>
     </article>
-    <article class="index-intro__beat" data-reveal>
-      <h2>Was wir tun</h2>
-      <p>TODO: 2–4 Sätze.</p>
+    
     </article>
   </div>
 
   <div class="index-intro__row index-intro__row--b">
     <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
       <h2>Wie wir arbeiten</h2>
-      <p>TODO: 2–4 Sätze - trägt das meiste Gewicht.</p>
+      <p>Wir sammeln alles, was mit dem Skateboardfahren zu tun hat: Skateboards,
+       Skateboardteile, Zubehör, Protektoren, Schuhe. Wir tragen die Materialien nach
+        Brasilien und geben sie persönlich an Projekte, die mit Kindern und Jugendlichen
+         arbeiten. Mit Geldspenden kaufen wir die Materialien direkt in Brasilien.
+          Außerdem übernehmen wir 100 % der Verwaltungskosten des Projektes.</p>
     </article>
     <div class="index-intro__photo" data-reveal>
       <!-- TODO: echtes Foto einsetzen, src ersetzen -->
