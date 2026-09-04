@@ -395,6 +395,12 @@ body.home .content-backdrop {
     display: grid;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    /* Without this, grid's default align-items: stretch forces the
+       photo to match the text beat's height (usually taller), which
+       would silently cancel out .index-intro__photo's smaller
+       min-height below - decoupling lets the photo actually render
+       shorter instead of stretching back up. */
+    align-items: start;
 }
 
 .index-intro__row--top {
@@ -435,10 +441,14 @@ body.home .content-backdrop {
 }
 
 /* Photo slot: holds its space gracefully with or without a real image
-   dropped into the <img src>. */
+   dropped into the <img src>. Shrunk from 220px per request, to cut
+   down the total height of the two text+image rows on the homepage -
+   real photos dropped in here get cropped top/bottom by object-fit:
+   cover (below) rather than squeezed, so pick images with some
+   headroom around the subject to spare. */
 .index-intro__photo {
     display: flex;
-    min-height: 220px;
+    min-height: 140px;
     background-color: rgba(37, 34, 32, 0.06);
     border-radius: 12px;
     overflow: hidden;
