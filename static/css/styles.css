@@ -368,7 +368,7 @@ body.home .content-backdrop {
    only the motto image (the subline text paragraph was removed), so
    it's free to match the image's own width below. */
 .index-intro__lede {
-    max-width: 745px;
+    max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
     margin: 0 auto 3rem auto;
     text-align: center;
 }
