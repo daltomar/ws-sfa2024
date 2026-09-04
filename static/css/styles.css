@@ -359,7 +359,7 @@ body.home .content-backdrop {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 16px;
+    padding: 2.5rem 16px;
     box-sizing: border-box;
     background-color: #ffffff;
 }
@@ -369,7 +369,7 @@ body.home .content-backdrop {
    it's free to match the image's own width below. */
 .index-intro__lede {
     max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2rem auto;
     text-align: center;
 }
 
@@ -394,7 +394,7 @@ body.home .content-backdrop {
 .index-intro__row {
     display: grid;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     /* Without this, grid's default align-items: stretch forces the
        photo to match the text beat's height (usually taller), which
        would silently cancel out .index-intro__photo's smaller
@@ -412,12 +412,12 @@ body.home .content-backdrop {
 }
 
 .index-intro__beat {
-    padding: 1.5rem;
+    padding: 1.25rem;
     box-sizing: border-box;
 }
 
 .index-intro__beat h2 {
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1.4rem;
     font-weight: 700;
     color: #252220;
@@ -427,11 +427,11 @@ body.home .content-backdrop {
     margin: 0;
     font-size: 1.15rem;
     color: #252220;
-    line-height: 1.6;
+    line-height: 1.45;
 }
 
 .index-intro__beat p + p {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
 }
 
 /* The one visually emphasized beat - carries the most substance. */
@@ -441,14 +441,19 @@ body.home .content-backdrop {
 }
 
 /* Photo slot: holds its space gracefully with or without a real image
-   dropped into the <img src>. Shrunk from 220px per request, to cut
-   down the total height of the two text+image rows on the homepage -
-   real photos dropped in here get cropped top/bottom by object-fit:
-   cover (below) rather than squeezed, so pick images with some
-   headroom around the subject to spare. */
+   dropped into the <img src>. A definite height (not min-height) is
+   required here: the <img> below is height: 100%, and a percentage
+   height only resolves against a definite parent height - against an
+   auto/min-height-only parent it computes to auto instead, so the
+   image was rendering at its own natural aspect ratio (up to ~360px
+   tall for the current placeholder photos) instead of being cropped
+   by object-fit: cover at all. That was the actual reason shrinking
+   this box previously had no visible effect. Real photos dropped in
+   here get cropped top/bottom to fit this height, so pick images with
+   some headroom around the subject to spare. */
 .index-intro__photo {
     display: flex;
-    min-height: 140px;
+    height: 220px;
     background-color: rgba(37, 34, 32, 0.06);
     border-radius: 12px;
     overflow: hidden;
