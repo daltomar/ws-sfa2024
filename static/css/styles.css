@@ -411,6 +411,49 @@ body.home .content-backdrop {
     grid-template-columns: 1fr 1.4fr;
 }
 
+/* Desktop only (matches the min-width: 641px counterpart of the
+   max-width: 640px collapse below): makes the photo match the "Wie
+   wir arbeiten" text's own height exactly, instead of its own fixed
+   220px crop. Below 640px the row collapses to one column, so photo
+   and text land in separate implicit grid rows with nothing to
+   stretch to - the same rules there collapsed this box to 0 height
+   (its content is taken out of flow, see below), hiding the image
+   entirely, so this whole block must stay scoped above the
+   breakpoint. */
+@media (min-width: 641px) {
+    .index-intro__row--bottom {
+        /* Overrides the base row's align-items: start. */
+        align-items: stretch;
+    }
+
+    /* Just setting min-height: 0 here was not enough on its own - the
+       <img> inside is still governed by the same height: 100% chain
+       documented on .index-intro__photo below, and while that's
+       indeterminate (during the row's own auto-height computation) it
+       falls back to the image's natural aspect-ratio height, which is
+       itself then what .index-intro__photo reports as ITS OWN natural
+       size - so the row track still ended up sized to the photo, with
+       the text stretching UP to match the photo instead of the
+       reverse.
+
+       Taking the <img> out of flow entirely (position: absolute,
+       sized below) means it contributes nothing to that computation,
+       so the row's height comes only from the text beat, and the
+       photo (position: relative, stretched by align-items: stretch
+       above) fills exactly that height with the image cropped via
+       object-fit: cover to match. */
+    .index-intro__row--bottom .index-intro__photo {
+        position: relative;
+        height: auto;
+        min-height: 0;
+    }
+
+    .index-intro__row--bottom .index-intro__photo img {
+        position: absolute;
+        inset: 0;
+    }
+}
+
 .index-intro__beat {
     padding: 1.25rem;
     box-sizing: border-box;
