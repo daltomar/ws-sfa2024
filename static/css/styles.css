@@ -276,22 +276,8 @@ body.home .content-backdrop {
     /* background-size: contain; */
     background-position: center;
     background-repeat: no-repeat;
-    /* Shrunk from 100vh per request: at 100vh (position: relative, in
-       normal flow, not fixed), on a tall monitor the browser can't
-       scroll #intro flush to the viewport top once index-intro is
-       shorter than the viewport (it was deliberately kept compact
-       enough to fit one screen in earlier work) - some of this
-       photo/hero is mathematically guaranteed to still show below the
-       nav after clicking the arrow. Shrinking the hero itself is the
-       only way to remove that leftover chunk regardless of monitor
-       height. 100px comfortably clears the notch below (60px deep)
-       plus the nav pill (~52px), matching its bottom edge - the
-       logo/GIF/slogan content inside #container_logo is untouched for
-       now, so it will overflow/get clipped in this much shorter box;
-       that trade-off is intentional, for evaluation before deciding
-       how to redistribute that content. */
-    min-height: 100px;
-    height: 100px;
+    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -564,7 +550,7 @@ body.home .content-backdrop {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* matches .background's own (shrunk) height, not the viewport */
+    height: 100vh;  /*Full viewport height*/ 
     max-width: 100%;
     width: 100%;
     text-align: center; /* Center text */
