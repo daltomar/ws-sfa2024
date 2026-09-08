@@ -35,18 +35,14 @@
          fehlt vielen Kindern in Brasilien ein Board.
          <strong>Wir wollen möglichst vielen Kindern und Jugendlichen ermöglichen, Skateboarding zu erleben.</strong></p>
     </article>
-    <!-- Eval placeholder: PSP_11.png picked at random from static/images
-         for layout evaluation, not a final content choice. -->
     <div class="index-intro__photo" data-reveal>
-      <img src="/static/images/PSP_11.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano" loading="lazy">
+      <img src="/static/images/IMG-1.jpg" alt="Gesammelte Skateboards, Protektoren und Zubehör, bereit für den Versand nach Brasilien" loading="lazy">
     </div>
   </div>
 
   <div class="index-intro__row index-intro__row--bottom">
-    <!-- Eval placeholder: VP_05.png picked at random from static/images
-         for layout evaluation, not a final content choice. -->
     <div class="index-intro__photo" data-reveal>
-      <img src="/static/images/VP_05.png" alt="Mailton beim Skaten im Vila Prudente Skate Park" loading="lazy">
+      <img src="/static/images/IMG-2.jpg" alt="Kinder und Jugendliche mit ihren Pokalen bei einem Skateboard-Projekt in Brasilien" loading="lazy">
     </div>
     <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
       <h2>Wie wir arbeiten</h2>
