@@ -23,16 +23,17 @@
 
 <section class="index-intro" id="intro">
   <div class="index-intro__lede">
-    <h1 class="index-intro__headline">Wir sammeln Skateboardteile und verteilen sie an Kinder und Jugendlichen in Brasilien</h1>
+    <h1 class="index-intro__headline">Wir sammeln alles rund ums Skateboard und bringen es zu sozialen Projekten in Brasilien</h1>
   </div>
 
   <div class="index-intro__row index-intro__row--top">
     <article class="index-intro__beat" data-reveal>
       <h2>Wer wir sind</h2>
-      <p>Als brasilianischen in Deutschland besuchen wir jährlich São Paulo, wo wir sehen,
-         wie viele Kinder in den Skateparks kein eigenes Skateboard haben.
-         Das hat uns zur Idee von „Skateboard für alle" gebracht:
-         <strong>Wir wollen möglichst vielen Kindern und Jugendlichen ermöglichen, Skateboarding zu erleben.</strong></p>
+      <p>Als Brasilianer in Deutschland besuchen wir jährlich unsere Heimat und fahren dort
+         selbst gerne Skateboard. Dabei ist uns ein deutlicher Kontrast aufgefallen: Während
+         in Deutschland viele Skateboards ungenutzt bleiben oder verschenkt werden, fehlt
+         Kindern in Brasilien oft bereits das nötige Board.
+         <strong>Wir möchten deshalb Skateboards dorthin bringen, wo sie wirklich gebraucht werden.</strong></p>
     </article>
     <!-- Eval placeholder: PSP_11.png picked at random from static/images
          for layout evaluation, not a final content choice. -->
@@ -49,11 +50,11 @@
     </div>
     <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
       <h2>Wie wir arbeiten</h2>
-      <p>Wir sammeln alles, was mit dem Skateboardfahren zu tun hat: Skateboards,
-       Skateboardteile, Zubehör, Protektoren, Schuhe. Wir tragen die Materialien nach
-        Brasilien und geben sie persönlich an Projekte, die mit Kindern und Jugendlichen
-         arbeiten. Mit Geldspenden kaufen wir die Materialien direkt in Brasilien.
-          <strong>Außerdem übernehmen wir 100 % der Verwaltungskosten des Projektes.</strong></p>
+      <p>Wir sammeln alles, was mit Skateboarding zu tun hat – Skateboards, Skateboardteile,
+       Zubehör, Protektoren, Schuhe usw. Wir bringen die gesammelten Materialien nach
+        Brasilien und verteilen sie an soziale Projekte, die mit Kindern und Jugendlichen
+         arbeiten. Mit Geldspenden kaufen wir zusätzlich Materialien direkt vor Ort.
+          <strong>Die Verwaltungskosten des Projekts übernehmen wir zu 100 %.</strong></p>
       <p>Möchtest du helfen? <a class="index-intro__link" href="/hilfmit">Hier mehr erfahren</a></p>
     </article>
   </div>
