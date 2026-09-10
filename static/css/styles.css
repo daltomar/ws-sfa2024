@@ -364,6 +364,23 @@ body.home .content-backdrop {
     background-color: #ffffff;
 }
 
+/* On desktop (tall monitors), the hero (.background) is 100vh in normal
+   flow. If Part 2's content is shorter than the viewport, the page can't
+   scroll far enough to push Part 1 fully above the fold — the browser's
+   max scroll is limited to (page height − viewport height), which is less
+   than 100vh when Part 2 is short. The result: the lower portion of Part
+   1's foreground images stays visible at the top of the viewport even
+   after the user has scrolled "all the way down" to Part 2.
+   Guaranteeing min-height: 100vh on Part 2 makes the page always at
+   least 200vh tall, so max scroll ≥ 100vh and Part 1 scrolls fully out
+   of view. Below 601px (mobile), Part 2's stacked single-column content
+   is already taller than 100vh, so no min-height is needed there. */
+@media (min-width: 601px) {
+    .index-intro {
+        min-height: 100vh;
+    }
+}
+
 /* No longer capped at a text-readability width (460px) - now holds
    only the motto image (the subline text paragraph was removed), so
    it's free to match the image's own width below. */
