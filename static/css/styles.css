@@ -378,6 +378,10 @@ body.home .content-backdrop {
 @media (min-width: 601px) {
     .index-intro {
         min-height: 100vh;
+        /* Pill nav is position:fixed ~52px tall; 5rem (80px) clears it
+           with ~28px of breathing room. Tune this single value to adjust
+           the gap between the floating nav and the headline below it. */
+        padding-top: 5rem;
     }
 }
 
@@ -386,7 +390,7 @@ body.home .content-backdrop {
    it's free to match the image's own width below. */
 .index-intro__lede {
     max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 6rem auto; /* 3× 2rem — tune here to adjust lede→row gap */
     text-align: center;
 }
 
@@ -446,7 +450,7 @@ body.home .content-backdrop {
        scoped to row--top only so it doesn't also add space after
        row--bottom, right before the section ends. */
     .index-intro__row--top {
-        margin-bottom: 2.5rem;
+        margin-bottom: 5rem; /* 2× 2.5rem — tune here to adjust row→row gap */
     }
 
     .index-intro__row--bottom {
@@ -586,6 +590,14 @@ body.home .content-backdrop {
         opacity: 1;
         transform: none;
     }
+}
+
+/* Reuses .about-social (icons, links, sizing, hover) from the About page;
+   overrides only layout to center the icon row within the index-intro. */
+.index-intro .about-social {
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 2.5rem;
 }
 
 #container {
