@@ -30,9 +30,13 @@
         hast und unser Projekt unterstützen möchtest, melde dich gerne bei uns.
         </p>
         <p class="about-text">Kontakt : kontakt@skateboardfueralle.org</p>
-        <p class="about-text">
-        <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" style="text-decoration: none;">
-        Instagram</a>
+        <p class="about-social">
+            <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573786774336" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
         </p>
         <br>
         <br>
