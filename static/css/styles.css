@@ -815,6 +815,24 @@ body.home .content-backdrop {
     }
 }
 
+.about-social {
+    display: flex;
+    gap: 1rem;
+    padding-left: 4px;
+    margin-top: 0.5rem;
+}
+
+.about-social a {
+    color: #000000;
+    font-size: 1.75rem;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.about-social a:hover {
+    color: #444444;
+}
+
 /*                          Projects Page */
 /* Scoped entirely under body.projects-page (set via the template's
    body_class block) so none of this leaks onto other pages that
