@@ -9,12 +9,8 @@
   <h1 class="page-title">Projekte</h1>
 
   <p class="page-intro">
-    Wir verteilen die Spenden in der Regel einmal im Jahr. Bisher haben wir alle Aktionen
-    persönlich durchgeführt und arbeiten derzeit auf zwei Ebenen. Das Projekt Skate Poético
-    ist eine strukturiertere und regelmäßigere Initiative, die das ganze Jahr über Aktivitäten
-    anbietet. Auf der Vila Prudente Skate Plaza wird normalerweise eine eher improvisierte Aktivität
-    mit Unterstützung eines professionellen Skaters aus der Region durchgeführt, der ebenfalls in sozialen
-    Projekten aktiv ist. Lies unten mehr über jedes Projekt.
+    Wir persönlich verteilen die Spenden in der Regel einmal im Jahr an soziale
+    Projekte in São Paulo, Brasilien. Lies unten mehr über jedes Projekt.
   </p>
 
   <!-- ============================================================
@@ -34,9 +30,7 @@
       <img class="project__logo" src="/static/images/PSP_Logo.png" alt="Logo des Projeto Skate Poético">
       <div class="project__intro-text">
         <p>
-          <!-- Platzhaltertext, durch echten Text ersetzen -->
-          Stadtviertel Jardim Romano, Sao Paulo, Brasilien.<br>
-          Skateboard und Kultur.
+       Skateboard, Bildung und Kultur in einem armen Stadtviertel am Rande São Paulos.
         </p>
       </div>
     </div>
@@ -69,26 +63,23 @@
 
       <div class="project__body">
         <p>
-          Das Projekt „Projeto Skate Poético“ – PROSKAP wurde 2016 von Anderson Silveira dos Santos
-          (bekannt als „Nando“) gegründet und heute auch von Kevin Nascimento da Silva und Rafael Souza
-          Alves Diniz betreibt. Die Aktivitäten finden im Stadtviertel Jardim Romano, ein Armenviertel
-          im äußersten Osten von São Paulo statt. Das Projekt verbindet Skateboard und Lyrik und versucht
-          nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen Kinder der Region zu bringen.
-          Am Anfang gab es nur ein paar kleine Aktivitäten wie „Boards-Customization“, eine Diskussionsrunde
-          und kleine Meisterschaften. Im Jahr 2017 sind die Geschichtslehrer und Skater Kevin Nascimento da Silva
-          und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
-          Kalender besser organisiert.
+          Das Projekt „Projeto Skate Poético" – PROSKAP wurde 2016 von Anderson Silveira dos Santos (bekannt als „Nando") gegründet.
+          Das Projekt verbindet Skateboard und Lyrik und versucht, nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen
+           Kindern der Region zu bringen. Am Anfang gab es nur ein paar kleine Aktivitäten wie „Board-Customization", eine Diskussionsrunde
+            und kleine Meisterschaften. Im Jahr 2017 stiegen die Geschichtslehrer und Skater Kevin Nascimento da Silva und Rafael Souza Alves
+             Diniz in das Projekt ein. Dadurch wurden die Aktivitäten mit einem festen Kalender besser organisiert.
         </p>
         <p>
-          Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
-          (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape-Schneiden und Bemalen, sowie
-          Lesungen und verschiedene Spielen anbietet. Es gibt leider keine offizielle Unterstützung. Bei dem Projekt
-          handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringen. Für die Kinder ist
-          die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen.
-          Bekannt wurde der Stadtteil „Jardim Romano“ im Jahr 2009, als eine Rekord-Flut das ganze Stadtviertel für einen Monat
-          unter Wasser setzte. Die Region gehört zu den ärmsten Stadtvierteln Sao Paulos und hat nicht viele Angebote für Kinder
-          und Jugendliche.
-          Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
+          Es gibt leider keine offizielle Unterstützung. Bei dem Projekt handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringt.
+           Für die Kinder ist es die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen. Die Region gehört zu den ärmsten Stadtvierteln São Paulos.
+        </p>
+        <p>
+          Im Jahr 2024 begann das Projekt, seine Aktivitäten in den Räumlichkeiten der Sambaschule „Escola de Samba Unidos de Santa Bárbara" anzubieten, die sich
+           in der Region befindet. Obwohl dieser Ort sicherer war als die Straßen des Viertels und Schutz vor Regen bot, gab es große Schwierigkeiten mit der Anreise
+            der Kinder. Hinzu kam, dass es einen Konflikt zwischen den Aktivitäten des Projekts und den zahlreichen anderen Veranstaltungen am Ort gab. Deshalb kehrte
+             das Projekt 2025 dazu zurück, seine Aktivitäten auf den Straßen des Viertels anzubieten, ergänzt durch einige Ausflüge zu Veranstaltungen und kulturellen 
+             Orten der Stadt. 2026 wurde das Projekt wieder allein von Nando koordiniert, der weiterhin in einem der wichtigsten Anliegen der Skater der Region 
+             aktiv ist: dem Bau einer Anlage, die sichere Bedingungen für die Ausübung des Sports durch die Kinder und Jugendlichen des Viertels bieten kann.
         </p>
       </div>
 
@@ -108,9 +99,8 @@
       <img class="project__logo" src="/static/images/PDSV-Logo.jpg" alt="Logo des Projeto Demorô Skate é Vida">
       <div class="project__intro-text">
         <p>
-          <!-- Platzhaltertext, durch echten Text ersetzen -->
-          Stadtviertel Heliópolis, Sao Paulo, Brasilien<br>
-          Regelmäßige Skateboard-Unterricht für Kinder.
+          Das Projekt „Projeto Demorô Skate é Vida" bietet regelmäßigen Skateunterricht
+           in einem sicheren Umfeld mitten in einer der größten Favelas Lateinamerikas.
         </p>
       </div>
     </div>
@@ -143,30 +133,23 @@
 
       <div class="project__body">
         <p>
-          Das Projekt „Projeto Skate Poético“ – PROSKAP wurde 2016 von Anderson Silveira dos Santos
-          (bekannt als „Nando“) gegründet und heute auch von Kevin Nascimento da Silva und Rafael Souza
-          Alves Diniz betreibt. Die Aktivitäten finden im Stadtviertel Jardim Romano, ein Armenviertel
-          im äußersten Osten von São Paulo statt. Das Projekt verbindet Skateboard und Lyrik und versucht
-          nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen Kinder der Region zu bringen.
-          Am Anfang gab es nur ein paar kleine Aktivitäten wie „Boards-Customization“, eine Diskussionsrunde
-          und kleine Meisterschaften. Im Jahr 2017 sind die Geschichtslehrer und Skater Kevin Nascimento da Silva
-          und Rafael Souza Alves Diniz in das Projekt eingestiegen. Dadurch wurden die Aktivitäten mit einem festen
-          Kalender besser organisiert.
+          Das Projekt wurde 2019 im Stadtteil Heliópolis gegründet, in einer Region mit enormen sozialen Problemen.
+           Die Initiative nutzt das Skateboarding, um soziale Inklusion zu fördern und dazu beizutragen, das Leben
+            von Kindern und Jugendlichen durch den Sport zu verändern. Das Projekt bietet zweimal pro Woche Skateunterricht,
+             eine komplette Ausrüstung (Skateboards, Schoner) und stellt außerdem einen Imbiss bereit.
         </p>
         <p>
-          Es geht um ein 100-prozentiges unabhängiges Projekt, das Skateboard-Kurse, Workshops zur Holzarbeiten
-          (Rampenbau, nachhaltiger Bau von Skateboard-Decks), Workshops zur Griptape-Schneiden und Bemalen, sowie
-          Lesungen und verschiedene Spielen anbietet. Es gibt leider keine offizielle Unterstützung. Bei dem Projekt
-          handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringen. Für die Kinder ist
-          die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen.
-          Bekannt wurde der Stadtteil „Jardim Romano“ im Jahr 2009, als eine Rekord-Flut das ganze Stadtviertel für einen Monat
-          unter Wasser setzte. Die Region gehört zu den ärmsten Stadtvierteln Sao Paulos und hat nicht viele Angebote für Kinder
-          und Jugendliche.
-          Wir sind sehr stolz, dieses Projekt unterstützen zu dürfen.
+          Das Projekt lehrt jedoch nicht nur das Skaten. Neben der Skate-Kultur, die es ebenfalls vermittelt und die Werte
+           wie Kameradschaft und Durchhaltevermögen umfasst, dient das Projekt letztlich auch als Anlaufstelle für Kinder
+            und Jugendliche, die den unterschiedlichsten Hindernissen gegenüberstehen – sowohl zu Hause als auch bei der
+             Suche nach einer besseren Perspektive.
+        </p>
+        <p>
+        Der Bedarf an Material ist bei diesem Projekt sehr groß, und jede Hilfe ist herzlich willkommen.
         </p>
       </div>
 
-      <p class="project__link"><a href="https://projeto-skate-poetico-9.webnode.page/">Offizielle Website</a></p>
+      <p class="project__link"><a href="https://instagram.com/projetodemoroskt/">Instagram</a></p>
     </details>
   </section>
 
@@ -178,10 +161,10 @@
       <img class="project__logo" src="/static/images/VP_Logo.jpg" alt="Logo des Vila Prudente Skate Park">
       <div class="project__intro-text">
         <p>
-          <!-- Platzhaltertext, durch echten Text ersetzen -->
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        Die Idee zu unserem Projekt entstand an diesem Ort. Leider ist unsere wichtigste Bezugsperson,
+         der Skater Maílton dos Santos, im April 2026 verstorben. Deshalb konzentrieren wir uns derzeit darauf,
+          andere, besser strukturierte Projekte zu unterstützen.
+         </p>
       </div>
     </div>
 
@@ -210,23 +193,34 @@
 
       <div class="project__body">
         <p>
-          Mailton dos Santos ist ein professioneller Skateboarder, der sich aktiv an sozialen
-          Projekten beteiligt, die Kinder und Jugendliche unterstützen. Mailton begann 2001
-          Skateboard zu fahren und wurde 2011 Profi-Skateboarder. Im selben Jahr tourte er durch
-          Europa und später auch durch Lateinamerika und Kalifornien.
-          Mailton besucht regelmäßig die Skateparks in Osten São Paulos. Dabei wurde er häufig von Kindern
-          angesprochen, die kurz mit seinem Skateboard fahren wollten. Darum begann er sich sozial zu engagieren.
-          Aktuell ist Mailton Teammitglieder der sozialen Organisation „Social Skate“, die derzeit rund 150 Kinder
-          und deren Familien mit pädagogischen und sportlichen Aktivitäten betreut. Darüber hinaus beteiligt er sich
-          auch an der kirchlich Gruppe „Cristo na Base“, die verschiedenen Angebote für Kinder und Jungendliche Osts
-          São Paulos fördert.
+          Im Dezember 2019 reisten wir nach Brasilien, und eines der ersten Dinge, die ich nach unserer Ankunft tat, war, 
+          ein Skateboard zu kaufen. Nach einer langen Pause von fast 30 Jahren stand ich wieder auf dem Board.
+           Der Skatepark von Vila Prudente liegt in der Nähe des Ortes, an dem ich aufgewachsen bin, und dort wurde ich mit
+            einer traurigen Realität konfrontiert: unzählige Kinder, die eigentlich in der Schule sein sollten, bettelten darum,
+             ein wenig mit den Skateboards derjenigen fahren zu dürfen, die auf die Bahn kamen. Die Freude der Kinder auf dem Skateboard
+              war der Funke, der die Idee entzündete, Skateboard für alle zu gründen. Man kann mit Recht sagen, dass das Projekt an diesem Ort entstanden ist.
         </p>
         <p>
-          Der Skate Park in Stadtteil Vila Prudente gehört zu den Skateparks, die häufig von Mailton besucht werden.
-          Dort ist unsere Idee von „Skateboard für alle“ geboren, vor allem weil wir von vielen Kindern angesprochen wurden.
-          Die Kinder waren total begeistert und wollten die Skateboards gar nicht zurückgeben. Bei einer von uns ins Leben
-          gerufenen Spendenaktion 2020 in diesem Park, haben wir durch Zufall Maiton kennengelernt. Er hat uns sofort bei der
-          Skateboard-Verteilung geholfen und wir hoffen, dass diese Partnerschaft lang gehalten wird.
+          Im Laufe des Jahres 2020 gelang es uns, genügend Teile zusammenzutragen, um 10 Skateboards zusammenzubauen. Im Dezember
+           2020 war ich wieder mit den Boards im Vila Prudente Skate Plaza, wusste aber nicht genau, wie ich sie verteilen sollte.
+            Bald wurde mir empfohlen, mit Maílton dos Santos zu sprechen. Als professioneller Skater der Region war er bereits in
+             sozialer Arbeit engagiert und genau der Richtige: Er wusste, wer Bedarf hatte und wie man das Material am besten verteilt.
+              Von da an wurde Maílton auch für uns zu einer wichtigen Bezugsperson. Nach einer komplizierten Aktion im Jahr 2021, als
+               unser Material erst lange nach unserer Rückkehr nach Deutschland ankam, veranstalteten wir 2022 ein unvergessliches Event.
+                2023 konnten wir nicht nach Brasilien reisen, aber 2024 organisierten wir mit Maíltons Hilfe ein weiteres ganz besonderes Event.
+        </p>
+        <p>
+          2025 begannen wir bereits, ein weiteres Event zu planen, doch alles wurde unterbrochen – eine schwere Krankheit, die Maílton
+           in der Vergangenheit bereits behandelt hatte, war zurückgekehrt. Trotzdem gelang es uns dank der Unterstützung lokaler Skater,
+            ein Event zur Verteilung des Materials zu veranstalten, und wir feierten mit einem kleinen Fest die Wiedereröffnung der Bahn, die zuvor
+             leicht umgebaut worden war.
+        </p>
+        <p>
+          Danach konnten wir nur noch aus der Ferne mitverfolgen, wie die Skate-Community von São Paulo Maílton unterstützte – mit unzähligen
+           Kampagnen und zahlreichen Ehrungen. Leider verstarb Maílton im April 2026. Er wird eine enorme Lücke hinterlassen, nicht nur in der
+            Skate-Szene von São Paulo, sondern auch bei den vielen sozialen Projekten, in denen er aktiv war. Da wir bei der Organisation der
+             Aktionen vor Ort stark von ihm abhängig waren, werden wir uns – zumindest vorerst – auf die anderen Projekte konzentrieren, die wir
+              unterstützen.
         </p>
       </div>
     </details>
