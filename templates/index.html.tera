@@ -54,6 +54,15 @@
       <p>Möchtest du helfen? <a class="index-intro__link" href="/hilfmit">Hier mehr erfahren</a></p>
     </article>
   </div>
+
+  <p class="about-social">
+      <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61573786774336" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+  </p>
 </section>
 
 <script src="/static/js/intro.js"></script>
