@@ -114,13 +114,13 @@
       <div class="carousel" data-carousel>
         <div class="carousel__track">
           <div class="carousel__slide is-active">
-            <img src="/static/images/PSP_01.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
+            <img src="/static/images/DemoroSkate-003.jpg" alt="Demoro Skate Projekt – Foto 1" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/PSP_11.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
+            <img src="/static/images/DemoroSkate-013.jpg" alt="Demoro Skate Projekt – Foto 2" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/PSP_16.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
+            <img src="/static/images/DemoroSkate-017.jpg" alt="Demoro Skate Projekt – Foto 3" loading="lazy">
           </div>
           <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
           <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
