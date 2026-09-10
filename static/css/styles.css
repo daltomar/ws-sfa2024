@@ -450,7 +450,7 @@ body.home .content-backdrop {
        scoped to row--top only so it doesn't also add space after
        row--bottom, right before the section ends. */
     .index-intro__row--top {
-        margin-bottom: 7.5rem; /* 3× 2.5rem — tune here to adjust row→row gap */
+        margin-bottom: 5rem; /* 2× 2.5rem — tune here to adjust row→row gap */
     }
 
     .index-intro__row--bottom {
