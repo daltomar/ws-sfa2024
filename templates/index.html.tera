@@ -27,7 +27,7 @@
   </div>
 
   <div class="index-intro__row index-intro__row--top">
-    <article class="index-intro__beat" data-reveal>
+    <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
       <h2>Wer wir sind</h2>
       <p>Als Brasilianer in Deutschland besuchen wir jährlich unsere Heimat und fahren dort
          selbst gerne Skateboard. Dabei ist uns ein deutlicher Kontrast aufgefallen: Während
