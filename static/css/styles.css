@@ -542,12 +542,30 @@ body.home .content-backdrop {
     object-fit: cover;
 }
 
-/* This photo's subject sits low in the frame - anchor the crop to the
-   image's own bottom edge so object-fit: cover trims only off the top
-   instead of the default center crop (which was eating into the
-   bottom too). */
+/* ---- Per-image focal-point controls ----------------------------------------
+   Two independent object-position values — one per photo. Tune each on its
+   own line. Any CSS <position> works: "center", "top", "bottom", "left",
+   "right", "50% 30%", "center top", etc.
+
+   TOP ROW  — IMG-1.jpg  (landscape 1280×960, 4:3)
+   The landscape photo fills a ~2:1 box at desktop max-width; object-fit: cover
+   clips ~34% of the height equally top and bottom at center. Stable across
+   viewports — adjust only if the subject drifts out of frame. */
+.index-intro__row--top .index-intro__photo img {
+    object-position: center;        /* ← top-row focal point — tune here */
+}
+
+/* BOTTOM ROW — IMG-2.jpg  (portrait 1064×1600, 2:3)
+   ⚠ Extreme-crop warning: this photo is portrait (tall) filling a landscape
+   box. At desktop max-width (~477×280 px box) object-fit: cover must scale
+   by the width axis, rendering the image at 477×717 px — only ~39% of the
+   height is ever visible regardless of object-position. The crop is less
+   severe at narrower viewports where the box approaches square. Accept this
+   and pick a focal point, or widen this column by adjusting
+   .index-intro__row--bottom's grid-template-columns so the photo gets a
+   narrower, more portrait-friendly track. */
 .index-intro__row--bottom .index-intro__photo img {
-    object-position: bottom;
+    object-position: center;        /* ← bottom-row focal point — tune here */
 }
 
 .index-intro__link {
