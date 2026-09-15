@@ -1159,8 +1159,8 @@ body.projects-page .carousel__caption {
 .news_box {
     max-width: 100%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     padding: 1rem 1rem;
     background-color: white;
     /* No border by design - was `border: black` (invalid shorthand,
@@ -1257,6 +1257,9 @@ body.projects-page .carousel__caption {
 .image-title {
     width: 100%;
     margin-bottom: 0.5em;
+    padding: 0.35rem 0.75rem;
+    background-color: rgba(37, 34, 32, 0.08);
+    border-radius: 4px;
     color: #252220;
     text-align: center;
     box-sizing: border-box;
