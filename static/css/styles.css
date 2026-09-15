@@ -1183,6 +1183,43 @@ body.projects-page .carousel__caption {
     hyphens: auto;
 }
 
+/* Expandable "mehr/weniger" for news items with multiple paragraphs.
+   Same <details>/<summary> pattern as .project__more on the projects page. */
+.newstext__more {
+    margin-top: 0.4rem;
+}
+
+.newstext__mehr {
+    cursor: pointer;
+    color: #1a5fb4;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.newstext__mehr::-webkit-details-marker {
+    display: none;
+}
+
+.newstext__mehr:hover {
+    color: #123d78;
+}
+
+.newstext__mehr-label--open {
+    display: none;
+}
+
+.newstext__more[open] .newstext__mehr-label--open {
+    display: inline;
+}
+
+.newstext__more[open] .newstext__mehr-label--closed {
+    display: none;
+}
+
+.newstext__more p {
+    margin-top: 0.6rem;
+}
+
 .news-pic-container {
     width: 100%;
     height: auto;
