@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -1300,6 +1302,15 @@ body.projects-page .carousel__caption {
     color: #252220;
     text-align: center;
     box-sizing: border-box;
+    font-family: 'Rock Salt', cursive;
+    font-size: 0.75rem;
+}
+
+.image-title h4 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.4;
 }
 
  /*                                                   Hilf Mit page */
