@@ -122,7 +122,7 @@ body.home main {
 .page-bg {
     position: fixed;
     inset: -30px;
-    background-image: url('/static/images/SFA_bck.png');
+    background-image: url('/static/images/SFA_bck.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -271,7 +271,7 @@ body.home .content-backdrop {
 }
 
 .background {
-    background-image: url('/static/images/SFA_bck.png');
+    background-image: url('/static/images/SFA_bck.jpg');
     background-size: cover;  /*Ensure the background image covers the entire viewport */
     /* background-size: contain; */
     background-position: center;
@@ -647,7 +647,7 @@ body.home .content-backdrop {
 /* INDEX MOBILE ----------------------------------------------------> */
 @media (max-width: 480px) {
     .background {
-        background-image: url('/static/images/SFA_bck-vert.png');
+        background-image: url('/static/images/SFA_bck-vert.jpg');
         background-size: cover;
         background-position: center;
         height: 100vh;

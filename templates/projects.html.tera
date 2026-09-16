@@ -44,13 +44,13 @@
       <div class="carousel" data-carousel>
         <div class="carousel__track">
           <div class="carousel__slide is-active">
-            <img src="/static/images/PSP_01.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
+            <img src="/static/images/PSP_01.jpg" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 1)" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/PSP_11.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
+            <img src="/static/images/PSP_11.jpg" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 2)" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/PSP_16.png" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
+            <img src="/static/images/PSP_16.jpg" alt="Skateboardaktion des Projeto Skate Poético in Jardim Romano (Foto 3)" loading="lazy">
           </div>
           <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
           <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
@@ -177,13 +177,13 @@
       <div class="carousel" data-carousel>
         <div class="carousel__track">
           <div class="carousel__slide is-active">
-            <img src="/static/images/VP_04.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 1)" loading="lazy">
+            <img src="/static/images/VP_04.jpg" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 1)" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/VP_05.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 2)" loading="lazy">
+            <img src="/static/images/VP_05.jpg" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 2)" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/static/images/VP_01.png" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
+            <img src="/static/images/VP_01.jpg" alt="Mailton beim Skaten im Vila Prudente Skate Park (Foto 3)" loading="lazy">
           </div>
           <button type="button" class="carousel__control carousel__control--prev" data-carousel-prev aria-label="Vorheriges Bild">&#10094;</button>
           <button type="button" class="carousel__control carousel__control--next" data-carousel-next aria-label="Nächstes Bild">&#10095;</button>
