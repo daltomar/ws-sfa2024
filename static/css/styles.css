@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -1159,8 +1161,8 @@ body.projects-page .carousel__caption {
 .news_box {
     max-width: 100%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     padding: 1rem 1rem;
     background-color: white;
     /* No border by design - was `border: black` (invalid shorthand,
@@ -1181,6 +1183,43 @@ body.projects-page .carousel__caption {
     padding-right: 4px;
     text-align: justify;
     hyphens: auto;
+}
+
+/* Expandable "mehr/weniger" for news items with multiple paragraphs.
+   Same <details>/<summary> pattern as .project__more on the projects page. */
+.newstext__more {
+    margin-top: 0.4rem;
+}
+
+.newstext__mehr {
+    cursor: pointer;
+    color: #1a5fb4;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.newstext__mehr::-webkit-details-marker {
+    display: none;
+}
+
+.newstext__mehr:hover {
+    color: #123d78;
+}
+
+.newstext__mehr-label--open {
+    display: none;
+}
+
+.newstext__more[open] .newstext__mehr-label--open {
+    display: inline;
+}
+
+.newstext__more[open] .newstext__mehr-label--closed {
+    display: none;
+}
+
+.newstext__more p {
+    margin-top: 0.6rem;
 }
 
 .news-pic-container {
@@ -1239,45 +1278,39 @@ body.projects-page .carousel__caption {
   
 
 
-  /*                                                   TEST IMAGE LEGEND */
+  /*                          News title above image or video */
 
 .image-container {
-    position: relative; /* Make the container a positioned element */
-    display: inline-block; /* Keep the container the size of the image */
-  }
-  
-  .image-container img {
+    display: block;
+    width: 100%;
+}
+
+.image-container img {
     width: 100%;
     height: auto;
-  }
-  
-  .image-title {
-    position: absolute;
-    bottom: 8px; /* Adjust this if needed */
-    left: 50%; /* Center the container horizontally */
-    transform: translateX(-50%); /* Move the container to truly center */
-    padding: 4px 15px;
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
-    color: white;
-    text-align: center; /* Center text inside the container */
+}
+
+/* News title: sits in normal flow above the image or .video-responsive,
+   separated by a small gap. Works as a sibling before either element
+   inside .news-pic-container — no absolute positioning needed. */
+.image-title {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.35rem 0.75rem;
+    background-color: rgba(37, 34, 32, 0.08);
     border-radius: 4px;
-    max-width: 95%; /* Max width for preventing overflow */
+    color: #252220;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Rock Salt', cursive;
+    font-size: 0.75rem;
 }
 
-/* Mobile Version (screens smaller than 768px) */
-@media (max-width: 768px) {
-    .image-title {
-        width: 90%; /* Fixed width: 90% of the image for mobile */
-        font-size: 14px; /* Adjust font size as needed */
-    }
-}
-
-/* Larger Screens (screens wider than 768px) */
-@media (min-width: 769px) {
-    .image-title {
-        width: 100%; /* Fixed width: 60% of the image for larger screens */
-        font-size: 16px; /* Adjust font size as needed */
-    }
+.image-title h4 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.4;
 }
 
  /*                                                   Hilf Mit page */

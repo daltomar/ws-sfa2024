@@ -9,9 +9,9 @@
 <section class="news_box">
   <div class="grid grid--1x2">
     <div class="news-pic-container">
-   
+
       <div class="video-responsive">
-        <iframe 
+        <iframe
           src="https://www.youtube.com/embed/AdrYzto2Z7Y"
           title="YouTube video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,7 +22,6 @@
             <p>
             Letztes Jahr haben wir einen der Organisatoren des Projekts Demoro Skate é Vida kennengelernt, und dieses Jahr haben wir einen Teil der Spenden dafür eingeplant,
             um das Projekt zu unterstützen.
-            <br />
             </p>
           </div>
     </div>
@@ -33,6 +32,7 @@
 <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Demorô Skate é Vida!</h4></div>
             <picture class="image-container">
             <img
               src="/static/images/PDS_01.png"
@@ -40,24 +40,26 @@
               class="news_bild"
               loading="lazy"
             />
-            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Demorô Skate é Vida!</h4></div>
             </picture>
             </div>
           <div class="newstext">
-            <p>
-            Letztes Jahr haben wir einen der Organisatoren des Projekts Demoro Skate é Vida kennengelernt, und dieses Jahr haben wir einen Teil der Spenden dafür eingeplant,
+            <p>Letztes Jahr haben wir einen der Organisatoren des Projekts Demoro Skate é Vida kennengelernt, und dieses Jahr haben wir einen Teil der Spenden dafür eingeplant,
             um das Projekt zu unterstützen.
             Das Projekt ist in der Region Heliópolis aktiv, die oft als die größte Favela von São Paulo und eine der größten in ganz Lateinamerika
-            bezeichnet wird. In einem Bildungszentrum namens „CEU“ haben die lokalen Skater es geschafft, einen Skatepark auf sehr hohem Niveau bauen
-            zu lassen, der zweimal pro Woche exklusiv für die Aktivitäten des Projekts genutzt wird.<br><br>
-            Es sind sehr viele Kinder (oft mehr als 80!), die in einer sicheren und sehr gut organisierten Umgebung nicht nur Skate-Techniken lernen,
-            sondern auch wichtige soziale Werte vermittelt bekommen – und sehen, dass es Alternativen zu den Lebensrealitäten gibt, die sie umgeben,
-            die oft mit Kriminalität verbunden sind.<br><br>
-            Es ist eine riesige Aufgabe, sich um so viele Kinder zu kümmern. Neben den Unterrichtseinheiten – die wirklich gut strukturiert sind,
-            mit Einteilung nach Niveau, Schutzausrüstung und Skateboards – bekommen die Kinder auch einen Snack.
-            An dieser Stelle ein großes Kompliment an die Organisatoren. Das ist ein Projekt, das man wirklich gerne unterstützt.
-              <br />
-            </p>
+            bezeichnet wird. In einem Bildungszentrum namens „CEU" haben die lokalen Skater es geschafft, einen Skatepark auf sehr hohem Niveau bauen
+            zu lassen, der zweimal pro Woche exklusiv für die Aktivitäten des Projekts genutzt wird.</p>
+            <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+              <p>Es sind sehr viele Kinder (oft mehr als 80!), die in einer sicheren und sehr gut organisierten Umgebung nicht nur Skate-Techniken lernen,
+              sondern auch wichtige soziale Werte vermittelt bekommen – und sehen, dass es Alternativen zu den Lebensrealitäten gibt, die sie umgeben,
+              die oft mit Kriminalität verbunden sind.</p>
+              <p>Es ist eine riesige Aufgabe, sich um so viele Kinder zu kümmern. Neben den Unterrichtseinheiten – die wirklich gut strukturiert sind,
+              mit Einteilung nach Niveau, Schutzausrüstung und Skateboards – bekommen die Kinder auch einen Snack.
+              An dieser Stelle ein großes Kompliment an die Organisatoren. Das ist ein Projekt, das man wirklich gerne unterstützt.</p>
+            </details>
           </div>
       </div>
       <hr>
@@ -67,6 +69,7 @@
 <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Skate Poético</h4></div>
             <picture class="image-container">
             <img
               src="/static/images/PSP_18.png"
@@ -74,23 +77,23 @@
               class="news_bild"
               loading="lazy"
             />
-            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Skate Poético</h4></div>
             </picture>
             </div>
           <div class="newstext">
-            <p>
-            Wir waren wieder einmal beim Projekt Skate Poético. Das Projekt startet gerade die Anmeldungen für die Aktivitäten im Jahr 2026.
+            <p>Wir waren wieder einmal beim Projekt Skate Poético. Das Projekt startet gerade die Anmeldungen für die Aktivitäten im Jahr 2026.
             Der Ort, den sie nutzen, gehört zu einer Sambaschule. Dieses Jahr mussten sie nicht nur das Ende des Karnevals abwarten
-            (weil die Halle für die Vorbereitungen der Umzüge genutzt wird), sondern es gab zusätzlich eine Verzögerung, da der Ort gerade renoviert wird.<br><br>
-            Das ist eine große Herausforderung für das Projekt: Einerseits ist der zur Verfügung gestellte Platz überdacht und deutlich sicherer
-            als die Straße, andererseits bringt er logistische Probleme mit sich, weil die Kinder transportiert werden müssen – was nicht immer einfach ist.
-            Nando, der aktuell der einzige Koordinator des Projekts ist, kämpft darum, einen besser geeigneten Ort für die Aktivitäten zu finden.
-            Das ist ein harter Kampf in einer sehr benachteiligten Region, die von den Behörden oft vergessen wird.<br><br>
-            Zumindest konnten wir noch ein paar weitere Teile übergeben, sodass Skate Poético jetzt genug Equipment hat, um die Skater aus der Region zu unterstützen.
-            Es hat uns besonders gefreut zu hören, dass sich einer der Skater aus dem Projekt langsam hervorhebt – der ist schon in dem
-            renommierten brasilianischen Magazin <b>100% Skate</b> erschienen. Wir drücken ihm die Daumen!
-              <br />
-            </p>
+            (weil die Halle für die Vorbereitungen der Umzüge genutzt wird), sondern es gab zusätzlich eine Verzögerung, da der Ort gerade renoviert wird.</p>
+            <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+              <p>Das ist eine große Herausforderung für das Projekt: Einerseits ist der zur Verfügung gestellte Platz überdacht und deutlich sicherer
+              als die Straße, andererseits bringt er logistische Probleme mit sich, weil die Kinder transportiert werden müssen – was nicht immer einfach ist.
+              Nando, der aktuell der einzige Koordinator des Projekts ist, kämpft darum, einen besser geeigneten Ort für die Aktivitäten zu finden.
+              Das ist ein harter Kampf in einer sehr benachteiligten Region, die von den Behörden oft vergessen wird.</p>
+              <p>Zumindest konnten wir noch ein paar weitere Teile übergeben, sodass Skate Poético jetzt genug Equipment hat, um die Skater aus der Region zu unterstützen.</p>
+            </details>
           </div>
       </div>
       <hr>
@@ -100,6 +103,7 @@
 <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Vila Prudente Skate Plaza</h4></div>
             <picture class="image-container">
             <img
               src="/static/images/VP_10.png"
@@ -107,24 +111,26 @@
               class="news_bild"
               loading="lazy"
             />
-            <div class="image-title"><h4>24.03.26 - Aktion 2026 - Vila Prudente Skate Plaza</h4></div>
             </picture>
             </div>
           <div class="newstext">
-            <p>
-              Dieses Jahr war es leider nicht möglich, unsere Aktion in Vila Prudente durchzuführen. Zuerst einmal, weil der Skater Mailton
+            <p>Dieses Jahr war es leider nicht möglich, unsere Aktion in Vila Prudente durchzuführen. Zuerst einmal, weil der Skater Mailton
               dos Santos sich in einer sehr kritischen gesundheitlichen Situation befindet. Er hat einen fortgeschrittenen Hirntumor und kümmert
               sich momentan nur um seine Behandlung.
-              Die Skateboard-Community organisiert sich gerade, um seine Familie bei den Behandlungskosten zu unterstützen. <b> Falls du helfen kannst
-              und möchtest, melde dich gern bei uns.</b><br><br>
-              Letztes Jahr konnten wir auch schon nicht auf Mailtons Hilfe zählen, aber wir haben es zumindest geschafft, ein kleines Event zu
+              Die Skateboard-Community organisiert sich gerade, um seine Familie bei den Behandlungskosten zu unterstützen. <b>Falls du helfen kannst
+              und möchtest, melde dich gern bei uns.</b></p>
+            <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+              <p>Letztes Jahr konnten wir auch schon nicht auf Mailtons Hilfe zählen, aber wir haben es zumindest geschafft, ein kleines Event zu
               organisieren und ein paar Teile zu verteilen. Dieses Jahr jedoch, während unseres Aufenthalts in Brasilien, war der Spot in Vila
               Prudente in Renovierung, was alle Pläne komplett unmöglich gemacht hat.
-              Zumindest konnten wir uns mit ein paar Locals treffen, und der große HP ("Zóio") wird uns nächstes Jahr unterstützen. <br><br>
-              Wir drücken weiterhin die Daumen, dass Mailton das schafft. Er war ein zentraler Teil unseres Projekts, und seine Unterstützung
-              und Energie fehlen sehr.
-              <br />
-            </p>
+              Zumindest konnten wir uns mit ein paar Locals treffen, und der große HP ("Zóio") wird uns nächstes Jahr unterstützen.</p>
+              <p>Wir drücken weiterhin die Daumen, dass Mailton das schafft. Er war ein zentraler Teil unseres Projekts, und seine Unterstützung
+              und Energie fehlen sehr.</p>
+            </details>
           </div>
       </div>
       <hr>
@@ -133,9 +139,9 @@
 <section class="news_box">
   <div class="grid grid--1x2">
     <div class="news-pic-container">
-   
+
       <div class="video-responsive">
-        <iframe 
+        <iframe
           src="https://www.youtube.com/embed/KU5nI9Ia_QA"
           title="YouTube video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -151,6 +157,7 @@
   <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <div class="image-title"><h4>31.05.25 - Aktion 2025 - Vila Prudente Skate Plaza</h4></div>
             <picture class="image-container">
             <img
               src="/static/images/VP_09.png"
@@ -158,7 +165,6 @@
               class="news_bild"
               loading="lazy"
             />
-            <div class="image-title"><h4>31.05.25 - Aktion 2025 - Vila Prudente Skate Plaza</h4></div>
             </picture>
             </div>
           <div class="newstext">
@@ -167,11 +173,10 @@
               der immer eine zentrale Rolle bei der Organisation der Spendenverteilung gespielt hat, kämpft mit einer ernsthaften
               Krankheit und konnte deshalb leider diesmal nicht dabei sein. Aber dank der Hilfe von Hilton "Zóio"  konnten wir gemeinsam
               mit einige Skateboarders der Vila Prudente Skateplaza und der Ima Crew Graffiti eine Veranstaltung zur Wiedereröffnung der
-              sanierten Skateanlage organisieren. Die Veranstaltung bot ein vielfältiges Programm mit Musik von DJ’s , Live-Graffit-Performances
-              und einem freundschaftlichen Skateboard-Wettkampf, bei dem alle Teilnehmer einen Preis erhielten. Die Preise bestanden aus 
+              sanierten Skateanlage organisieren. Die Veranstaltung bot ein vielfältiges Programm mit Musik von DJ's , Live-Graffit-Performances
+              und einem freundschaftlichen Skateboard-Wettkampf, bei dem alle Teilnehmer einen Preis erhielten. Die Preise bestanden aus
               Skateboardteilen, die wir mit der Unterstützung der Klippel Stiftung in Brasilien gekauft haben sowie gebrauchte Teile, die
-              in Deutschland gesammelt wurden. 
-              <br />
+              in Deutschland gesammelt wurden.
             </p>
           </div>
       </div>
@@ -183,6 +188,7 @@
   <section class="news_box">
         <div class="grid grid--1x2">
               <div class="news-pic-container">
+              <div class="image-title"><h4>31.05.25 - Aktion 2025 - Projeto Skate Poético</h4></div>
               <picture class="image-container">
               <img
                 src="/static/images/PSP_17.png"
@@ -190,24 +196,23 @@
                 class="news_bild"
                 loading="lazy"
               />
-              <div class="image-title"><h4>31.05.25 - Aktion 2025 - Projeto Skate Poético</h4></div>
               </picture>
               </div>
             <div class="newstext">
-              <p>
-              Am 27.04.2025 haben wir unsere Freund*innen vom Projekt Skate Poético getroffen, um die Spenden zu übergeben,
+              <p>Am 27.04.2025 haben wir unsere Freund*innen vom Projekt Skate Poético getroffen, um die Spenden zu übergeben,
               die wir gesammelt hatten. Dank der Unterstützung der Klippel-Stiftung, die uns wieder mit einer Geldspende geholfen hat,
               konnten wir in Brasilien neues Material kaufen. Zusammen mit dem, was wir hier gesammelt haben, konnten wir so dazu
-              beitragen, dass das Projekt weiterläuft – und das macht echt regelmäßig tolle Sachen mit den Kids aus der Region.
-              <br />
-              <br />
-              An dem Tag sind wir nach Suzano gefahren, wo die 2. Etappe des Circuito Paulista de Skate Street 2025 stattfand. 
-              Danach gab’s noch eine entspannte Session, und wir haben uns mit den Leuten vom Projekt Demoro Skate getroffen – auch eine
-              super engagierte Crew aus São Paulo, die echt tolle Arbeit macht.
-              <br />
-              <br />
-              Ein richtig schöner Tag mit Menschen, die nicht nur für Skate brennen, sondern auch für die Zukunft von Kindern und Jugendlichen.
-              </p>
+              beitragen, dass das Projekt weiterläuft – und das macht echt regelmäßig tolle Sachen mit den Kids aus der Region.</p>
+              <details class="newstext__more">
+                <summary class="newstext__mehr">
+                  <span class="newstext__mehr-label--closed">Mehr</span>
+                  <span class="newstext__mehr-label--open">Weniger</span>
+                </summary>
+                <p>An dem Tag sind wir nach Suzano gefahren, wo die 2. Etappe des Circuito Paulista de Skate Street 2025 stattfand.
+                Danach gab's noch eine entspannte Session, und wir haben uns mit den Leuten vom Projekt Demoro Skate getroffen – auch eine
+                super engagierte Crew aus São Paulo, die echt tolle Arbeit macht.</p>
+                <p>Ein richtig schöner Tag mit Menschen, die nicht nur für Skate brennen, sondern auch für die Zukunft von Kindern und Jugendlichen.</p>
+              </details>
             </div>
         </div>
         <hr>
@@ -217,6 +222,7 @@
 <section class="news_box">
     <div class="grid grid--1x2">
           <div class="news-pic-container">
+          <div class="image-title"><h4>01.11.24 - Amtliche Annerkenung!</h4></div>
           <picture class="image-container">
           <img
             src="/static/images/SFA_Logo_v03.gif"
@@ -224,22 +230,21 @@
             class="news_bild"
             loading="lazy"
           />
-          <div class="image-title"><h4>01.11.24 - Amtliche Annerkenung!</h4></div>
           </picture>
           </div>
         <div class="newstext">
-          <p>
-            Ab jetzt sind wir offiziell als gemeinnützige Organisation anerkannt! Das heißt, wir dürfen jetzt Geldspenden annehmen
-              und Spendenquittungen ausstellen. Dadurch können wir teilweise auch Skateboardteile direkt in Brasilien kaufen und du
-              kannst Steuer sparen, da die Spende steuerlich absetzbar ist.
-            <br />
-            <br />
-            Wir werden weiterhin Skateboardteile als Gepäck auf unseren Reisen nach Brasilien mitnehmen, möchten aber den Versand
-              per Post vermeiden, da dieser sehr teuer und bürokratisch ist. 
-            <br />
-            <br />
-            Falls du uns unterstützen möchtest, kontaktiere uns gerne über kontakt@skateboardfueralle.org.
-          </p>
+          <p>Ab jetzt sind wir offiziell als gemeinnützige Organisation anerkannt! Das heißt, wir dürfen jetzt Geldspenden annehmen
+            und Spendenquittungen ausstellen. Dadurch können wir teilweise auch Skateboardteile direkt in Brasilien kaufen und du
+            kannst Steuer sparen, da die Spende steuerlich absetzbar ist.</p>
+          <details class="newstext__more">
+            <summary class="newstext__mehr">
+              <span class="newstext__mehr-label--closed">Mehr</span>
+              <span class="newstext__mehr-label--open">Weniger</span>
+            </summary>
+            <p>Wir werden weiterhin Skateboardteile als Gepäck auf unseren Reisen nach Brasilien mitnehmen, möchten aber den Versand
+              per Post vermeiden, da dieser sehr teuer und bürokratisch ist.</p>
+            <p>Falls du uns unterstützen möchtest, kontaktiere uns gerne über kontakt@skateboardfueralle.org.</p>
+          </details>
         </div>
     </div>
     <hr>
@@ -249,6 +254,7 @@
   <section class="news_box">
       <div class="grid grid--1x2">
             <div class="news-pic-container">
+            <div class="image-title"><h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4></div>
             <picture class="image-container">
             <source srcset="/static/images/PSP_04-m2.png" media="(min-width: 1024px)" />
             <img
@@ -257,18 +263,17 @@
               class="news_bild"
               loading="lazy"
             />
-            <div class="image-title"><h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4></div>
             </picture>
             </div>
           <div class="newstext">
             <p>
-              Am 24.03.2024 waren wir beim Projekt “Skate Poetico”. Wir haben die neuen Installation im Gebäude der Sambaschule “Escola de Samba Unidos de Santa Barbara”
-              besucht und die gespendeten Skateboardteile übergeben. Da das Projekt Skate Poetico jetzt mehr Teilnehmer hat, kommen die gespendeten Materialien sehr gut entgegen. 
-              Außerdem wird das Projekt “Skate Poético” vom Verein “Itaim Skate or Die” unterstützt.
+              Am 24.03.2024 waren wir beim Projekt "Skate Poetico". Wir haben die neuen Installation im Gebäude der Sambaschule "Escola de Samba Unidos de Santa Barbara"
+              besucht und die gespendeten Skateboardteile übergeben. Da das Projekt Skate Poetico jetzt mehr Teilnehmer hat, kommen die gespendeten Materialien sehr gut entgegen.
+              Außerdem wird das Projekt "Skate Poético" vom Verein "Itaim Skate or Die" unterstützt.
               <br />
               Am 30.03. haben die 3 Organisationen eine Osteraktion gemacht,
               wo viele Aktivitäten durchgeführt und Essen, Getränke und Schokolade besorgt wurden. Wir waren auch an diesem Tag vor Ort und es war sehr schön,
-              an so einer schönen Veranstaltung teilnehmen zu können. 
+              an so einer schönen Veranstaltung teilnehmen zu können.
             </p>
           </div>
       </div>
@@ -279,6 +284,7 @@
   <section class="news_box">
     <div class="grid grid--1x2">
           <div class="news-pic-container">
+          <div class="image-title"><h4>20.03.24 - Freundliche Wettbewerbe an Vila Prudente Skate Park</h4></div>
           <picture class="image-container">
           <img
             src="/static/images/VP_08.png"
@@ -286,18 +292,17 @@
             class="news_bild"
             loading="lazy"
           />
-          <div class="image-title"> <h4>20.03.24 - Freundliche Wettbewerbe an Vila Prudente Skate Park</h4></div>
           </picture>
           </div>
         <div class="newstext">
           <p>
-            Mailton dos Santos leitet im Moment das Projekt “Skate para todos”, das kostenlose Skateboard-Unterrichte anbietet.
+            Mailton dos Santos leitet im Moment das Projekt "Skate para todos", das kostenlose Skateboard-Unterrichte anbietet.
             Gemeinsam haben wir eine kleine Party für die Teilnehmer organisiert, wo zwei freundliche Wettbewerbe stattgefunden haben.
-            Das Projekt “Skate para todos” hat Trophäe machen lassen, einige Eltern haben Essen und Trinken besorgt und ein Teil
+            Das Projekt "Skate para todos" hat Trophäe machen lassen, einige Eltern haben Essen und Trinken besorgt und ein Teil
             unserer gesammelten Spenden wurde an die Kinder als Prämien übergeben. Die Kinder haben viel Enthusiasmus mitgebracht.
             <br />
             Ein sehr schönen Tag, der uns viel Spaß gemacht hat.
-            </p>
+          </p>
         </div>
     </div>
     <hr>
@@ -307,6 +312,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>20.02.24 - Unterstützung von KLIPPEL Stiftung</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/O_Logo_Klippel.png"
@@ -314,8 +320,7 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>20.02.24 - Unterstützung von KLIPPEL Stiftung</h4></div>
-          </picture>
+        </picture>
         </div>
       <div class="newstext">
         <p>
@@ -335,6 +340,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>14.01.23 - Best Trick Wettkampf auf dem Vila Prudente Skatepark</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/VP_07.png"
@@ -342,20 +348,20 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>14.01.23 - Best Trick Wettkampf auf dem Vila Prudente Skatepark</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
-        <p>
-          Am 15. Dezember 2022 haben wir einen kleinen „Best Trick“-Wettbewerb organisiert, um die Skaters des
-          <a href="https://www.instagram.com/vilaprudenteskateplaza/"
-          >Vila Prudente Skate Parks</a>
+        <p>Am 15. Dezember 2022 haben wir einen kleinen „Best Trick"-Wettbewerb organisiert, um die Skaters des
+          <a href="https://www.instagram.com/vilaprudenteskateplaza/">Vila Prudente Skate Parks</a>
           zu unterstützen. Alle Teilnehmer haben etwas von den gespendeten Materialien bekommen.
-          Außerdem wurden Spielzeuge, Kleidungen und andere Gegenständen für Kinder der Region gespendet.
-          <br />
-          <br />
-          Hoffentlich ist das die erste von vielen Veranstaltungen!!
-        </p>
+          Außerdem wurden Spielzeuge, Kleidungen und andere Gegenständen für Kinder der Region gespendet.</p>
+        <details class="newstext__more">
+          <summary class="newstext__mehr">
+            <span class="newstext__mehr-label--closed">Mehr</span>
+            <span class="newstext__mehr-label--open">Weniger</span>
+          </summary>
+          <p>Hoffentlich ist das die erste von vielen Veranstaltungen!!</p>
+        </details>
       </div>
       </div>
       <hr>
@@ -365,6 +371,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>14.01.23 - Spendenaktion an "Projeto Skate Poético" 2022</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/PSP_03.png"
@@ -372,9 +379,8 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>14.01.23 - Spendenaktion an "Projeto Skate Poético" 2022</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
         <p>
           Am 11. Dezember 2022 waren wir beim <a href="https://www.instagram.com/projetoskatepoetico/"
@@ -392,6 +398,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>22.01.22 - Spendenaktion an "Projeto Skate Poético" 2021</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/PSP_02.png"
@@ -399,23 +406,23 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>22.01.22 - Spendenaktion an "Projeto Skate Poético" 2021</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
-        <p>
-          Im Laufe des Jahres 2021 wurden an uns Skateboards, Kleidungen und
+        <p>Im Laufe des Jahres 2021 wurden an uns Skateboards, Kleidungen und
           Bücher gespendet und im Dezember waren wir bei Projeto Skate
           Poético, um die Spenden abzugeben. Es war sehr schön, vor Ort zu
           sein und die Begeisterung der Kinder zu sehen, die sofort die Boards
           holten und starteten zu spielen. Mehr Bilder und Videos kann man auf
-          <a href="https://www.instagram.com/projetoskatepoetico/"
-            >Instagram</a>
-          finden.
-          <br />
-          <br />
-          Wir möchten uns bei allen Spendern herzlichen bedanken!
-        </p>
+          <a href="https://www.instagram.com/projetoskatepoetico/">Instagram</a>
+          finden.</p>
+        <details class="newstext__more">
+          <summary class="newstext__mehr">
+            <span class="newstext__mehr-label--closed">Mehr</span>
+            <span class="newstext__mehr-label--open">Weniger</span>
+          </summary>
+          <p>Wir möchten uns bei allen Spendern herzlichen bedanken!</p>
+        </details>
       </div>
       </div>
       <hr>
@@ -425,6 +432,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>22.01.22 - Spendenaktion an "Vila Prudente Skate Park"</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/VP_06.png"
@@ -432,20 +440,21 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>22.01.22 - Spendenaktion an "Vila Prudente Skate Park"</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
-       <p>
-          Aufgrund der großen Spendenmenge mussten wir ein paar Skateboards
+        <p>Aufgrund der großen Spendenmenge mussten wir ein paar Skateboards
           per Post schicken. Leider ist das Paket bisher vermisst. Das war uns
           sehr Schade, aber zumindest konnten wir ein Teil der Spende an das
-          Projekt Vila Prudente Skate Park abgeben.
-          <br />
-          <br />
-          Wir hoffen, dass wir das Paket zurückbekommen, um es am Ende des
-          Jahres an das Projekt abgegeben zu können.
-        </p>
+          Projekt Vila Prudente Skate Park abgeben.</p>
+        <details class="newstext__more">
+          <summary class="newstext__mehr">
+            <span class="newstext__mehr-label--closed">Mehr</span>
+            <span class="newstext__mehr-label--open">Weniger</span>
+          </summary>
+          <p>Wir hoffen, dass wir das Paket zurückbekommen, um es am Ende des
+          Jahres an das Projekt abgegeben zu können.</p>
+        </details>
       </div>
       </div>
       <hr>
@@ -455,6 +464,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>27.06.21 - Aktion 2021 läuft!</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/SFA_03.png"
@@ -462,21 +472,22 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"> <h4>27.06.21 - Aktion 2021 läuft!</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
-        <p>
-          Wir haben schon ein paar Teile für die Aktion im Jahr 2021
+        <p>Wir haben schon ein paar Teile für die Aktion im Jahr 2021
           gesammelt. Ziel ist es, mindestens die gleiche Menge wie im Jahr
           2020 zu sammeln. Wir möchten uns bei allen bedanken, die in unserer
           Aktion involviert waren. Die Teile werden Ende November nach
-          Brasilien mitgenommen.
-          <br />
-          <br />
-          Wenn Du alte Skateboard Teile übrig hast und mitmachen möchtest,
-          nimm bitte Kontakt mit uns auf.
-        </p>
+          Brasilien mitgenommen.</p>
+        <details class="newstext__more">
+          <summary class="newstext__mehr">
+            <span class="newstext__mehr-label--closed">Mehr</span>
+            <span class="newstext__mehr-label--open">Weniger</span>
+          </summary>
+          <p>Wenn Du alte Skateboard Teile übrig hast und mitmachen möchtest,
+          nimm bitte Kontakt mit uns auf.</p>
+        </details>
       </div>
       </div>
       <hr>
@@ -486,6 +497,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>19.06.2021 - Wir werden das Projekt "Skate Poético" unterstützten!</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/PSP_01.png"
@@ -493,12 +505,11 @@
           class="news_bild"
           loading="lazy"
         />
-         <div class="image-title"><h4>19.06.2021 - Wir werden das Projekt “Skate Poético” unterstützten!</h4></div>
-          </picture>
-        </div>
+        </picture>
+          </div>
       <div class="newstext">
         <p>
-          Wir haben das Projekt “Skate Poético” kennengelernt - eine Aktion,
+          Wir haben das Projekt "Skate Poético" kennengelernt - eine Aktion,
           die Skateboard und Kultur für Kinder aus einem armen Stadtviertel
           São Paulos bringt. Für Kinder und Jugendliche dieser armen Region
           ist das ein sehr wichtiges Projekt. Wir finden das super und werden
@@ -513,6 +524,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
         <div class="news-pic-container">
+        <div class="image-title"><h4>01.06.2021 - Unsere erste Aktion.</h4></div>
         <picture class="image-container">
         <img
           src="/static/images/SFA_01.png"
@@ -520,21 +532,22 @@
           class="news_bild"
           loading="lazy"
         />
-        <div class="image-title"><h4>01.06.2021 - Unsere erste Aktion.</h4></div>
-          </picture>
+        </picture>
         </div>
       <div class="newstext">
-        <p>
-          Wir haben unsere erste Aktion im Dezember 2020 durchgeführt. Wir
-          konnten 10 Skateboards zusammenbauen und an Kinder im “Vila Prudente
+        <p>Wir haben unsere erste Aktion im Dezember 2020 durchgeführt. Wir
+          konnten 10 Skateboards zusammenbauen und an Kinder im "Vila Prudente
           Skatepark" verschenken. Dabei haben wir die Boards spontan an armen
-          Kindern gegeben, die im Skatepark waren.
-          <br />
-          <br />
-          Dann haben wir die Sozialarbeit des Profi-Skateboarder Mailton dos
+          Kindern gegeben, die im Skatepark waren.</p>
+        <details class="newstext__more">
+          <summary class="newstext__mehr">
+            <span class="newstext__mehr-label--closed">Mehr</span>
+            <span class="newstext__mehr-label--open">Weniger</span>
+          </summary>
+          <p>Dann haben wir die Sozialarbeit des Profi-Skateboarder Mailton dos
           Santos kennengelernt und haben die übrigen Materialien an das
-          Projekt gespendet.
-        </p>
+          Projekt gespendet.</p>
+        </details>
       </div>
       </div>
 </section>
