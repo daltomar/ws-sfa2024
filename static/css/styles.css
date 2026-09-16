@@ -392,7 +392,7 @@ body.home .content-backdrop {
    it's free to match the image's own width below. */
 .index-intro__lede {
     max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
-    margin: 0 auto 6rem auto; /* 3× 2rem — tune here to adjust lede→row gap */
+    margin: 0 auto 5.4rem auto; /* tune here to adjust lede→row gap */
     text-align: center;
 }
 
@@ -437,7 +437,7 @@ body.home .content-backdrop {
     /* More breathing room between the two rows. Scoped to row--top only
        so it doesn't add space after row--bottom before the section ends. */
     .index-intro__row--top {
-        margin-bottom: 5rem; /* tune here to adjust row→row gap */
+        margin-bottom: 4.5rem; /* tune here to adjust row→row gap */
     }
 
     .index-intro__photo {
@@ -780,14 +780,12 @@ body.home .content-backdrop {
     padding-right: 4px;
     text-align: justify;
     hyphens: auto;
+    font-size: 1.15rem; /* matches .index-intro__beat p */
 }
 
 @media (min-width: 768px) {
     .about-header{
         font-size: xx-large;
-    }
-    .about-text {
-        font-size: x-large;
     }
 }
 
@@ -1311,12 +1309,10 @@ body.projects-page .carousel__caption {
    on pages long enough to scroll, it simply lands after the content
    in normal flow instead of covering it.
 
-   Traditional-footer layout: a single top rule with the logo+text
-   brand row left-aligned beneath it, replacing the old symmetric
-   line-logo-line row. Column direction stacks the border above the
-   brand row; align-items: flex-start keeps the (now narrower, not
-   full-width) brand row pinned to the left instead of the old
-   centered arrangement.
+   Footer layout: a single top rule with the logo+text brand row
+   centered beneath it. Column direction stacks the border above the
+   brand row; align-items: center keeps the brand row horizontally
+   centered within the footer container.
 
    The top rule is a border-top on this element itself, not a
    separate inner div - a previous version used an inner .footer-line
@@ -1330,7 +1326,7 @@ body.projects-page .carousel__caption {
 .footer-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 95%;
     padding: 0 0 5px 0;
     margin-top: auto; /* Push the footer down to the bottom */
@@ -1352,15 +1348,10 @@ body.projects-page .carousel__caption {
     margin-top: 12px;
 }
 
-/* Style for the logo - slightly smaller than before (80px -> 60px)
-   now that it sits inline with text instead of centered alone. Small
-   left padding keeps it from sitting flush against the footer's own
-   edge. */
 .footer-logo {
     width: 11vw;
     max-width: 60px;
     height: auto;
-    padding-left: 8px;
 }
 
 .footer-text {
