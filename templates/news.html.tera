@@ -35,7 +35,7 @@
             <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Demorô Skate é Vida!</h4></div>
             <picture class="image-container">
             <img
-              src="/static/images/PDS_01.png"
+              src="/static/images/PDS_01.jpg"
               alt="Skatepark des Projeto Demorô Skate é Vida im Bildungszentrum CEU, Heliópolis"
               class="news_bild"
               loading="lazy"
@@ -72,7 +72,7 @@
             <div class="image-title"><h4>24.03.26 - Aktion 2026 - Projeto Skate Poético</h4></div>
             <picture class="image-container">
             <img
-              src="/static/images/PSP_18.png"
+              src="/static/images/PSP_18.jpg"
               alt="Spendenübergabe beim Projeto Skate Poético 2026"
               class="news_bild"
               loading="lazy"
@@ -106,7 +106,7 @@
             <div class="image-title"><h4>24.03.26 - Aktion 2026 - Vila Prudente Skate Plaza</h4></div>
             <picture class="image-container">
             <img
-              src="/static/images/VP_10.png"
+              src="/static/images/VP_10.jpg"
               alt="Vila Prudente Skate Plaza"
               class="news_bild"
               loading="lazy"
@@ -160,7 +160,7 @@
             <div class="image-title"><h4>31.05.25 - Aktion 2025 - Vila Prudente Skate Plaza</h4></div>
             <picture class="image-container">
             <img
-              src="/static/images/VP_09.png"
+              src="/static/images/VP_09.jpg"
               alt="Wiedereröffnungsfeier der sanierten Vila Prudente Skate Plaza 2025"
               class="news_bild"
               loading="lazy"
@@ -191,7 +191,7 @@
               <div class="image-title"><h4>31.05.25 - Aktion 2025 - Projeto Skate Poético</h4></div>
               <picture class="image-container">
               <img
-                src="/static/images/PSP_17.png"
+                src="/static/images/PSP_17.jpg"
                 alt="Spendenübergabe beim Projeto Skate Poético 2025"
                 class="news_bild"
                 loading="lazy"
@@ -256,9 +256,9 @@
             <div class="news-pic-container">
             <div class="image-title"><h4>30.03.24 - Spendenaktion an "Projeto Skate Poético" 2023-2024</h4></div>
             <picture class="image-container">
-            <source srcset="/static/images/PSP_04-m2.png" media="(min-width: 1024px)" />
+            <source srcset="/static/images/PSP_04-m2.jpg" media="(min-width: 1024px)" />
             <img
-              src="/static/images/PSP_04.png"
+              src="/static/images/PSP_04.jpg"
               alt="Osteraktion beim Projeto Skate Poético 2024"
               class="news_bild"
               loading="lazy"
@@ -287,7 +287,7 @@
           <div class="image-title"><h4>20.03.24 - Freundliche Wettbewerbe an Vila Prudente Skate Park</h4></div>
           <picture class="image-container">
           <img
-            src="/static/images/VP_08.png"
+            src="/static/images/VP_08.jpg"
             alt="Wettbewerb beim Vila Prudente Skate Park 2024"
             class="news_bild"
             loading="lazy"
@@ -343,7 +343,7 @@
         <div class="image-title"><h4>14.01.23 - Best Trick Wettkampf auf dem Vila Prudente Skatepark</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/VP_07.png"
+          src="/static/images/VP_07.jpg"
           alt="Best-Trick-Wettkampf auf dem Vila Prudente Skatepark"
           class="news_bild"
           loading="lazy"
@@ -374,7 +374,7 @@
         <div class="image-title"><h4>14.01.23 - Spendenaktion an "Projeto Skate Poético" 2022</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/PSP_03.png"
+          src="/static/images/PSP_03.jpg"
           alt="Spendenübergabe beim Projeto Skate Poético 2022"
           class="news_bild"
           loading="lazy"
@@ -401,7 +401,7 @@
         <div class="image-title"><h4>22.01.22 - Spendenaktion an "Projeto Skate Poético" 2021</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/PSP_02.png"
+          src="/static/images/PSP_02.jpg"
           alt="Spendenübergabe beim Projeto Skate Poético 2021"
           class="news_bild"
           loading="lazy"
@@ -435,7 +435,7 @@
         <div class="image-title"><h4>22.01.22 - Spendenaktion an "Vila Prudente Skate Park"</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/VP_06.png"
+          src="/static/images/VP_06.jpg"
           alt="Spendenübergabe am Vila Prudente Skate Park 2021"
           class="news_bild"
           loading="lazy"
@@ -467,7 +467,7 @@
         <div class="image-title"><h4>27.06.21 - Aktion 2021 läuft!</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/SFA_03.png"
+          src="/static/images/SFA_03.jpg"
           alt="Gesammelte Skateboardteile für die Aktion 2021"
           class="news_bild"
           loading="lazy"
@@ -500,7 +500,7 @@
         <div class="image-title"><h4>19.06.2021 - Wir werden das Projekt "Skate Poético" unterstützten!</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/PSP_01.png"
+          src="/static/images/PSP_01.jpg"
           alt="Kinder beim Projeto Skate Poético"
           class="news_bild"
           loading="lazy"
@@ -527,7 +527,7 @@
         <div class="image-title"><h4>01.06.2021 - Unsere erste Aktion.</h4></div>
         <picture class="image-container">
         <img
-          src="/static/images/SFA_01.png"
+          src="/static/images/SFA_01.jpg"
           alt="Erste Skateboard-Spendenaktion von Skateboard für alle, Dezember 2020"
           class="news_bild"
           loading="lazy"
