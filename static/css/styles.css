@@ -392,7 +392,7 @@ body.home .content-backdrop {
    it's free to match the image's own width below. */
 .index-intro__lede {
     max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
-    margin: 0 auto 4.86rem auto; /* tune here to adjust lede→row gap */
+    margin: 0 auto 3.0rem auto; /* tune here to adjust lede→row gap */
     text-align: center;
 }
 
@@ -437,7 +437,7 @@ body.home .content-backdrop {
     /* More breathing room between the two rows. Scoped to row--top only
        so it doesn't add space after row--bottom before the section ends. */
     .index-intro__row--top {
-        margin-bottom: 4.05rem; /* tune here to adjust row→row gap */
+        margin-bottom: 3.00rem; /* tune here to adjust row→row gap */
     }
 
     .index-intro__photo {

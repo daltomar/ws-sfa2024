@@ -62,24 +62,39 @@
       </div>
 
       <div class="project__body">
+        <div class="project__body">
         <p>
           Das Projekt „Projeto Skate Poético" – PROSKAP wurde 2016 von Anderson Silveira dos Santos (bekannt als „Nando") gegründet.
           Das Projekt verbindet Skateboard und Lyrik und versucht, nicht nur Sport, sondern auch Bildung und Kultur zu den bedürftigen
            Kindern der Region zu bringen. Am Anfang gab es nur ein paar kleine Aktivitäten wie „Board-Customization", eine Diskussionsrunde
             und kleine Meisterschaften. Im Jahr 2017 stiegen die Geschichtslehrer und Skater Kevin Nascimento da Silva und Rafael Souza Alves
-             Diniz in das Projekt ein. Dadurch wurden die Aktivitäten mit einem festen Kalender besser organisiert.
+             Diniz in das Projekt ein.
         </p>
         <p>
-          Es gibt leider keine offizielle Unterstützung. Bei dem Projekt handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringt.
-           Für die Kinder ist es die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen. Die Region gehört zu den ärmsten Stadtvierteln São Paulos.
+          Der zu Beginn genutzte Ort war ein Sportplatz einer städtischen Bildungseinrichtung der Stadtverwaltung São Paulo. Doch schon kurze Zeit
+           später wurden die Aktivitäten dort verboten, und zwischen 2018 und 2024 nutzte das Projekt die Straßen des Viertels, was aufgrund des
+            starken Fahrzeugverkehrs mit Risiken verbunden ist.
         </p>
         <p>
           Im Jahr 2024 begann das Projekt, seine Aktivitäten in den Räumlichkeiten der Sambaschule „Escola de Samba Unidos de Santa Bárbara" anzubieten, die sich
            in der Region befindet. Obwohl dieser Ort sicherer war als die Straßen des Viertels und Schutz vor Regen bot, gab es große Schwierigkeiten mit der Anreise
-            der Kinder. Hinzu kam, dass es einen Konflikt zwischen den Aktivitäten des Projekts und den zahlreichen anderen Veranstaltungen am Ort gab. Deshalb kehrte
+            der Kinder. Hinzu kam, dass es einen Konflikt zwischen den Aktivitäten des Projekts und den zahlreichen anderen Veranstaltungen am Ort gab. 
+        </p>
+
+        <p>
+            Deshalb kehrte
              das Projekt 2025 dazu zurück, seine Aktivitäten auf den Straßen des Viertels anzubieten, ergänzt durch einige Ausflüge zu Veranstaltungen und kulturellen 
-             Orten der Stadt. 2026 wurde das Projekt wieder allein von Nando koordiniert, der weiterhin in einem der wichtigsten Anliegen der Skater der Region 
+             Orten der Stadt. 
+             
+        </p>
+        
+        <p>
+             2026 wurde das Projekt wieder allein von Nando koordiniert, der weiterhin in einem der wichtigsten Anliegen der Skater der Region 
              aktiv ist: dem Bau einer Anlage, die sichere Bedingungen für die Ausübung des Sports durch die Kinder und Jugendlichen des Viertels bieten kann.
+        </p>
+        <p>
+          Es gibt leider keine offizielle Unterstützung. Bei dem Projekt handelt es sich um eine ehrenamtliche Gruppe, die Kunst und Kultur zu den Kindern bringt.
+           Für die Kinder ist es die einzige Chance, an organisierten Freizeitaktivitäten teilzunehmen. 
         </p>
       </div>
 
@@ -99,7 +114,7 @@
       <img class="project__logo" src="/static/images/PDSV-Logo.jpg" alt="Logo des Projeto Demorô Skate é Vida">
       <div class="project__intro-text">
         <p>
-          Das Projekt „Projeto Demorô Skate é Vida" bietet regelmäßigen Skateunterricht
+          Skateunterrichte
            in einem sicheren Umfeld mitten in einer der größten Favelas Lateinamerikas.
         </p>
       </div>
@@ -161,9 +176,7 @@
       <img class="project__logo" src="/static/images/VP_Logo.jpg" alt="Logo des Vila Prudente Skate Park">
       <div class="project__intro-text">
         <p>
-        Die Idee zu unserem Projekt entstand an diesem Ort. Leider ist unsere wichtigste Bezugsperson,
-         der Skater Maílton dos Santos, im April 2026 verstorben. Deshalb konzentrieren wir uns derzeit darauf,
-          andere, besser strukturierte Projekte zu unterstützen.
+        Wo die Idee zu unserem Projekt entstand.
          </p>
       </div>
     </div>
@@ -193,21 +206,21 @@
 
       <div class="project__body">
         <p>
-          Im Dezember 2019 reisten wir nach Brasilien, und eines der ersten Dinge, die ich nach unserer Ankunft tat, war, 
-          ein Skateboard zu kaufen. Nach einer langen Pause von fast 30 Jahren stand ich wieder auf dem Board.
-           Der Skatepark von Vila Prudente liegt in der Nähe des Ortes, an dem ich aufgewachsen bin, und dort wurde ich mit
-            einer traurigen Realität konfrontiert: unzählige Kinder, die eigentlich in der Schule sein sollten, bettelten darum,
-             ein wenig mit den Skateboards derjenigen fahren zu dürfen, die auf die Bahn kamen. Die Freude der Kinder auf dem Skateboard
-              war der Funke, der die Idee entzündete, Skateboard für alle zu gründen. Man kann mit Recht sagen, dass das Projekt an diesem Ort entstanden ist.
+          Im Dezember 2019 reisten wir nach Brasilien und besuchten den Skatepark von Vila Prudente.
+          Dort wurden wir mit einer traurigen Realität konfrontiert: Unzählige Kinder bettelten darum, 
+          ein wenig mit den Skateboards derjenigen fahren zu dürfen, die auf die Bahn kamen. Die Freude der
+           Kinder auf dem Skateboard war der Funke, der die Idee entzündete, Skateboard für alle zu gründen.
+            Man kann mit Recht sagen, dass das Projekt an diesem Ort entstanden ist.
         </p>
         <p>
-          Im Laufe des Jahres 2020 gelang es uns, genügend Teile zusammenzutragen, um 10 Skateboards zusammenzubauen. Im Dezember
-           2020 war ich wieder mit den Boards im Vila Prudente Skate Plaza, wusste aber nicht genau, wie ich sie verteilen sollte.
-            Bald wurde mir empfohlen, mit Maílton dos Santos zu sprechen. Als professioneller Skater der Region war er bereits in
-             sozialer Arbeit engagiert und genau der Richtige: Er wusste, wer Bedarf hatte und wie man das Material am besten verteilt.
-              Von da an wurde Maílton auch für uns zu einer wichtigen Bezugsperson. Nach einer komplizierten Aktion im Jahr 2021, als
-               unser Material erst lange nach unserer Rückkehr nach Deutschland ankam, veranstalteten wir 2022 ein unvergessliches Event.
-                2023 konnten wir nicht nach Brasilien reisen, aber 2024 organisierten wir mit Maíltons Hilfe ein weiteres ganz besonderes Event.
+          Im Laufe des Jahres 2020 gelang es uns, genügend Teile zusammenzutragen, um 10 Skateboards zusammenzubauen. 
+          Im Dezember 2020 waren wir wieder mit den Boards im Vila Prudente Skate Plaza, wussten aber nicht genau, wie wir 
+          sie verteilen sollten. Bald wurde uns empfohlen, mit Maílton dos Santos zu sprechen. Als professioneller Skater der
+           Region war er bereits in sozialer Arbeit engagiert und genau der Richtige: Er wusste, wer Bedarf hatte und wie man
+            das Material am besten verteilt. Von da an wurde Maílton auch für uns zu einer wichtigen Bezugsperson. Nach einer
+             komplizierten Aktion im Jahr 2021, als unser Material erst lange nach unserer Rückkehr nach Deutschland ankam, veranstalteten
+              wir 2022 ein unvergessliches Event für die Verteilung der Spenden. 2023 konnten wir nicht nach Brasilien reisen, aber 2024
+               organisierten wir mit Maíltons Hilfe ein weiteres ganz besonderes Event für die Kinder.
         </p>
         <p>
           2025 begannen wir bereits, ein weiteres Event zu planen, doch alles wurde unterbrochen – eine schwere Krankheit, die Maílton
