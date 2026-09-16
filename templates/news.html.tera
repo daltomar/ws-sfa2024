@@ -9,7 +9,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
     <div class="news-pic-container">
-
+      <div class="image-title"><h4>24.03.26 - Aktion 2026 - Das Video!</h4></div>
       <div class="video-responsive">
         <iframe
           src="https://www.youtube.com/embed/AdrYzto2Z7Y"
@@ -20,8 +20,8 @@
       </div>
           <div class="newstext">
             <p>
-            Letztes Jahr haben wir einen der Organisatoren des Projekts Demoro Skate é Vida kennengelernt, und dieses Jahr haben wir einen Teil der Spenden dafür eingeplant,
-            um das Projekt zu unterstützen.
+            Wie gewohnt haben wir ein Video mit Aufnahmen unserer Verteilungsaktion der Spenden im Jahr 2026 gemacht.
+             Schau es dir an, und falls du uns helfen möchtest, nimm Kontakt mit uns auf.
             </p>
           </div>
     </div>
@@ -139,7 +139,7 @@
 <section class="news_box">
   <div class="grid grid--1x2">
     <div class="news-pic-container">
-
+      <div class="image-title"><h4>31.05.25 - Aktion 2025 - Das Video!</h4></div>
       <div class="video-responsive">
         <iframe
           src="https://www.youtube.com/embed/KU5nI9Ia_QA"
@@ -148,6 +148,12 @@
           allowfullscreen>
         </iframe>
       </div>
+      <div class="newstext">
+            <p>
+            Wir haben ein Video mit Aufnahmen unserer Verteilungsaktion der Spenden im Jahr 2025 gemacht.
+             Schau es dir an, und falls du uns helfen möchtest, nimm Kontakt mit uns auf.
+            </p>
+          </div>
     </div>
   </div>
   <hr>
