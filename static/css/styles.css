@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -12,7 +14,10 @@ body {
 
 html, body {
     height: 100%;
-  
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 main {
@@ -23,6 +28,10 @@ main {
     flex-direction: column; /* Align content vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+    /* Positioning context for .content-backdrop, so that panel is
+       sized to main's own rendered height instead of the viewport -
+       see .content-backdrop's comment for why. */
+    position: relative;
 }
 
 header {
@@ -96,8 +105,175 @@ header {
     display: none;
 }
 
+/* main's margin-top (2rem, see the base `main` rule) exists to clear
+   the fixed header on normal in-flow pages. On the homepage,
+   #container_logo's own padding-top already clears the floating nav
+   inside its own 100vh box, so that margin only adds dead space below
+   the viewport and forces a few pixels of pointless page scroll. */
+body.home main {
+    margin-top: 0;
+}
+
+/* Full-bleed blurred background layer, rendered once from
+   layout.html.tera so every page gets it (originally homepage-only as
+   .home-bg, behind just the hero; promoted site-wide as an experiment
+   - trying the same subtle backdrop everywhere rather than only
+   behind the hero). Fills the space outside each page's own
+   content-column width. Fixed + oversized so the blur never shows a
+   hard edge; sits behind everything else on every page. */
+.page-bg {
+    position: fixed;
+    inset: -30px;
+    background-image: url('/static/images/SFA_bck.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Solid white panel behind ordinary page content, giving text a white
+   backing instead of sitting directly on the faint .page-bg blur.
+   Desktop-only (min-width: 601px, same breakpoint as the pill nav
+   below) since the width target here is the pill nav's own rendered
+   width, which only exists at that breakpoint - mobile's nav is a
+   different full-width bar, so this concept doesn't translate down
+   and mobile keeps its current page-bg-only look, unchanged.
+
+   Hidden on the homepage (body.home): its hero already has its own
+   dedicated white backdrop/notch treatment (.background /
+   .hero-backdrop below) and the index-intro section beneath it is
+   deliberately wider than this column, so layering this panel in too
+   would just conflict rather than help.
+
+   Rendered as the first child inside <main> (not a fixed, viewport-
+   pinned sibling like .page-bg) and sized with position: absolute;
+   inset matching main's own box (main has position: relative, see
+   that rule) rather than height: 100vh. This used to be position:
+   fixed + height: 100vh, matching .hero-backdrop's technique so it
+   stayed behind scrolled content on long pages - but a fixed,
+   viewport-height layer covers the ENTIRE visible screen at all
+   times regardless of scroll, which included the footer whenever it
+   was on screen (the footer is transparent by design, so this white
+   layer showed through it - a bug, not a stylistic choice). Scoping
+   it inside <main> instead means it can only ever be as tall as
+   main's own content, so it structurally can't reach the footer (or
+   header) - and it still covers the full scrollable height of long
+   pages, since main's box grows to fit all of its content regardless
+   of viewport height. z-index: -1 is still required despite being
+   first in DOM order: a positioned element with z-index: auto paints
+   *above* normal in-flow content in the same stacking context
+   regardless of DOM order (browsers paint positioned descendants as a
+   later layer than in-flow ones) - without it, this white panel
+   painted over every page's plain-text content and hid it entirely,
+   while images/carousels stayed visible only because they sit inside
+   their own already-positioned wrapper elements, which form separate
+   stacking contexts painted alongside this one, not underneath it.
+
+   Width: 745px x 1.1 = ~820px, per request to make it 10% wider than
+   the top nav pill. 745px is reused from the existing "roughly lines
+   up with the nav pill" approximation already used by .about_box /
+   .projects-content / .news_container (see the "Projects Page"
+   section below) - the pill itself has no fixed width, it hugs its
+   six links, so this is an eyeballed estimate, not a measurement;
+   nudge this alongside 745px if they visually drift apart. */
+.content-backdrop {
+    display: none;
+}
+
+@media (min-width: 601px) {
+    .content-backdrop {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 820px;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+body.home .content-backdrop {
+    display: none;
+}
+
+/* Solid white backdrop, same 1200px-capped footprint as .background
+   (not full-viewport like .page-bg). Sits between .page-bg and
+   .background in the stacking order (same z-index, later in source
+   so it paints on top of .page-bg) so it only ever shows through
+   .background's own clip-path notch - it never covers .page-bg in
+   the true side margins beyond 1200px. Homepage-only still, unlike
+   .page-bg above. */
+.hero-backdrop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Centered floating "pill" nav, site-wide at desktop widths (originally
+   homepage-only, scoped via body.home; promoted site-wide to evaluate
+   it across every page). Wrapped in a min-width query matching the
+   site's existing 600px mobile breakpoint exactly, rather than
+   declaring these rules unconditionally and trying to undo each
+   property again below 600px - that approach previously missed
+   resetting link padding/font-size/white-space, leaking the desktop
+   pill's sizing into the mobile hamburger dropdown. Scoping to
+   min-width means there is nothing to undo: below 600px none of these
+   rules exist, so mobile nav stays identical to how it already was. */
+@media (min-width: 601px) {
+    .topnav {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: calc(100% - 32px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background-color: #ffffff;
+        border: 1px solid rgba(8, 8, 8, 0.12);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .topnav a {
+        float: none;
+        padding: 10px 26px;
+        border-radius: 999px;
+        font-size: 15px;
+        white-space: nowrap;
+        color: rgb(8, 8, 8);
+    }
+
+    .topnav a:hover {
+        background-color: rgba(8, 8, 8, 0.08);
+        color: rgb(8, 8, 8);
+    }
+
+    .topnav a.active {
+        background-color: rgba(8, 8, 8, 0.12);
+        color: rgb(8, 8, 8);
+    }
+}
+
 .background {
-    background-image: url('/static/images/SFA_bck.png');
+    background-image: url('/static/images/SFA_bck.jpg');
     background-size: cover;  /*Ensure the background image covers the entire viewport */
     /* background-size: contain; */
     background-position: center;
@@ -106,13 +282,20 @@ header {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    /* Notch cut into the top-center, cradling the floating pill nav:
+       straight diagonals from the two top corners down to a point
+       60px deep at the horizontal center. The area above these lines
+       shows the page's white background instead of the image - the
+       nav itself (position: fixed) is unaffected, it paints in its
+       own layer regardless. */
+    clip-path: polygon(0 0, 50% 60px, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Semi-transparent overlay for the watermark effect */
@@ -125,6 +308,262 @@ header {
     height: 100%;
     background-color: rgba(249, 249, 249, 0.7); /* Watermark color with 0.8 opacity */
     z-index: 1; /* Place it over the background image */
+}
+
+/* Bouncing "scroll down" chevron, anchored to the bottom-center of the
+   hero. Sits above both the watermark overlay (z-index: 1) and
+   #container (z-index: 2). */
+.scroll-indicator {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1.75rem;
+    line-height: 0;
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-12px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-6px);
+    }
+}
+
+/* ------------------------------------------------------------------
+   Homepage "index-intro" section: compact mission-in-four-beats block
+   below the hero, replacing the old .below-hero motto section (its
+   image now lives inside this section instead). Homepage-only, but
+   this page shares layout.html.tera with every other page, so every
+   rule here is scoped under .index-intro - no bare element or generic
+   class selectors that could leak elsewhere.
+
+   No CSS custom properties/design tokens exist anywhere else in this
+   stylesheet to reuse, so values below match the site's established
+   literal palette/spacing by direct precedent instead: warm near-black
+   #252220 and link blue #1a5fb4 (Projects page), the rgba(37, 34, 32, X)
+   tint/border family, and 12px card radius.
+
+   Width is capped at 1200px, matching .background (the hero directly
+   above it) rather than the 745px readable column used by the rest of
+   the site's pages - narrowing this section to 745px to match those
+   other pages was tried and reverted (looked worse), so this section
+   is intentionally as wide as the hero instead, not as wide as
+   /projects, /news, /about, etc. */
+.index-intro {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 16px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* On desktop (tall monitors), the hero (.background) is 100vh in normal
+   flow. If Part 2's content is shorter than the viewport, the page can't
+   scroll far enough to push Part 1 fully above the fold — the browser's
+   max scroll is limited to (page height − viewport height), which is less
+   than 100vh when Part 2 is short. The result: the lower portion of Part
+   1's foreground images stays visible at the top of the viewport even
+   after the user has scrolled "all the way down" to Part 2.
+   Guaranteeing min-height: 100vh on Part 2 makes the page always at
+   least 200vh tall, so max scroll ≥ 100vh and Part 1 scrolls fully out
+   of view. Below 601px (mobile), Part 2's stacked single-column content
+   is already taller than 100vh, so no min-height is needed there. */
+@media (min-width: 601px) {
+    .index-intro {
+        min-height: 100vh;
+        /* Pill nav is position:fixed ~52px tall; 5rem (80px) clears it
+           with ~28px of breathing room. Tune this single value to adjust
+           the gap between the floating nav and the headline below it. */
+        padding-top: 5rem;
+    }
+}
+
+/* No longer capped at a text-readability width (460px) - now holds
+   only the motto image (the subline text paragraph was removed), so
+   it's free to match the image's own width below. */
+.index-intro__lede {
+    max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
+    margin: 0 auto 3.0rem auto; /* tune here to adjust lede→row gap */
+    text-align: center;
+}
+
+/* Plain text now (was the SFA_motto.png image) - per request, sized
+   bigger than .index-intro__beat h2's 1.4rem so it still reads as the
+   section's headline. */
+.index-intro__headline {
+    margin: 0 0 0.75rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #252220;
+}
+
+.index-intro__row {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    align-items: start; /* mobile: each cell its natural height */
+}
+
+.index-intro__row--top {
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.index-intro__row--bottom {
+    grid-template-columns: 1fr 1.4fr;
+}
+
+/* Desktop: both rows share the same height mechanism — image fills text-card
+   height exactly (tops and bottoms aligned). abs-positioned img takes the
+   photo box out of flow so the row height is driven by the text only; the
+   box then fills that height via align-items: stretch.
+   Must stay above the mobile breakpoint: below 641px the grid collapses to
+   one column, each item is alone in its row, and position: absolute on the
+   img would collapse the box to 0 height. */
+@media (min-width: 641px) {
+    .index-intro__row {
+        align-items: stretch;
+    }
+
+    /* More breathing room between the two rows. Scoped to row--top only
+       so it doesn't add space after row--bottom before the section ends. */
+    .index-intro__row--top {
+        margin-bottom: 3.00rem; /* tune here to adjust row→row gap */
+    }
+
+    .index-intro__photo {
+        position: relative;
+        height: auto;
+        min-height: 0;
+    }
+
+    .index-intro__photo img {
+        position: absolute;
+        inset: 0;
+    }
+}
+
+.index-intro__beat {
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.index-intro__beat h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #252220;
+}
+
+.index-intro__beat p {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #252220;
+    line-height: 1.45;
+}
+
+.index-intro__beat p + p {
+    margin-top: 0.6rem;
+}
+
+/* The one visually emphasized beat - carries the most substance. */
+.index-intro__beat--tinted {
+    background-color: rgba(37, 34, 32, 0.04);
+    border-radius: 12px;
+}
+
+/* Photo slot. aspect-ratio: 3/2 governs the box height on mobile
+   (single-column, natural sizing). On desktop the grid row height
+   (text-driven via align-items: stretch) overrides aspect-ratio, so
+   the box fills the text card height — object-fit: cover handles the
+   resulting crop. */
+.index-intro__photo {
+    display: flex;
+    aspect-ratio: 3 / 2;
+    background-color: rgba(37, 34, 32, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.index-intro__photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- Per-image focal-point controls ----------------------------------------
+   Both boxes are text-height-driven on desktop; some vertical crop is
+   expected. Adjust object-position if the subject is off-center vertically.
+
+   TOP ROW  — index-top-right.jpg  (3000×2000, 3:2) */
+.index-intro__row--top .index-intro__photo img {
+    object-position: center;    /* ← top-row focal point — tune here */
+}
+
+/* BOTTOM ROW — index-bottom-left.jpeg  (1500×1000, 3:2) */
+.index-intro__row--bottom .index-intro__photo img {
+    object-position: center;    /* ← bottom-row focal point — tune here */
+}
+
+.index-intro__link {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
+
+.index-intro__link:hover {
+    color: #123d78;
+}
+
+.index-intro__link:focus-visible {
+    outline: 2px solid #1a5fb4;
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .index-intro__row--top,
+    .index-intro__row--bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Subtle scroll-in fade, additive only: reduced-motion (or a browser
+   without the media query) sees the final, fully visible state with
+   no animation at all - content is never gated behind JS running. */
+.index-intro [data-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .index-intro [data-reveal] {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .index-intro [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Reuses .about-social (icons, links, sizing, hover) from the About page;
+   overrides only layout to center the icon row within the index-intro. */
+.index-intro .about-social {
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 2.5rem;
 }
 
 #container {
@@ -144,8 +583,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: normal; */
-    padding-top: 5rem;
+    align-items: center;
+    padding-top: calc(5rem + 100px);
     padding-bottom: 60px;
     max-width: 100%;
     width: 100%;
@@ -210,7 +649,7 @@ header {
 /* INDEX MOBILE ----------------------------------------------------> */
 @media (max-width: 480px) {
     .background {
-        background-image: url('/static/images/SFA_bck-vert.png');
+        background-image: url('/static/images/SFA_bck-vert.jpg');
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -257,18 +696,11 @@ header {
 @keyframes ollie {
 
     0% {
-        transform: translateX(100%);
-        transform: translateY(5000%)
-    }
-
-    45% {
-        
-        /*transform: translateY(-20%);*/
+        transform: translateX(-150%);
     }
 
     100% {
-        transform: translateX(100%);
-        transform: translateY(-12%);
+        transform: translateX(0);
     }
 }
 
@@ -287,14 +719,28 @@ header {
 }
 
 /* --------------------------------------------About page */
+/* Also used as-is by /impressum and /datenschutz (same .about_box /
+   .about-header / .about-text classes), so this width change applies
+   to all three pages, matching /projects and /news. */
 
+/* width: 100% matters here: .about_box is a flex item of <main>
+   (display: flex; align-items: center - not stretch), so with width
+   left at its default auto it would shrink-wrap to its content's
+   preferred size instead of filling out to max-width, rendering
+   narrower than the 745px column (same fix as .news_container and
+   .projects-content needed). */
 .about_box {
-    max-width: 95%;
+    width: 100%;
+    max-width: 745px;
     margin-top: 100px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 .about-pic-container {
@@ -328,180 +774,414 @@ header {
 }
 
 .about-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: black;
     /*float: left;*/
     padding-left: 4px;
     padding-right: 4px;
     text-align: justify;
     hyphens: auto;
+    font-size: 1.15rem; /* matches .index-intro__beat p */
 }
 
 @media (min-width: 768px) {
     .about-header{
         font-size: xx-large;
     }
-    .about-text {
-        font-size: x-large;
-    }
+}
+
+.about-social {
+    display: flex;
+    gap: 1rem;
+    padding-left: 4px;
+    margin-top: 0.5rem;
+}
+
+.about-social a {
+    color: #000000;
+    font-size: 1.75rem;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.about-social a:hover {
+    color: #444444;
 }
 
 /*                          Projects Page */
+/* Scoped entirely under body.projects-page (set via the template's
+   body_class block) so none of this leaks onto other pages that
+   share layout.html.tera. */
 
-.p1-header {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 1px;
-    max-width: 85%;
+/* Readable-column wrapper: caps line length regardless of the site's
+   wider 1200px body, with consistent side padding so text doesn't
+   touch the viewport edge on mobile. Width is set in px rather than
+   ch to roughly line up with the nav pill above it (header nav has no
+   fixed width - it hugs its six links' text - so this is a one-time
+   calculated approximation, not a live measurement; nudge this value
+   if it doesn't sit flush once you see it rendered). */
+body.projects-page .projects-content {
+    width: 100%;
+    max-width: 745px;
+    margin: 0 auto;
+    padding: 0 16px 50px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #252220;
 }
 
-.project-box {
-    max-width: 95% ;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 75px;
+body.projects-page .page-title {
+    margin: 60px 0 24px 0;
+    font-size: 2.0rem;
+    font-weight: 700;
+    text-align: left;
 }
 
-.p2-header {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    max-width: 85%;
+body.projects-page .page-intro {
+    margin: 0 0 3rem 0;
 }
 
-.projects-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: black;
-    padding-left: 4px;
-    padding-right: 4px;
+body.projects-page .projects-content p {
+    line-height: 1.6;
     text-align: justify;
     hyphens: auto;
 }
 
-@media (max-width: 768px) {
-    #psp-logo{
-        max-width: 250px;
-        height: auto;
-    }
+/* Blue is reserved for actual links; everything else uses the page's
+   warm near-black. */
+body.projects-page .projects-content a {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
 
+body.projects-page .projects-content a:hover {
+    color: #123d78;
 }
 
 @media (min-width: 768px) {
-    .p1-header{
-        font-size: x-large;
-    }
-    .p2-header{
-        font-size: x-large;
-    }
-    .projects-text {
-        font-size:larger;
+    body.projects-page .projects-content p {
+        font-size: larger;
     }
 }
 
-
-/* -------------------Slideshow container */
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
+/* ---- Reusable project section pattern ----
+   Each project is a self-contained <section class="project"> with a
+   heading, an optional logo, a carousel, body text and an optional
+   outbound link. Dropping in a new project is just copying this
+   structure - no per-project CSS needed. Permanent bordered card,
+   whether collapsed or expanded via its <details>. */
+body.projects-page .project {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 0 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(37, 34, 32, 0.15);
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+body.projects-page .project:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Collapsible "Weiterlesen" content: everything past the intro row
+   (carousel, body text, optional link) lives inside this <details>.
+   Native open/closed handling - no JS needed, and browsers hide the
+   non-summary children internally, so it can't be broken by any
+   display/spacing rules applied to those children below. */
+body.projects-page .project__more {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body.projects-page .project__weiterlesen {
     cursor: pointer;
+    color: #1a5fb4;
+    text-decoration: underline;
+    list-style: none;
+}
+
+body.projects-page .project__weiterlesen::-webkit-details-marker {
+    display: none;
+}
+
+body.projects-page .project__weiterlesen:hover {
+    color: #123d78;
+}
+
+/* Label swap via the native [open] attribute - no JS. */
+body.projects-page .project__weiterlesen-label--open {
+    display: none;
+}
+
+body.projects-page .project__more[open] .project__weiterlesen-label--open {
+    display: inline;
+}
+
+body.projects-page .project__more[open] .project__weiterlesen-label--closed {
+    display: none;
+}
+
+body.projects-page .project__heading {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Logo (left) + text box (right). Stacks on narrow screens; the text
+   box is flex: 1 1 auto so it just fills the row on its own when a
+   project has no logo (no image element = one flex child, not two).
+   align-items: stretch (the default, stated explicitly) makes the
+   text box match the logo's rendered height on the row layout - the
+   logo keeps its own aspect-ratio height regardless (images with an
+   intrinsic ratio aren't stretched), so it's the one setting the row
+   height and the text box's border just grows to meet it. */
+body.projects-page .project__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    body.projects-page .project__intro {
+        flex-direction: row;
+    }
+}
+
+body.projects-page .project__logo {
+    flex: 0 0 auto;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+
+body.projects-page .project__intro-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background-color: transparent;
+}
+
+body.projects-page .project__intro-text p {
+    margin: 0;
+}
+
+body.projects-page .project__body p {
+    margin: 0 0 1rem 0;
+}
+
+body.projects-page .project__body p:last-child {
+    margin-bottom: 0;
+}
+
+body.projects-page .project__link {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    body.projects-page .project__heading {
+        font-size: x-large;
+    }
+}
+
+/* -------------------Carousel (shared by every project's slideshow) */
+body.projects-page .carousel {
+    width: 100%;
+}
+
+body.projects-page .carousel__track {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+body.projects-page .carousel__slide {
+    display: none;
+}
+
+body.projects-page .carousel__slide.is-active {
+    display: block;
+}
+
+body.projects-page .carousel__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Soft, semi-transparent circular prev/next buttons over the image. */
+body.projects-page .carousel__control {
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.prev {
-    left: 0;
-    text-align: left !important;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-  
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* The dots/bullets/indicators */
-.dot1 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-  
-.active, .dot1:hover {
-    background-color: #717171;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.dot2 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+body.projects-page .carousel__control:hover {
+    background-color: rgba(0, 0, 0, 0.55);
 }
-  
-.active, .dot2:hover {
-    background-color: #717171;
+
+body.projects-page .carousel__control--prev {
+    left: 12px;
+}
+
+body.projects-page .carousel__control--next {
+    right: 12px;
+}
+
+/* Dots: larger than the browser-default tiny click targets, with an
+   unambiguous active state. */
+body.projects-page .carousel__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+body.projects-page .carousel__dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(37, 34, 32, 0.25);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+body.projects-page .carousel__dot:hover {
+    background-color: rgba(37, 34, 32, 0.45);
+}
+
+body.projects-page .carousel__dot.is-active {
+    background-color: #252220;
+    transform: scale(1.25);
+}
+
+/* Optional per-project caption under the carousel - omitted entirely
+   for projects that don't have one, no fallback styling needed. */
+body.projects-page .carousel__caption {
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(37, 34, 32, 0.7);
 }
 
 /*                                                   News Page */
 
+/* Capped at the same width as .projects-content (static/css/styles.css,
+   "Projects Page" section) so the readable column lines up across
+   pages instead of jumping wider/narrower on navigation. Also fixes a
+   latent bug: the old rule declared margin-top: 25px then a later
+   margin: auto shorthand that silently reset it back to 0 - folded
+   into one shorthand so the top margin actually applies.
+
+   width: 100% matters here: .news_container is a flex item of <main>
+   (display: flex; align-items: center - not stretch), so with width
+   left at its default auto it would shrink-wrap to its content's
+   preferred size instead of filling out to max-width, rendering
+   narrower than the 745px column. .projects-content sets the same
+   width: 100% for the same reason. */
 .news_container {
-    margin-top: 25px;
-    padding-top: 25px;
-    padding-bottom: 35px;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    margin: 25px auto 0 auto;
+    padding: 25px 16px 50px;
+    max-width: 745px;
+    box-sizing: border-box;
 }
 
+/* box-sizing: border-box so the 1rem padding is carved out of the
+   100% width instead of added on top of it - without this, each card
+   rendered exactly as wide as .news_container's own outer edge,
+   silently eating the container's side padding instead of sitting
+   inset from it. */
 .news_box {
     max-width: 100%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     padding: 1rem 1rem;
     background-color: white;
-    border: black;
+    /* No border by design - was `border: black` (invalid shorthand,
+       already rendered nothing) before a brief attempt to make the
+       box's edge visible; reverted per feedback, no border wanted
+       here. .news_box's own 1rem padding (on top of .news_container's)
+       means news text sits inset further than .page-intro on the
+       projects page, which has no equivalent wrapping box - accepted
+       as-is rather than restructuring to match exactly. */
+    border: none;
+    box-sizing: border-box;
 }
 
 .newstext {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: black;
     /*float: left;*/
     padding-left: 4px;
     padding-right: 4px;
     text-align: justify;
     hyphens: auto;
+}
+
+/* Expandable "mehr/weniger" for news items with multiple paragraphs.
+   Same <details>/<summary> pattern as .project__more on the projects page. */
+.newstext__more {
+    margin-top: 0.4rem;
+}
+
+.newstext__mehr {
+    cursor: pointer;
+    color: #1a5fb4;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.newstext__mehr::-webkit-details-marker {
+    display: none;
+}
+
+.newstext__mehr:hover {
+    color: #123d78;
+}
+
+.newstext__mehr-label--open {
+    display: none;
+}
+
+.newstext__more[open] .newstext__mehr-label--open {
+    display: inline;
+}
+
+.newstext__more[open] .newstext__mehr-label--closed {
+    display: none;
+}
+
+.newstext__more p {
+    margin-top: 0.6rem;
 }
 
 .news-pic-container {
@@ -560,52 +1240,55 @@ header {
   
 
 
-  /*                                                   TEST IMAGE LEGEND */
+  /*                          News title above image or video */
 
 .image-container {
-    position: relative; /* Make the container a positioned element */
-    display: inline-block; /* Keep the container the size of the image */
-  }
-  
-  .image-container img {
+    display: block;
+    width: 100%;
+}
+
+.image-container img {
     width: 100%;
     height: auto;
-  }
-  
-  .image-title {
-    position: absolute;
-    bottom: 8px; /* Adjust this if needed */
-    left: 50%; /* Center the container horizontally */
-    transform: translateX(-50%); /* Move the container to truly center */
-    padding: 4px 15px;
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
-    color: white;
-    text-align: center; /* Center text inside the container */
+}
+
+/* News title: sits in normal flow above the image or .video-responsive,
+   separated by a small gap. Works as a sibling before either element
+   inside .news-pic-container — no absolute positioning needed. */
+.image-title {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.35rem 0.75rem;
+    background-color: rgba(37, 34, 32, 0.08);
     border-radius: 4px;
-    max-width: 95%; /* Max width for preventing overflow */
+    color: #252220;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Rock Salt', cursive;
+    font-size: 0.75rem;
 }
 
-/* Mobile Version (screens smaller than 768px) */
-@media (max-width: 768px) {
-    .image-title {
-        width: 90%; /* Fixed width: 90% of the image for mobile */
-        font-size: 14px; /* Adjust font size as needed */
-    }
-}
-
-/* Larger Screens (screens wider than 768px) */
-@media (min-width: 769px) {
-    .image-title {
-        width: 100%; /* Fixed width: 60% of the image for larger screens */
-        font-size: 16px; /* Adjust font size as needed */
-    }
+.image-title h4 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.4;
 }
 
  /*                                                   Hilf Mit page */
+ /* width: 100% + max-width matches .projects-content / .news_container
+    / .about_box: .banner-hilf-container is a flex item of <main>
+    (display: flex; align-items: center - not stretch), so width left
+    at auto would shrink-wrap instead of filling out to max-width. */
  .banner-hilf-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 745px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
     height: calc(100vh - var(--header-height) - var(--footer-height)); /* Adjust this */
     overflow: hidden;
   }
@@ -618,34 +1301,73 @@ header {
 
 /*                                                   Footer */
 
+/* In normal flow (not position: fixed) so it sits after the page's
+   own content instead of overlapping it. body is display: flex;
+   flex-direction: column; min-height: 100vh with main: flex: 1, so
+   this margin-top: auto still pushes the footer down to the bottom
+   of the viewport on short pages (the classic sticky-footer trick) -
+   on pages long enough to scroll, it simply lands after the content
+   in normal flow instead of covering it.
+
+   Footer layout: a single top rule with the logo+text brand row
+   centered beneath it. Column direction stacks the border above the
+   brand row; align-items: center keeps the brand row horizontally
+   centered within the footer container.
+
+   The top rule is a border-top on this element itself, not a
+   separate inner div - a previous version used an inner .footer-line
+   div with the container's own top padding above it, which let the
+   (then-tinted) background leak above the line since the padding box
+   extends past the line div. A border sits at the true outer edge of
+   the box by definition, so background (background-clip defaults to
+   border-box, but the border itself paints over/at that edge) can
+   never render above it - this is structurally guaranteed, not just
+   because the background happens to be transparent right now. */
 .footer-container {
     display: flex;
-    align-items: center; /* Vertically center the lines with the logo */
-    justify-content: center; /* Horizontally center the whole element */
-    /* position: relative; */
-    position: fixed;
+    flex-direction: column;
+    align-items: center;
     width: 95%;
-    padding: 5px 0;
-    margin-top: auto; /* Push the logo container to the bottom */
-    z-index: 100;
-    bottom: 0;
-    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0) 50%);
+    padding: 0 0 5px 0;
+    margin-top: auto; /* Push the footer down to the bottom */
+    margin-left: auto;
+    margin-right: auto; /* body's default align-items: stretch doesn't
+       center a flex item with a definite width like this one - without
+       these, the footer would hug the left edge instead of the
+       center. */
+    border-top: 3px solid rgba(62, 68, 68, 1);
+    background: transparent;
     max-width: 1200px;
 }
 
-/* Style for the logo */
+/* Logo + brand text row, left-aligned under the top line. */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
 .footer-logo {
-    width: 15vw;
-    max-width: 80px;
+    width: 11vw;
+    max-width: 60px;
     height: auto;
-
 }
 
-/* Style for the lines */
-.footer-line {
-    height: 2px;
-    background-color: rgba(62, 68, 68, 1);
-    width: 90%;
-    max-width: 1200px;
+.footer-text {
+    font-size: 0.95rem;
+    color: rgba(62, 68, 68, 1); /* matches the top rule's color */
+}
+
+/* Cap .footer-container itself to the same 820px .content-backdrop
+   uses, so the top line and brand row line up with the white content
+   column above it instead of spanning near the full page width.
+   Scoped to the same min-width: 601px breakpoint as .content-backdrop,
+   which is desktop-only - mobile has no such column to match, so it
+   stays as it was. */
+@media (min-width: 601px) {
+    .footer-container {
+        max-width: 820px;
+    }
 }
 

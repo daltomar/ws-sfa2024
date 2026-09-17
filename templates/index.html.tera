@@ -2,20 +2,71 @@
 
 {% block title %}Skateboard für alle{% endblock %}
 
-{% block body_class %}no-footer{% endblock %}
+{% block body_class %}no-footer home{% endblock %}
 
 {% block content %}
+<!-- The full-bleed blurred backdrop (.page-bg) now renders once from
+     layout.html.tera, shared by every page - no longer declared here. -->
+<div class="hero-backdrop" aria-hidden="true"></div>
 <div class="background">
     <div id="container">
         <div id="container_logo">
-            <img id="logo_text" src="/static/images/sfa_skt_text.png" alt="Skateboard für alle">
+            <img id="logo_text" src="/static/images/logo_text.png" alt="Skateboard für alle">
             <img id="logo" src="/static/images/sfa_skt.gif" alt="Animiertes Skateboard-Logo">
-            <img id="motto" src="/static/images/SFA_motto.png" alt="…and Skateboards for all!">
+            <img id="motto" src="/static/images/slogan.png" alt="Wir fördern Skateboarding">
         </div>
     </div>
+    <a href="#intro" class="scroll-indicator" aria-label="Nach unten scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+    </a>
 </div>
 
+<section class="index-intro" id="intro">
+  <div class="index-intro__lede">
+    <h1 class="index-intro__headline">Wir sammeln alles rund ums Skateboard und bringen es zu sozialen Projekten in Brasilien</h1>
+  </div>
+
+  <div class="index-intro__row index-intro__row--top">
+    <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
+      <h2>Wer wir sind</h2>
+      <p>Als Brasilianer in Deutschland besuchen wir jährlich unsere Heimat und fahren dort
+         selbst gerne Skateboard. Dabei ist uns ein deutlicher Kontrast aufgefallen: Während
+         in Deutschland viele Skateboards ungenutzt bleiben oder verschenkt werden,
+         fehlt vielen Kindern in Brasilien ein Board.
+         <strong>Wir wollen möglichst vielen Kindern und Jugendlichen ermöglichen, Skateboarding zu erleben.</strong></p>
+    </article>
+    <div class="index-intro__photo" data-reveal>
+      <img src="/static/images/index-top-right.jpg" alt="Gesammelte Skateboards, Protektoren und Zubehör, bereit für den Versand nach Brasilien" loading="lazy">
+    </div>
+  </div>
+
+  <div class="index-intro__row index-intro__row--bottom">
+    <div class="index-intro__photo" data-reveal>
+      <img src="/static/images/index-bottom-left.jpeg" alt="Kinder und Jugendliche mit ihren Pokalen bei einem Skateboard-Projekt in Brasilien" loading="lazy">
+    </div>
+    <article class="index-intro__beat index-intro__beat--tinted" data-reveal>
+      <h2>Wie wir arbeiten</h2>
+      <p>Wir sammeln alles, was mit Skateboarding zu tun hat – Skateboards, Skateboardteile,
+       Zubehör, Protektoren, Schuhe usw. Wir bringen die gesammelten Materialien nach
+        Brasilien und verteilen sie an soziale Projekte, die mit Kindern und Jugendlichen
+         arbeiten. Mit Geldspenden kaufen wir zusätzlich Materialien direkt vor Ort.
+          <strong>Die Verwaltungskosten des Projekts übernehmen wir zu 100 %.</strong></p>
+      <p>Möchtest du helfen? <a class="index-intro__link" href="/hilfmit">Hier mehr erfahren</a></p>
+    </article>
+  </div>
+
+  <p class="about-social">
+      <a href="https://www.instagram.com/skateboard_fuer_alle/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61573786774336" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+  </p>
+</section>
+
 <script src="/static/js/intro.js"></script>
+<script src="/static/js/index-intro.js"></script>
 
 
 {% endblock %}

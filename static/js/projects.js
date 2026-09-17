@@ -1,63 +1,37 @@
-// Slide shows photos
-// Based on material of the w3schools.com
-// https://www.w3schools.com/howto/howto_js_slideshow.asp
+// Generic carousel controller. Any number of `[data-carousel]` blocks
+// on the page work off this one script - no per-project functions to
+// duplicate when a new project section is added.
 
-let slideIndex = 1;
-showSlides(slideIndex);
+document.querySelectorAll('[data-carousel]').forEach(initCarousel);
 
-// Next/previous controls
-function plusSlides1(n) {
-  showSlides(slideIndex += n);
-}
+function initCarousel(root) {
+  const slides = Array.from(root.querySelectorAll('.carousel__slide'));
+  const dotsContainer = root.querySelector('[data-carousel-dots]');
+  const prevBtn = root.querySelector('[data-carousel-prev]');
+  const nextBtn = root.querySelector('[data-carousel-next]');
 
-// Thumbnail image controls
-function currentSlide1(n) {
-  showSlides(slideIndex = n);
-}
+  if (slides.length === 0) return;
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides1");
-  let dots = document.getElementsByClassName("dot1");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel__dot';
+    dot.setAttribute('aria-label', `Bild ${i + 1} anzeigen`);
+    dot.addEventListener('click', () => show(i));
+    dotsContainer && dotsContainer.appendChild(dot);
+    return dot;
+  });
+
+  let index = 0;
+
+  function show(n) {
+    index = (n + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
 
+  prevBtn && prevBtn.addEventListener('click', () => show(index - 1));
+  nextBtn && nextBtn.addEventListener('click', () => show(index + 1));
 
-let slideIndex2 = 1;
-showSlides2(slideIndex2);
-
-
-// Next/previous controls
-function plusSlides2(n) {
-    showSlides2(slideIndex2 += n);
-  }
-  
-// Thumbnail image controls
-function currentSlide2(n) {
-    showSlides2(slideIndex2 = n);
-  }
-  
-function showSlides2(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides2");
-    let dots = document.getElementsByClassName("dot2");
-    if (n > slides.length) {slideIndex2 = 1}
-    if (n < 1) {slideIndex2 = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex2-1].style.display = "block";
-    dots[slideIndex2-1].className += " active";
+  show(0);
 }
