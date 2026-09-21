@@ -422,22 +422,37 @@ body.home .content-backdrop {
     grid-template-columns: 1fr 1.4fr;
 }
 
-/* Desktop: both rows share the same height mechanism — image fills text-card
-   height exactly (tops and bottoms aligned). abs-positioned img takes the
-   photo box out of flow so the row height is driven by the text only; the
-   box then fills that height via align-items: stretch.
+/* Desktop: section fills exactly one viewport height so all content —
+   headline, both rows, social icons — is always visible without scrolling.
+   The two rows share whatever height is left after the fixed elements
+   (headline, social icons, paddings) via flex: 1.
+   Vertical spacings use min(rem, vh) so they compress on shorter screens
+   rather than pushing the social icons below the fold.
    Must stay above the mobile breakpoint: below 641px the grid collapses to
    one column, each item is alone in its row, and position: absolute on the
    img would collapse the box to 0 height. */
 @media (min-width: 641px) {
+    .index-intro {
+        min-height: unset;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: min(2.5rem, 2vh);
+    }
+
+    .index-intro__lede {
+        flex-shrink: 0;
+        margin-bottom: min(3rem, 3.5vh);
+    }
+
     .index-intro__row {
+        flex: 1;
+        min-height: 0;
         align-items: stretch;
     }
 
-    /* More breathing room between the two rows. Scoped to row--top only
-       so it doesn't add space after row--bottom before the section ends. */
     .index-intro__row--top {
-        margin-bottom: 3.00rem; /* tune here to adjust row→row gap */
+        margin-bottom: min(3rem, 2vh);
     }
 
     .index-intro__photo {
@@ -564,6 +579,13 @@ body.home .content-backdrop {
     justify-content: center;
     padding-left: 0;
     margin-top: 2.5rem;
+}
+
+@media (min-width: 641px) {
+    .index-intro .about-social {
+        flex-shrink: 0;
+        margin-top: min(2.5rem, 2vh);
+    }
 }
 
 #container {
