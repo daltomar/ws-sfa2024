@@ -42,16 +42,16 @@ header {
     max-width: 1200px;
 }
 
-/* Mobile nav bar — near-white background, near-black text, subtle dark tints for hover/active. */
+/* Mobile nav bar — dark semi-transparent background, white text. */
 .topnav {
-    background-color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.65);
     overflow: hidden;
 }
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     display: block;
-    color: rgb(8, 8, 8);
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -59,13 +59,13 @@ header {
   }
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: rgba(8, 8, 8, 0.08);
-    color: rgb(8, 8, 8);
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
   }
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: rgba(8, 8, 8, 0.12);
-    color: rgb(8, 8, 8);
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
   }
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
@@ -245,7 +245,7 @@ body.home .content-backdrop {
         gap: 8px;
         padding: 6px 16px;
         border-radius: 0 0 16px 16px;
-        background-color: #f0f0f0;
+        background-color: rgba(0, 0, 0, 0.65);
     }
 
     .topnav a {
@@ -254,17 +254,17 @@ body.home .content-backdrop {
         border-radius: 999px;
         font-size: 15px;
         white-space: nowrap;
-        color: rgb(8, 8, 8);
+        color: #ffffff;
     }
 
     .topnav a:hover {
-        background-color: rgba(8, 8, 8, 0.08);
-        color: rgb(8, 8, 8);
+        background-color: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
     }
 
     .topnav a.active {
-        background-color: rgba(8, 8, 8, 0.12);
-        color: rgb(8, 8, 8);
+        background-color: rgba(255, 255, 255, 0.18);
+        color: #ffffff;
     }
 }
 
@@ -1327,7 +1327,7 @@ body.projects-page .carousel__caption {
     width: 100%;
     padding: 0 0 5px 0;
     margin-top: auto;
-    background: #f0f0f0;
+    background: rgba(0, 0, 0, 0.65);
 }
 
 /* Logo + brand text row, centered within the full-width footer. */
@@ -1346,7 +1346,7 @@ body.projects-page .carousel__caption {
 
 .footer-text {
     font-size: 0.95rem;
-    color: rgba(62, 68, 68, 1); /* matches the top rule's color */
+    color: #ffffff;
 }
 
 
