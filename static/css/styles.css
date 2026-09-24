@@ -42,9 +42,9 @@ header {
     max-width: 1200px;
 }
 
-/* Mobile nav bar — transparent background, near-black text, subtle dark tints for hover/active. */
+/* Mobile nav bar — near-white background, near-black text, subtle dark tints for hover/active. */
 .topnav {
-    background-color: transparent;
+    background-color: #f0f0f0;
     overflow: hidden;
 }
   /* Style the links inside the navigation bar */
@@ -245,7 +245,7 @@ body.home .content-backdrop {
         gap: 8px;
         padding: 6px 16px;
         border-radius: 0 0 16px 16px;
-        background-color: transparent;
+        background-color: #f0f0f0;
     }
 
     .topnav a {
@@ -1327,7 +1327,7 @@ body.projects-page .carousel__caption {
     width: 100%;
     padding: 0 0 5px 0;
     margin-top: auto;
-    background: transparent;
+    background: #f0f0f0;
 }
 
 /* Logo + brand text row, centered within the full-width footer. */
