@@ -42,12 +42,11 @@ header {
     max-width: 1200px;
 }
 
-/* Mobile nav bar — matches the desktop pill nav color scheme:
-   white background, near-black text, subtle dark tints for hover/active. */
+/* Mobile nav bar — transparent background, near-black text, subtle dark tints for hover/active. */
 .topnav {
-    background-color: #ffffff;
+    background-color: transparent;
     overflow: hidden;
-  }
+}
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
@@ -238,19 +237,15 @@ body.home .content-backdrop {
     .topnav {
         position: fixed;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        max-width: calc(100% - 32px);
+        left: 0;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 8px;
         padding: 6px 16px;
-        border-radius: 999px;
-        background-color: #ffffff;
-        border: 1px solid rgba(8, 8, 8, 0.12);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 0 0 16px 16px;
+        background-color: transparent;
     }
 
     .topnav a {
@@ -290,13 +285,6 @@ body.home .content-backdrop {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
-    /* Notch cut into the top-center, cradling the floating pill nav:
-       straight diagonals from the two top corners down to a point
-       60px deep at the horizontal center. The area above these lines
-       shows the page's white background instead of the image - the
-       nav itself (position: fixed) is unaffected, it paints in its
-       own layer regardless. */
-    clip-path: polygon(0 0, 50% 60px, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Semi-transparent overlay for the watermark effect */
@@ -1331,40 +1319,18 @@ body.projects-page .carousel__caption {
    this margin-top: auto still pushes the footer down to the bottom
    of the viewport on short pages (the classic sticky-footer trick) -
    on pages long enough to scroll, it simply lands after the content
-   in normal flow instead of covering it.
-
-   Footer layout: a single top rule with the logo+text brand row
-   centered beneath it. Column direction stacks the border above the
-   brand row; align-items: center keeps the brand row horizontally
-   centered within the footer container.
-
-   The top rule is a border-top on this element itself, not a
-   separate inner div - a previous version used an inner .footer-line
-   div with the container's own top padding above it, which let the
-   (then-tinted) background leak above the line since the padding box
-   extends past the line div. A border sits at the true outer edge of
-   the box by definition, so background (background-clip defaults to
-   border-box, but the border itself paints over/at that edge) can
-   never render above it - this is structurally guaranteed, not just
-   because the background happens to be transparent right now. */
+   in normal flow instead of covering it. */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 100%;
     padding: 0 0 5px 0;
-    margin-top: auto; /* Push the footer down to the bottom */
-    margin-left: auto;
-    margin-right: auto; /* body's default align-items: stretch doesn't
-       center a flex item with a definite width like this one - without
-       these, the footer would hug the left edge instead of the
-       center. */
-    border-top: 3px solid rgba(62, 68, 68, 1);
+    margin-top: auto;
     background: transparent;
-    max-width: 1200px;
 }
 
-/* Logo + brand text row, left-aligned under the top line. */
+/* Logo + brand text row, centered within the full-width footer. */
 .footer-brand {
     display: flex;
     align-items: center;
@@ -1383,15 +1349,4 @@ body.projects-page .carousel__caption {
     color: rgba(62, 68, 68, 1); /* matches the top rule's color */
 }
 
-/* Cap .footer-container itself to the same 820px .content-backdrop
-   uses, so the top line and brand row line up with the white content
-   column above it instead of spanning near the full page width.
-   Scoped to the same min-width: 601px breakpoint as .content-backdrop,
-   which is desktop-only - mobile has no such column to match, so it
-   stays as it was. */
-@media (min-width: 601px) {
-    .footer-container {
-        max-width: 820px;
-    }
-}
 
