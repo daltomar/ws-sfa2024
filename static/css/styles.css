@@ -42,11 +42,9 @@ header {
     max-width: 1200px;
 }
 
-/* Mobile nav bar — image background, white text. */
+/* Mobile nav bar — dark semi-transparent background, white text. */
 .topnav {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/static/images/deck-detail.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(0, 0, 0, 0.65);
     overflow: hidden;
 }
   /* Style the links inside the navigation bar */
@@ -239,17 +237,18 @@ body.home .content-backdrop {
     .topnav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
+        max-width: 820px;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 8px;
         padding: 6px 16px;
+        border-radius: 16px;
         overflow: visible;
-        background-image: url('/static/images/deck-detail.jpg');
-        background-size: cover;
-        background-position: center;
+        background-color: rgba(0, 0, 0, 0.65);
     }
 
     .topnav a {
@@ -1329,16 +1328,19 @@ body.projects-page .carousel__caption {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* Break out of body's max-width: 1200px so the footer spans the full
-       viewport. calc(50% - 50vw) offsets left by the body's centering margin;
-       100vw gives the full viewport width. */
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 100%;
     padding: 6px 16px;
     margin-top: auto;
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/static/images/deck-detail.jpg');
-    background-size: cover;
-    background-position: center;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+@media (min-width: 601px) {
+    .footer-container {
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Logo + brand text row, centered within the full-width footer. */
