@@ -246,7 +246,6 @@ body.home .content-backdrop {
         align-items: center;
         gap: 8px;
         padding: 6px 16px;
-        border-radius: 0 0 16px 16px;
         overflow: visible;
         background-image: url('/static/images/deck-detail.jpg');
         background-size: cover;
