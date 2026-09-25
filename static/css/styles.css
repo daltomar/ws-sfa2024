@@ -42,9 +42,11 @@ header {
     max-width: 1200px;
 }
 
-/* Mobile nav bar — dark semi-transparent background, white text. */
+/* Mobile nav bar — image background, white text. */
 .topnav {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-image: url('/static/images/deck-detail.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
   /* Style the links inside the navigation bar */
@@ -245,7 +247,10 @@ body.home .content-backdrop {
         gap: 8px;
         padding: 6px 16px;
         border-radius: 0 0 16px 16px;
-        background-color: rgba(0, 0, 0, 0.65);
+        overflow: visible;
+        background-image: url('/static/images/deck-detail.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
     .topnav a {
@@ -1324,10 +1329,16 @@ body.projects-page .carousel__caption {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    /* Break out of body's max-width: 1200px so the footer spans the full
+       viewport. calc(50% - 50vw) offsets left by the body's centering margin;
+       100vw gives the full viewport width. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     padding: 0 0 5px 0;
     margin-top: auto;
-    background: rgba(0, 0, 0, 0.65);
+    background-image: url('/static/images/deck-detail.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Logo + brand text row, centered within the full-width footer. */
