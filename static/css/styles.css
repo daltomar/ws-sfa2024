@@ -247,7 +247,7 @@ body.home .content-backdrop {
         align-items: center;
         gap: 8px;
         padding: 6px 16px;
-        border-radius: 16px;
+
         overflow: visible;
         background-color: rgba(0, 0, 0, 0.65);
     }
