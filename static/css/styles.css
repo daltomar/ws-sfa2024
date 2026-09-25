@@ -44,7 +44,7 @@ header {
 
 /* Mobile nav bar — image background, white text. */
 .topnav {
-    background-image: url('/static/images/deck-detail.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/static/images/deck-detail.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -1336,7 +1336,7 @@ body.projects-page .carousel__caption {
     margin-left: calc(50% - 50vw);
     padding: 0 0 5px 0;
     margin-top: auto;
-    background-image: url('/static/images/deck-detail.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/static/images/deck-detail.jpg');
     background-size: cover;
     background-position: center;
 }
