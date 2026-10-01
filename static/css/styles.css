@@ -282,12 +282,15 @@ body.home .content-backdrop {
     z-index: 0;
 }
 
-/* Semi-transparent overlay above the blur, below the content. */
+/* Sharp collage (whole, uncropped) under the wash overlay, above the blur.
+   Layers: ::before = blur (z 0) → ::after = sharp image + overlay (z 1) → content. */
 .background::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(249, 249, 249, 0.80);
+    background:
+        linear-gradient(rgba(249, 249, 249, 0.80), rgba(249, 249, 249, 0.80)),
+        url('/static/images/SFA_bck.jpg') center / contain no-repeat;
     z-index: 1;
 }
 
@@ -678,6 +681,11 @@ body.home .content-backdrop {
     /* Use the portrait-oriented image on small screens. */
     .background::before {
         background-image: url('/static/images/SFA_bck-vert.jpg');
+    }
+    .background::after {
+        background:
+            linear-gradient(rgba(249, 249, 249, 0.80), rgba(249, 249, 249, 0.80)),
+            url('/static/images/SFA_bck-vert.jpg') center / contain no-repeat;
     }
     #container_logo {
         display: flex;
