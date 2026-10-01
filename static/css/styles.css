@@ -203,20 +203,20 @@ body.home .content-backdrop {
     display: none;
 }
 
-/* Solid white backdrop, same 1200px-capped footprint as .background
+/* Solid white backdrop, same 820px-capped footprint as .background
    (not full-viewport like .page-bg). Sits between .page-bg and
    .background in the stacking order (same z-index, later in source
    so it paints on top of .page-bg) so it only ever shows through
-   .background's own clip-path notch - it never covers .page-bg in
-   the true side margins beyond 1200px. Homepage-only still, unlike
-   .page-bg above. */
+   .background's own clip-path notch — outside that 820px box the
+   blurred .page-bg shows through as normal. Homepage-only still,
+   unlike .page-bg above. */
 .hero-backdrop {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1200px;
+    max-width: 820px;
     height: 100vh;
     background-color: #ffffff;
     z-index: -1;
@@ -301,6 +301,16 @@ body.home .content-backdrop {
     height: 100%;
     background-color: rgba(249, 249, 249, 0.80); /* Watermark color with 0.80 opacity */
     z-index: 1; /* Place it over the background image */
+}
+
+/* Desktop: match the pill-nav width (820px = .topnav max-width in the
+   min-width: 601px block). Centering is handled by main's
+   align-items: center. Below 601px the hero stays full-width,
+   matching the full-width mobile nav. */
+@media (min-width: 601px) {
+    .background {
+        max-width: 820px;
+    }
 }
 
 /* Bouncing "scroll down" chevron, anchored to the bottom-center of the
