@@ -403,13 +403,13 @@ body.home .content-backdrop {
     color: #252220;
 }
 
-/* Desktop: section fills one viewport height. With .is-enhanced the
-   rotator takes flex:1 so social icons stay anchored at the bottom.
-   Without JS both slides show in normal flow — no flex:1 is needed. */
+/* Desktop: section is at least one viewport tall (ensures the hero above
+   can scroll fully out of view). Content flows naturally from the top;
+   social icons are pushed to the bottom via margin-top: auto (see
+   .index-intro .about-social below). */
 @media (min-width: 641px) {
     .index-intro {
-        min-height: unset;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         padding-bottom: min(2.5rem, 2vh);
@@ -418,33 +418,6 @@ body.home .content-backdrop {
     .index-intro__lede {
         flex-shrink: 0;
         margin-bottom: min(3rem, 3.5vh);
-    }
-
-    /* Rotator grows to fill remaining height so icons never move */
-    .is-enhanced .index-rotator {
-        flex: 1;
-        min-height: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Card fills the rotator; grid-area stacking keeps height stable */
-    .is-enhanced .index-rotator__card {
-        flex: 1;
-        min-height: 0;
-    }
-
-    /* Each slide fills the card cell */
-    .is-enhanced .index-rotator__slide {
-        height: 100%;
-    }
-
-    /* Image fills remaining slide height after the text panel */
-    .is-enhanced .index-rotator__slide .index-intro__photo {
-        flex: 1;
-        min-height: 0;
-        max-height: none;
-        aspect-ratio: unset;
     }
 }
 
@@ -477,11 +450,9 @@ body.home .content-backdrop {
     border-radius: 12px;
 }
 
-/* Photo slot. aspect-ratio: 3/2 governs the box height on mobile
-   (single-column, natural sizing). On desktop the grid row height
-   (text-driven via align-items: stretch) overrides aspect-ratio, so
-   the box fills the text card height — object-fit: cover handles the
-   resulting crop. */
+/* Photo slot. aspect-ratio: 3/2 governs the box height on mobile.
+   On desktop (min-width: 601px) aspect-ratio is overridden by max-height
+   in the rotator rule below; object-fit: cover handles the resulting crop. */
 .index-intro__photo {
     display: flex;
     aspect-ratio: 3 / 2;
@@ -525,7 +496,8 @@ body.home .content-backdrop {
 @media (min-width: 641px) {
     .index-intro .about-social {
         flex-shrink: 0;
-        margin-top: min(2.5rem, 2vh);
+        margin-top: auto;        /* push icons to the bottom of the section */
+        padding-top: min(1.5rem, 2vh); /* keep a minimum gap above them */
     }
 }
 
@@ -534,30 +506,34 @@ body.home .content-backdrop {
    stacked in normal flow — works without JS and with prefers-reduced-motion.
    JS adds .is-enhanced to .index-intro to activate the flip behaviour. */
 
-/* Rotator wrapper: matches the nav pill / hero width (820px), centered.
-   The section itself is already 820px, so width:100% fills it exactly.
-   perspective is set here so the flip has a natural depth feeling. */
+/* Rotator wrapper: narrowed to match .index-intro__lede (685px) so the
+   rotator aligns visually with the section headline above it. */
 .index-rotator {
     width: 100%;
+    max-width: 685px;
+    margin: 0 auto;
     box-sizing: border-box;
-}
-
-.is-enhanced .index-rotator {
-    perspective: 1200px;
 }
 
 /* Card: the flipping element. display:grid + grid-area:1/1 on both slides
    stacks them in a single cell — card height = tallest slide, so the dots
    and social icons never shift on flip. Only active under .is-enhanced so
-   the no-JS fallback keeps normal block flow. */
+   the no-JS fallback keeps normal block flow.
+
+   perspective() is placed inside the card's own transform function (not as
+   a property on the parent). A parent `perspective` property creates a 3D
+   rendering context that extends to sibling elements and can cause the
+   rotating card to visually overlap the lede above it. Inline perspective()
+   is self-contained: the 3D effect stays within the card. */
 .is-enhanced .index-rotator__card {
     display: grid;
     transform-style: preserve-3d;
+    transform: perspective(1200px) rotateX(0deg);
     transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-enhanced .index-rotator__card.is-flipped {
-    transform: rotateX(180deg);
+    transform: perspective(1200px) rotateX(180deg);
 }
 
 /* Both slides share the single grid cell */
@@ -573,18 +549,21 @@ body.home .content-backdrop {
     transform: rotateX(180deg);
 }
 
-/* Each slide (JS or no-JS): text panel on top, image below, full width */
+/* Each slide (JS or no-JS): text panel on top, image below, full width.
+   White background prevents the blurred .page-bg from showing through
+   the semi-transparent .index-intro__beat--tinted in the 3D context. */
 .index-rotator__slide {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    background-color: #ffffff;
 }
 
-/* No-JS / unenhanced desktop: cap image so two stacked slides don't
-   dominate the viewport */
+/* Desktop: cap image height so title + rotator + icons fit in one viewport.
+   aspect-ratio: unset so the box obeys max-height, not the 3:2 mobile ratio. */
 @media (min-width: 601px) {
     .index-rotator__slide .index-intro__photo {
-        max-height: 280px;
+        max-height: 30vh;
         aspect-ratio: unset;
     }
 }
