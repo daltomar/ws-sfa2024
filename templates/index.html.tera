@@ -5,9 +5,6 @@
 {% block body_class %}no-footer home{% endblock %}
 
 {% block content %}
-<!-- The full-bleed blurred backdrop (.page-bg) now renders once from
-     layout.html.tera, shared by every page - no longer declared here. -->
-<div class="hero-backdrop" aria-hidden="true"></div>
 <div class="background">
     <div id="container">
         <div id="container_logo">
