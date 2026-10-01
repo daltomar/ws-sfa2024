@@ -132,16 +132,6 @@ body.home main {
     pointer-events: none;
 }
 
-/* On the landing page the hero is constrained to 820px, leaving side
-   margins visible at wider viewports. At 0.2 opacity the blurred layer
-   barely registers there, looking nearly white. Raise it to fully cover
-   the viewport background. The hero (.background) and section
-   (.index-intro) have opaque backgrounds that sit above this layer in
-   the stacking order, so content areas are unaffected. */
-body.home .page-bg {
-    opacity: 1;
-}
-
 /* Solid white panel behind ordinary page content, giving text a white
    backing instead of sitting directly on the faint .page-bg blur.
    Desktop-only (min-width: 601px, same breakpoint as the pill nav
