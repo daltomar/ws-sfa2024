@@ -290,7 +290,7 @@ body.home .content-backdrop {
     inset: 0;
     background:
         linear-gradient(rgba(249, 249, 249, 0.80), rgba(249, 249, 249, 0.80)),
-        url('/static/images/SFA_bck.jpg') center / contain no-repeat;
+        url('/static/images/SFA_bck.jpg') center / cover no-repeat;
     z-index: 1;
 }
 
@@ -685,7 +685,7 @@ body.home .content-backdrop {
     .background::after {
         background:
             linear-gradient(rgba(249, 249, 249, 0.80), rgba(249, 249, 249, 0.80)),
-            url('/static/images/SFA_bck-vert.jpg') center / contain no-repeat;
+            url('/static/images/SFA_bck-vert.jpg') center / cover no-repeat;
     }
     #container_logo {
         display: flex;
