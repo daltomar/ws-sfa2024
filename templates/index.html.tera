@@ -10,7 +10,7 @@
         <div id="container_logo">
             <img id="logo_text" src="/static/images/logo_text.png" alt="Skateboard für alle">
             <img id="logo" src="/static/images/sfa_skt.gif" alt="Animiertes Skateboard-Logo">
-            <img id="motto" src="/static/images/slogan.png" alt="Wir fördern Skateboarding">
+            <h1 class="index-intro__headline">Wir sammeln alles rund ums Skateboard und bringen es zu sozialen Projekten in Brasilien</h1>
         </div>
     </div>
     <a href="#intro" class="scroll-indicator" aria-label="Nach unten scrollen">
@@ -19,10 +19,6 @@
 </div>
 
 <section class="index-intro" id="intro">
-  <div class="index-intro__lede">
-    <h1 class="index-intro__headline">Wir sammeln alles rund ums Skateboard und bringen es zu sozialen Projekten in Brasilien</h1>
-  </div>
-
   <div class="index-rotator" role="region" aria-label="Über das Projekt">
     <div class="index-rotator__card">
 
