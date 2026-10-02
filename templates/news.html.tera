@@ -177,7 +177,13 @@
             <p>
               Dieses Jahr war unsere Aktion in Vila Prudente etwas schwieriger umzusetzen. Unser Freund Mailton do Santos,
               der immer eine zentrale Rolle bei der Organisation der Spendenverteilung gespielt hat, kämpft mit einer ernsthaften
-              Krankheit und konnte deshalb leider diesmal nicht dabei sein. Aber dank der Hilfe von Hilton "Zóio"  konnten wir gemeinsam
+              Krankheit und konnte deshalb leider diesmal nicht dabei sein.</b></p>
+              <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+              <p> Aber dank der Hilfe von Hilton "Zóio"  konnten wir gemeinsam
               mit einige Skateboarders der Vila Prudente Skateplaza und der Ima Crew Graffiti eine Veranstaltung zur Wiedereröffnung der
               sanierten Skateanlage organisieren. Die Veranstaltung bot ein vielfältiges Programm mit Musik von DJ's , Live-Graffit-Performances
               und einem freundschaftlichen Skateboard-Wettkampf, bei dem alle Teilnehmer einen Preis erhielten. Die Preise bestanden aus
@@ -274,9 +280,16 @@
           <div class="newstext">
             <p>
               Am 24.03.2024 waren wir beim Projekt "Skate Poetico". Wir haben die neuen Installation im Gebäude der Sambaschule "Escola de Samba Unidos de Santa Barbara"
-              besucht und die gespendeten Skateboardteile übergeben. Da das Projekt Skate Poetico jetzt mehr Teilnehmer hat, kommen die gespendeten Materialien sehr gut entgegen.
-              Außerdem wird das Projekt "Skate Poético" vom Verein "Itaim Skate or Die" unterstützt.
-              <br />
+              besucht und die gespendeten Skateboardteile übergeben. </b></p>
+              <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+              
+              <p>Da das Projekt Skate Poetico jetzt mehr Teilnehmer hat, kommen die gespendeten Materialien sehr gut entgegen.
+              Außerdem wird das Projekt "Skate Poético" vom Verein "Itaim Skate or Die" unterstützt. <br/> </b>
+             
               Am 30.03. haben die 3 Organisationen eine Osteraktion gemacht,
               wo viele Aktivitäten durchgeführt und Essen, Getränke und Schokolade besorgt wurden. Wir waren auch an diesem Tag vor Ort und es war sehr schön,
               an so einer schönen Veranstaltung teilnehmen zu können.
@@ -304,9 +317,16 @@
           <p>
             Mailton dos Santos leitet im Moment das Projekt "Skate para todos", das kostenlose Skateboard-Unterrichte anbietet.
             Gemeinsam haben wir eine kleine Party für die Teilnehmer organisiert, wo zwei freundliche Wettbewerbe stattgefunden haben.
-            Das Projekt "Skate para todos" hat Trophäe machen lassen, einige Eltern haben Essen und Trinken besorgt und ein Teil
+            </b> </p>
+            <details class="newstext__more">
+              <summary class="newstext__mehr">
+                <span class="newstext__mehr-label--closed">Mehr</span>
+                <span class="newstext__mehr-label--open">Weniger</span>
+              </summary>
+
+            <p>Das Projekt "Skate para todos" hat Trophäe machen lassen, einige Eltern haben Essen und Trinken besorgt und ein Teil
             unserer gesammelten Spenden wurde an die Kinder als Prämien übergeben. Die Kinder haben viel Enthusiasmus mitgebracht.
-            <br />
+            <br /></b>
             Ein sehr schönen Tag, der uns viel Spaß gemacht hat.
           </p>
         </div>
