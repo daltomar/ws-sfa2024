@@ -838,7 +838,7 @@ body.projects-page .page-title {
     margin: 60px 0 24px 0;
     font-size: 2.0rem;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 
 body.projects-page .page-intro {
@@ -902,7 +902,7 @@ body.projects-page .project__more {
 
 body.projects-page .project__weiterlesen {
     display: block;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
     color: #1a5fb4;
     text-decoration: underline;
@@ -934,7 +934,7 @@ body.projects-page .project__heading {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 
 /* Logo (left) + text box (right). Stacks on narrow screens; the text
@@ -995,6 +995,22 @@ body.projects-page .project__link {
 @media (min-width: 768px) {
     body.projects-page .project__heading {
         font-size: x-large;
+    }
+}
+
+/* Mobile: center-align all projects-page content below the 768px breakpoint. */
+@media (max-width: 767px) {
+    body.projects-page .projects-content {
+        text-align: center;
+    }
+
+    body.projects-page .projects-content p {
+        text-align: center;
+    }
+
+    /* Center the logo and intro-text column within each project card. */
+    body.projects-page .project__intro {
+        align-items: center;
     }
 }
 
