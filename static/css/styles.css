@@ -374,18 +374,6 @@ body.home .content-backdrop {
     }
 }
 
-/* No longer capped at a text-readability width (460px) - now holds
-   only the motto image (the subline text paragraph was removed), so
-   it's free to match the image's own width below. */
-.index-intro__lede {
-    max-width: 685px; /* ~8% down from 745px, per request to shrink this slightly (5-10%) */
-    margin: 0 auto 3.0rem auto; /* tune here to adjust lede→row gap */
-    text-align: center;
-}
-
-/* Plain text now (was the SFA_motto.png image) - per request, sized
-   bigger than .index-intro__beat h2's 1.4rem so it still reads as the
-   section's headline. */
 .index-intro__headline {
     margin: 0 0 0.75rem 0;
     font-size: 2rem;
@@ -404,11 +392,6 @@ body.home .content-backdrop {
         display: flex;
         flex-direction: column;
         padding-bottom: min(2.5rem, 2vh);
-    }
-
-    .index-intro__lede {
-        flex-shrink: 0;
-        margin-bottom: min(3rem, 3.5vh);
     }
 }
 
@@ -497,8 +480,7 @@ body.home .content-backdrop {
    stacked in normal flow — works without JS and with prefers-reduced-motion.
    JS adds .is-enhanced to .index-intro to activate the flip behaviour. */
 
-/* Rotator wrapper: narrowed to match .index-intro__lede (685px) so the
-   rotator aligns visually with the section headline above it. */
+/* Rotator wrapper: 685px to align visually with the hero headline above. */
 .index-rotator {
     width: 100%;
     max-width: 685px;
@@ -554,7 +536,7 @@ body.home .content-backdrop {
    aspect-ratio: unset so the box obeys max-height, not the 3:2 mobile ratio. */
 @media (min-width: 601px) {
     .index-rotator__slide .index-intro__photo {
-        max-height: 30vh;
+        max-height: 40vh; /* was 30vh; freed by removing .index-intro__lede */
         aspect-ratio: unset;
     }
 }
@@ -650,19 +632,14 @@ body.home .content-backdrop {
     z-index: 600;
 }
 
-#motto {
-    text-align:justify;
-    /* animation-name: slide; */
-    /* animation-duration: 6s; */
-    /* animation-play-state: running; */
-    display: block;
-    max-width: 85%;
-    height: auto;
-    margin: auto;
+/* Headline inside the hero: match the top-margin the old #motto image had;
+   slightly smaller font than the intro section; side padding so text
+   doesn't touch the hero edges. */
+#container_logo .index-intro__headline {
     margin-top: 40px;
-    font-size: medium;
-    padding: 5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #ollie {
@@ -705,10 +682,6 @@ body.home .content-backdrop {
         padding-top: 3px;
     }
     
-    #motto {
-        margin-top: 120px;
-        font-weight: 200;
-    }
 }
 
 
