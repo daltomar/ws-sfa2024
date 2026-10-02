@@ -632,9 +632,14 @@ body.home .content-backdrop {
     z-index: 600;
 }
 
-/* Headline inside the hero: match the top-margin the old #motto image had. */
+/* Headline inside the hero: match the top-margin the old #motto image had;
+   slightly smaller font than the intro section; side padding so text
+   doesn't touch the hero edges. */
 #container_logo .index-intro__headline {
     margin-top: 40px;
+    font-size: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #ollie {
